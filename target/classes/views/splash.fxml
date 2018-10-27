@@ -5,18 +5,18 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="604.0" styleClass="parent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.main.java.controller.SplashController">
+<AnchorPane fx:id="parent" prefHeight="400.0" prefWidth="604.0" styleClass="parent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SplashController">
    <children>
-      <Label layoutX="144.0" layoutY="200.0" text="Welcome" textFill="WHITE">
+      <Label layoutX="65.0" layoutY="167.0" text="Student Information System" textFill="WHITE">
          <font>
             <Font name="Segoe UI Black" size="34.0" />
          </font>
       </Label>
-      <Label layoutX="186.0" layoutY="250.0" text="Loading..." textFill="WHITE">
+      <Label layoutX="266.0" layoutY="217.0" text="Loading..." textFill="WHITE">
          <font>
             <Font name="Consolas" size="13.0" />
          </font>
       </Label>
-      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE" glyphStyle="-fx-fill:#fff;&#10;" layoutX="584.0" layoutY="19.0" onMouseClicked="#closeApp" size="16.0" text="" />
+      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE" glyphStyle="-fx-fill:#fff" layoutX="584.0" layoutY="19.0" onMouseClicked="#closeApp" size="20.0" text="" />
    </children>
 </AnchorPane>

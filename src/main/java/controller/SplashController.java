@@ -14,10 +14,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
-import views.transitions.FadeTransition;
+import assets.transitions.FadeTransition;
+import application.Index;
 
 import java.io.IOException;
 import java.net.URL;
@@ -30,35 +31,51 @@ import java.util.logging.Logger;
  *
  * @author Trung Hieu Bui (Mr)
  */
-public class SplashController implements Initializable {
+public class SplashController extends BaseController implements Initializable {
 
     @FXML
     private AnchorPane parent;
+    private double     xOffset = 0;
+    private double     yOffset = 0;
 
     @FXML
     private MaterialDesignIconView cross;
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override public void initialize(URL location, ResourceBundle resources) {
         FadeTransition.applyFadeTransition(parent, Duration.seconds(5), (EventHandler<ActionEvent>) event -> {
             try {
-                Parent fxml = FXMLLoader.load(getClass().getResource("../../resources/views/splash.fxml"));
+                Parent               fxml     = FXMLLoader.load(getClass().getResource("../views/splash.fxml"));
                 ObservableList<Node> children = parent.getChildren();
                 children.removeAll();
                 children.setAll(fxml);
             } catch (IOException e) {
                 Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, e);
             }
-        }, 0.2, 1, 1,true);
+        }, 0.5, 1, 1, true);
+
+        makeStageDraggable();
+        LoginController.getInstance();
     }
 
-    /**
-     * Close app.
-     *
-     * @param event the event
-     */
-    @FXML
-    void closeApp(MouseEvent event) {
-        System.exit(0);
+    private void makeStageDraggable() {
+        Stage stage = Index.getStage();
+        parent.setOnMousePressed(e -> {
+            xOffset = e.getSceneX();
+            yOffset = e.getSceneY();
+        });
+        parent.setOnMouseDragged(e -> {
+            stage.setX(e.getScreenX() - xOffset);
+            stage.setY(e.getScreenY() - yOffset);
+            stage.setOpacity(0.7f);
+        });
+        parent.setOnDragDone(e -> {
+            stage.setOpacity(1.0f);
+        });
+        parent.setOnMouseReleased(e -> {
+            stage.setOpacity(1.0f);
+        });
     }
 }

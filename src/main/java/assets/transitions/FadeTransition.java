@@ -4,7 +4,7 @@
  * Created: 00:09 ~ 27/10/2018
  * buitr Copyright
  */
-package views.transitions;
+package assets.transitions;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;

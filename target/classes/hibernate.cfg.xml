@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sis_db</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">critical</property>
+
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- JDBC connection pool (use the built-in) -->
+        <property name="connection.pool_size">1</property>
+
+        <!-- Enable Hibernate's automatic session context management -->
+        <property name="current_session_context_class">thread</property>
+
+        <!-- Disable the second-level cache -->
+        <!--<property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
+
+        <!-- DB schema will be updated if needed -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <mapping class="src.main.java.entities.TblAccount"/>
+        <mapping class="src.main.java.entities.TblDetaillearningchart"/>
+        <mapping class="src.main.java.entities.TblDetailpermission"/>
+        <mapping class="src.main.java.entities.TblDetailregisterfee"/>
+        <mapping class="src.main.java.entities.TblDetailregistersubject"/>
+        <mapping class="src.main.java.entities.TblDetailsubject"/>
+        <mapping class="src.main.java.entities.TblDetailtimetable"/>
+        <mapping class="src.main.java.entities.TblLearningchart"/>
+        <mapping class="src.main.java.entities.TblManager"/>
+        <mapping class="src.main.java.entities.TblPermission"/>
+        <mapping class="src.main.java.entities.TblRegisterfee"/>
+        <mapping class="src.main.java.entities.TblRegistersubject"/>
+        <mapping class="src.main.java.entities.TblStudent"/>
+        <mapping class="src.main.java.entities.TblSubject"/>
+        <mapping class="src.main.java.entities.TblTimetable"/>
+        <mapping class="src.main.java.entities.TblToeic"/>
+    </session-factory>
+</hibernate-configuration>
