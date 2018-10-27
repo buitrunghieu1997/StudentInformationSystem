@@ -1,0 +1,24 @@
+.parent {
+    -fx-background-color: #42a5f5;
+}
+
+.txt-fields {
+    -fx-background-color: transparent;
+}
+
+.vbox {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5px;
+}
+
+.txt-color {
+    -fx-text-fill: #999999;
+}
+
+.icon-inside {
+    -fx-fill: #999;
+}
+
+.component {
+    -fx-fill: #fff;
+}
