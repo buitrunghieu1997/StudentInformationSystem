@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import java.lang.String?>
@@ -12,9 +13,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#closeApp" prefHeight="400.0" prefWidth="600.0" styleClass="parent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="parent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <MaterialDesignIconView glyphName="CLOSE" layoutX="579.0" layoutY="19.0" size="20" styleClass="component" />
+      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE" layoutX="575.0" layoutY="20.0" onMouseClicked="#closeApp" onMouseEntered="#changeCrossIconStyle" onMouseExited="#changeCrossIconStyleBack" onMousePressed="#changeCrossIconStyle" onMouseReleased="#changeCrossIconStyleBack" size="20" styleClass="component" />
       <VBox layoutX="150.0" layoutY="141.0" styleClass="vbox">
          <children>
             <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="300.0">
@@ -23,7 +24,7 @@
                </padding>
                <children>
                   <FontAwesomeIconView glyphName="USER" size="16.0" styleClass="icon-inside" />
-                  <TextField promptText=" Username" HBox.hgrow="ALWAYS">
+                  <TextField promptText="Username" HBox.hgrow="ALWAYS">
                      <styleClass>
                         <String fx:value="txt-fields" />
                         <String fx:value="txt-color" />
@@ -49,17 +50,17 @@
             </HBox>
          </children>
       </VBox>
-      <VBox layoutX="150.0" layoutY="225.0" styleClass="vbox">
-         <children>
-            <JFXButton maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="300.0" ripplerFill="BLACK" text="Sign In" textAlignment="CENTER" underline="true">
-               <styleClass>
-                  <String fx:value="txt-fields" />
-                  <String fx:value="txt-color" />
-                  <String fx:value="font-size-bold" />
-               </styleClass>
-            </JFXButton>
-         </children>
-      </VBox>
+      <VBox layoutX="150.0" layoutY="225.0" styleClass="vbox" />
       <Label id="water-mark" layoutX="519.0" layoutY="366.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="80.0" styleClass="component" text="Design by B.T.Hieu" textAlignment="CENTER" wrapText="true" />
+      <JFXCheckBox id="remember-me" checkedColor="#ffffff00" layoutX="150.0" layoutY="251.0" text="Remember me" unCheckedColor="WHITE" />
+      <JFXButton layoutX="300.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="150.0" ripplerFill="BLACK" text="Sign In" textAlignment="CENTER" underline="true">
+         <styleClass>
+            <String fx:value="txt-fields" />
+            <String fx:value="txt-color" />
+            <String fx:value="font-size-bold" />
+            <String fx:value="vbox" />
+         </styleClass>
+      </JFXButton>
+      <FontAwesomeIconView fx:id="minimize" glyphName="MINUS" layoutX="560.0" layoutY="20.0" onMouseClicked="#hideApp" onMouseEntered="#changeMinimizeIconStyle" onMouseExited="#changeMinimizeIconStyleBack" onMousePressed="#changeMinimizeIconStyleBack" onMouseReleased="#changeMinimizeIconStyle" size="14" styleClass="component" text="" />
    </children>
 </AnchorPane>

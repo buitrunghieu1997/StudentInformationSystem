@@ -37,7 +37,7 @@ public class Index extends Application {
             primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.show();
         } catch (IOException e) {
-            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, e);
+            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, Index.class.getName(), e);
         }
     }
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -17,6 +18,7 @@
             <Font name="Consolas" size="13.0" />
          </font>
       </Label>
-      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE" glyphStyle="-fx-fill:#fff" layoutX="584.0" layoutY="19.0" onMouseClicked="#closeApp" size="20.0" text="" />
+      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE" layoutX="575.0" layoutY="20.0" onMouseClicked="#closeApp" onMouseEntered="#changeCrossIconStyle" onMouseExited="#changeCrossIconStyleBack" onMousePressed="#changeCrossIconStyle" onMouseReleased="#changeCrossIconStyleBack" size="20" styleClass="component" />
+      <FontAwesomeIconView fx:id="minimize" glyphName="MINUS" layoutX="560.0" layoutY="20.0" onMouseClicked="#hideApp" onMouseEntered="#changeMinimizeIconStyle" onMouseExited="#changeMinimizeIconStyleBack" onMousePressed="#changeMinimizeIconStyle" onMouseReleased="#changeMinimizeIconStyleBack" size="14" styleClass="component" text="" />
    </children>
 </AnchorPane>
