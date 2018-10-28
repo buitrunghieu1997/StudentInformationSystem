@@ -45,9 +45,10 @@ public class SplashController extends BaseController implements Initializable {
      * {@inheritDoc}
      */
     @Override public void initialize(URL location, ResourceBundle resources) {
+        makeStageDraggable();
         FadeTransition.applyFadeTransition(parent, Duration.seconds(5), (EventHandler<ActionEvent>) event -> {
             try {
-                Parent               fxml     = FXMLLoader.load(getClass().getResource("../views/splash.fxml"));
+                Parent               fxml     = FXMLLoader.load(getClass().getResource("../views/login.fxml"));
                 ObservableList<Node> children = parent.getChildren();
                 children.removeAll();
                 children.setAll(fxml);
@@ -55,9 +56,6 @@ public class SplashController extends BaseController implements Initializable {
                 Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, e);
             }
         }, 0.5, 1, 1, true);
-
-        makeStageDraggable();
-        LoginController.getInstance();
     }
 
     private void makeStageDraggable() {
