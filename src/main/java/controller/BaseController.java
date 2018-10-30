@@ -20,11 +20,6 @@ import javafx.scene.input.MouseEvent;
  */
 public class BaseController {
 
-    @FXML
-    private MaterialDesignIconView cross;
-    @FXML
-    private FontAwesomeIconView    minimize;
-
     /**
      * Close app.
      *
