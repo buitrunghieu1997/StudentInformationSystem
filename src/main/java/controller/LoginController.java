@@ -19,5 +19,5 @@ import java.util.ResourceBundle;
 public class LoginController extends BaseController implements Initializable {
 
     @Override public void initialize(URL location, ResourceBundle resources) {
-    }
+	}
 }
