@@ -18,7 +18,12 @@
             <Font name="Consolas" size="13.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <MaterialDesignIconView fx:id="cross" glyphName="CLOSE" layoutX="580.0" layoutY="20.0" onMouseClicked="#closeApp" size="20" styleClass="component" />
       <FontAwesomeIconView fx:id="minimize" glyphName="MINUS" layoutX="570.0" layoutY="20.0" onMouseClicked="#hideApp" onMouseEntered="#changeMinimizeIconStyle" onMouseExited="#changeMinimizeIconStyleBack" onMousePressed="#changeMinimizeIconStyle" onMouseReleased="#changeMinimizeIconStyleBack" size="14" styleClass="component" text="" />
+=======
+      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE" layoutX="575.0" layoutY="20.0" onMouseClicked="#closeApp" onMouseEntered="#changeCrossIconStyle" onMouseExited="#changeCrossIconStyleBack" onMousePressed="#changeCrossIconStyle" onMouseReleased="#changeCrossIconStyleBack" size="20" styleClass="component" />
+      <FontAwesomeIconView fx:id="minimize" glyphName="MINUS" layoutX="560.0" layoutY="20.0" onMouseClicked="#hideApp" onMouseEntered="#changeMinimizeIconStyle" onMouseExited="#changeMinimizeIconStyleBack" onMousePressed="#changeMinimizeIconStyle" onMouseReleased="#changeMinimizeIconStyleBack" size="14" styleClass="component" text="" />
+>>>>>>> 11f06f8b754eda292ef6c8c3386cb7265f231859
    </children>
 </AnchorPane>

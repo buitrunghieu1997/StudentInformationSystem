@@ -42,6 +42,7 @@
     -fx-font-weight: bold;
     -fx-font-size: 14;
     -fx-fill: white;
+<<<<<<< HEAD
 }
 
 .water-mark {
@@ -153,4 +154,6 @@
 #minimize:hover {
     -fx-fill: gray;
     -fx-font-size: 18px;
+=======
+>>>>>>> 11f06f8b754eda292ef6c8c3386cb7265f231859
 }

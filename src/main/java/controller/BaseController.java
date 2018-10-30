@@ -39,4 +39,37 @@ public class BaseController {
     void hideApp (MouseEvent event) {
         Index.getStage().setIconified(true);
     }
+<<<<<<< HEAD
+=======
+
+    /**
+     * Change style.
+     *
+     * @param event the event
+     */
+    @FXML
+    void changeCrossIconStyle(MouseEvent event) {
+        cross.setStyle("-fx-font-size: 25; -fx-fill: red;");
+    }
+
+    /**
+     * Change style back.
+     *
+     * @param event the event
+     */
+    @FXML
+    void changeCrossIconStyleBack(MouseEvent event) {
+        cross.setStyle("-fx-font-size: 18; -fx-fill: white");
+    }
+
+    @FXML
+    void changeMinimizeIconStyle() {
+        minimize.setStyle("-fx-font-size: 18; -fx-fill: white;");
+    }
+
+    @FXML
+    void changeMinimizeIconStyleBack() {
+        minimize.setStyle("-fx-font-size: 14; -fx-fill: white;");
+    }
+>>>>>>> 11f06f8b754eda292ef6c8c3386cb7265f231859
 }
