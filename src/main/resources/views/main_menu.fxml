@@ -1,0 +1,819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1000.0" stylesheets="@../css/style.css">
+         <top>
+            <HBox styleClass="vbox" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="166.0" styleClass="water-mark-box">
+                     <children>
+                        <FontAwesomeIconView glyphName="LASTFM" size="28">
+                           <styleClass>
+                              <String fx:value="cursor-hand" />
+                              <String fx:value="water-mark-icon" />
+                           </styleClass>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nhóm 09">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="water-mark" />
+                              <String fx:value="quicksand" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <TextField id="search-txt-fields" promptText="Search" styleClass="txt-fields">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="10.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <FontAwesomeIconView id="search" glyphName="SEARCH" size="18">
+                                 <styleClass>
+                                    <String fx:value="cursor-hand" />
+                                    <String fx:value="menu-color" />
+                                 </styleClass>
+                              </FontAwesomeIconView>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS">
+                           <children>
+                              <FontAwesomeIconView glyphName="BELL_ALT" size="18">
+                                 <styleClass>
+                                    <String fx:value="cursor-hand" />
+                                    <String fx:value="menu-color" />
+                                 </styleClass>
+                              </FontAwesomeIconView>
+                              <ImageView fitWidth="32.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="cursor-hand">
+                                 <image>
+                                    <Image url="@../icons/customer-service.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bùi Trung Hiếu">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="Consolas" size="12.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="quicksand" />
+                                    <String fx:value="bolder" />
+                                    <String fx:value="menu-color" />
+                                 </styleClass>
+                              </Text>
+                              <FontAwesomeIconView glyphName="ANGLE_DOWN" size="18">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="cursor-hand" />
+                                    <String fx:value="menu-color" />
+                                 </styleClass>
+                              </FontAwesomeIconView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </top>
+         <left>
+            <VBox maxWidth="-Infinity" prefWidth="166.0" styleClass="vbox" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <FontAwesomeIconView glyphName="HOME" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="1.0" right="5.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="USER" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="3.0" right="7.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Info">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="LIST_UL" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="2.0" right="4.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Program">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="CALENDAR_ALT" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="3.0" right="4.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Schedule">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="MORTAR_BOARD" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mark">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="CALENDAR_CHECK_ALT" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Register Subject">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="SEARCH_PLUS" rotate="90.0" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="4.0" right="4.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Look Up">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="USERS" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Report">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="388.0" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <MaterialDesignIconView glyphName="HELP" size="20" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="3.0" right="3.0" />
+                           </HBox.margin>
+                        </MaterialDesignIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Help">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="426.0" styleClass="hover-border">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <FontAwesomeIconView glyphName="CODEPEN" size="18" styleClass="menu-color">
+                           <HBox.margin>
+                              <Insets left="4.0" right="4.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Other">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="quicksand" />
+                              <String fx:value="bold" />
+                              <String fx:value="menu-color" />
+                           </styleClass>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox alignment="CENTER" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIconView glyphName="COG" size="18" styleClass="menu-color">
+                                 <HBox.margin>
+                                    <Insets left="6.0" right="4.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="quicksand" />
+                                    <String fx:value="bold" />
+                                    <String fx:value="menu-color" />
+                                 </styleClass>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="hover-border">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <FontAwesomeIconView glyphName="FLAG" size="18" styleClass="menu-color">
+                                 <HBox.margin>
+                                    <Insets left="5.0" right="3.0" />
+                                 </HBox.margin>
+                              </FontAwesomeIconView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contact Support">
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                                 <styleClass>
+                                    <String fx:value="quicksand" />
+                                    <String fx:value="bold" />
+                                    <String fx:value="menu-color" />
+                                 </styleClass>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="component-inside" text="News" />
+                        <HBox alignment="TOP_RIGHT" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="TH_LARGE" size="1.3em" styleClass="menu-color" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="button-inside" />
+                                    <String fx:value="cursor-hand" />
+                                 </styleClass>
+                              </Button>
+                              <Button mnemonicParsing="false">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="TH_LIST" size="1.3em" styleClass="menu-color" />
+                                 </graphic>
+                                 <styleClass>
+                                    <String fx:value="button-inside" />
+                                    <String fx:value="cursor-hand" />
+                                 </styleClass>
+                              </Button>
+                              <HBox alignment="CENTER">
+                                 <children>
+                                    <TextField id="search-txt-fields" promptText="Search for News" styleClass="txt-fields">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="10.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <FontAwesomeIconView id="search" glyphName="SEARCH" size="18">
+                                       <styleClass>
+                                          <String fx:value="cursor-hand" />
+                                          <String fx:value="menu-color" />
+                                       </styleClass>
+                                    </FontAwesomeIconView>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <Button mnemonicParsing="false" text="Refresh">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="button-text" />
+                              <String fx:value="cursor-hand" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="white">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="29 October 2018" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="ELLIPSIS_H" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </HBox>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sis.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-inside" text="Hướng dẫn" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="vbox" />
+                              <String fx:value="hover-fade" />
+                              <String fx:value="pre" />
+                           </styleClass>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="white">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="29 October 2018" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="ELLIPSIS_H" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </HBox>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sis.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-inside" text="Lịch thi" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="vbox" />
+                              <String fx:value="hover-fade" />
+                              <String fx:value="pre" />
+                           </styleClass>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="654.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="white">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="29 October 2018" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="ELLIPSIS_H" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </HBox>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sis.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-inside" text="TB của BQT" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="vbox" />
+                              <String fx:value="hover-fade" />
+                              <String fx:value="pre" />
+                           </styleClass>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="654.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="white">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="29 October 2018" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="ELLIPSIS_H" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </HBox>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sis.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-inside" text="TB Đăng Ký HT" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="vbox" />
+                              <String fx:value="hover-fade" />
+                              <String fx:value="pre" />
+                           </styleClass>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="30.0" layoutY="112.0" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="white">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="29 October 2018" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="ELLIPSIS_H" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </HBox>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sis.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-inside" text="TB kết quả học tập" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="vbox" />
+                              <String fx:value="hover-fade" />
+                              <String fx:value="pre" />
+                           </styleClass>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="30.0" layoutY="30.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="white">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="29 October 2018" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="ELLIPSIS_H" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </HBox>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sis.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-inside" text="TB xử lý học tập" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="vbox" />
+                              <String fx:value="hover-fade" />
+                              <String fx:value="pre" />
+                           </styleClass>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="654.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="white">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="29 October 2018" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="ELLIPSIS_H" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </HBox>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sis.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-inside" text="TB xét nhận ĐATN" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="vbox" />
+                              <String fx:value="hover-fade" />
+                              <String fx:value="pre" />
+                           </styleClass>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="654.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" styleClass="white">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="29 October 2018" />
+                                    <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="ELLIPSIS_H" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <effect>
+                                    <DropShadow color="#bbbbbb" height="10.0" radius="4.5" width="10.0" />
+                                 </effect>
+                              </HBox>
+                              <ImageView fitHeight="128.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/sis.png" />
+                                 </image>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </VBox.margin>
+                              </ImageView>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="txt-inside" text="TB xét tốt nghiệp" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <styleClass>
+                              <String fx:value="vbox" />
+                              <String fx:value="hover-fade" />
+                           </styleClass>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <styleClass>
+            <String fx:value="vbox" />
+            <String fx:value="main-background" />
+         </styleClass>
+      </BorderPane>
+   </children>
+</AnchorPane>
