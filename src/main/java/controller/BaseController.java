@@ -8,6 +8,7 @@
 package controller;
 
 import application.Index;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
 
@@ -25,7 +26,7 @@ public class BaseController {
      */
     @FXML
     void closeApp(MouseEvent event) {
-        System.exit(0);
+        Platform.exit();
     }
 
     @FXML

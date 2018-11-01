@@ -8,6 +8,9 @@ package src.main.java.utils;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+
+import java.util.Objects;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -26,17 +29,16 @@ public class HibernateUtils {
      */
     private static SessionFactory buildSessionFactory() {
         try {
-            // create service registry from hibernate.cfg.xml
+            // create service registry from cfg.cfg.xml
             org.hibernate.service.ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-                    .configure("hibernate.cfg.xml").build();
+                    .configure("cfg/hibernate.cfg.xml").build();
 
             //create metadata source from ServiceRegistry
             org.hibernate.boot.Metadata metadata = new MetadataSources(serviceRegistry).getMetadataBuilder().build();
 
             return metadata.getSessionFactoryBuilder().build();
         } catch (Exception e) {
-//            Objects.requireNonNull(LOGGER).log(Level.WARNING, e.getMessage());
-            e.printStackTrace();
+            Objects.requireNonNull(LOGGER).log(Level.WARNING, e.getMessage());
         }
         return null;
     }

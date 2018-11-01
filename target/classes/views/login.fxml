@@ -15,7 +15,8 @@
 
 <AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="parent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE" layoutX="580.0" layoutY="20.0" onMouseClicked="#closeApp" size="20" styleClass="component" />
+      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE_CIRCLE_OUTLINE" layoutX="575.0" layoutY="25.0" onMouseClicked="#closeApp" size="20" styleClass="component" />
+      <MaterialDesignIconView id="minimize" fx:id="minimize" glyphName="MINUS_CIRCLE_OUTLINE" layoutX="550.0" layoutY="25.0" onMouseClicked="#hideApp" size="20" styleClass="component" />
       <VBox layoutX="150.0" layoutY="141.0" styleClass="vbox">
          <children>
             <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="300.0">
@@ -53,7 +54,7 @@
       <VBox layoutX="150.0" layoutY="225.0" styleClass="vbox" />
       <Label id="water-mark" layoutX="519.0" layoutY="366.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="80.0" styleClass="component" text="Design by B.T.Hieu" textAlignment="CENTER" wrapText="true" />
       <JFXCheckBox id="remember-me" checkedColor="#ffffff00" layoutX="150.0" layoutY="251.0" text="Remember me" unCheckedColor="WHITE" />
-      <JFXButton layoutX="300.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="150.0" ripplerFill="#c9c9c9" text="Sign In" textAlignment="CENTER" underline="true">
+      <JFXButton fx:id="signInBtn" layoutX="300.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity" onMouseClicked="#signIn" prefHeight="35.0" prefWidth="150.0" ripplerFill="#c9c9c9" text="Sign In" textAlignment="CENTER" underline="true">
          <styleClass>
             <String fx:value="txt-fields" />
             <String fx:value="txt-color" />
@@ -61,6 +62,5 @@
             <String fx:value="vbox" />
          </styleClass>
       </JFXButton>
-      <FontAwesomeIconView fx:id="minimize" glyphName="MINUS" layoutX="570.0" layoutY="20.0" onMouseClicked="#hideApp" size="14" styleClass="component" text="" />
    </children>
 </AnchorPane>

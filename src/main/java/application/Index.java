@@ -6,11 +6,11 @@ package application; /**
  */
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import utils.FXMLUtils;
 
 import java.io.IOException;
 import java.util.logging.Level;
@@ -26,13 +26,15 @@ public class Index extends Application {
      */
     private static Stage stage = null;
 
-    /** {@inheritDoc} */
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public void start(Stage primaryStage) {
         try {
             setStage(primaryStage);
-            Parent root = FXMLLoader.load(getClass().getResource("../views/splash.fxml"));
-            Scene scene = new Scene(root);
+            Parent root  = FXMLUtils.load("../views/splash.fxml");
+            Scene  scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.initStyle(StageStyle.UNDECORATED);
             primaryStage.show();

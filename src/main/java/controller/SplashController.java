@@ -5,20 +5,18 @@
  */
 package controller;
 
+import application.Index;
+import assets.transitions.FadeTransition;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import assets.transitions.FadeTransition;
-import application.Index;
+import utils.FXMLUtils;
 
 import java.io.IOException;
 import java.net.URL;
@@ -44,11 +42,12 @@ public class SplashController extends BaseController implements Initializable {
     /**
      * {@inheritDoc}
      */
-    @Override public void initialize(URL location, ResourceBundle resources) {
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
         makeStageDraggable();
-        FadeTransition.applyFadeTransition(parent, Duration.seconds(5), (EventHandler<ActionEvent>) event -> {
+        FadeTransition.applyFadeTransition(parent, Duration.seconds(2), event -> {
             try {
-                Parent               fxml     = FXMLLoader.load(getClass().getResource("../views/login.fxml"));
+                Parent               fxml     = FXMLUtils.load("../views/login.fxml");
                 ObservableList<Node> children = parent.getChildren();
                 children.removeAll();
                 children.setAll(fxml);
