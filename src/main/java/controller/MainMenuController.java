@@ -8,12 +8,14 @@
 package controller;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
@@ -62,6 +64,10 @@ public class MainMenuController extends BaseController implements Initializable 
         db.setOnMouseClicked(e -> {
             collapseAll();
         });
+
+        Platform.runLater(() -> {
+            addDoubleClickEvent();
+        });
     }
 
     private void makeStageDraggable() {
@@ -88,5 +94,13 @@ public class MainMenuController extends BaseController implements Initializable 
         sr.setExpanded(false);
         rs.setExpanded(false);
         lu.setExpanded(false);
+    }
+
+    private void addDoubleClickEvent() {
+        stage.getScene().setOnMouseClicked(event -> {
+            if (event.getButton().equals(MouseButton.PRIMARY) && event.getClickCount() == 2) {
+                stage.setFullScreen(true);
+            }
+        });
     }
 }

@@ -1,14 +1,34 @@
-package src.main.java.entities;
+/*
+ * Copyright(C) 2018 buitr
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblSubject.java
+ * Created at 05:45 ~ 02/11/2018 by buitr
+ */
+
+package entities;
 
 import javax.persistence.*;
+import java.util.Objects;
 
-@Entity @Table(name = "subject", schema = "sis_db", catalog = "") public class TblSubject {
-    private int idSubject;
-    private String name;
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author buitr
+ * Created: 05:45 ~ 02/11/2018
+ */
+@Entity
+@Table(name = "subject", schema = "sis_db", catalog = "")
+public class TblSubject {
+    private int     idSubject;
+    private String  name;
     private Integer creditSubject;
     private Integer creditTuition;
+    private Integer stt;
+    private String  timeModified;
 
-    @Id @Column(name = "idSubject") public int getIdSubject() {
+    @Id
+    @Column(name = "idSubject")
+    public int getIdSubject() {
         return idSubject;
     }
 
@@ -16,7 +36,9 @@ import javax.persistence.*;
         this.idSubject = idSubject;
     }
 
-    @Basic @Column(name = "name") public String getName() {
+    @Basic
+    @Column(name = "name")
+    public String getName() {
         return name;
     }
 
@@ -24,7 +46,9 @@ import javax.persistence.*;
         this.name = name;
     }
 
-    @Basic @Column(name = "creditSubject") public Integer getCreditSubject() {
+    @Basic
+    @Column(name = "creditSubject")
+    public Integer getCreditSubject() {
         return creditSubject;
     }
 
@@ -32,7 +56,9 @@ import javax.persistence.*;
         this.creditSubject = creditSubject;
     }
 
-    @Basic @Column(name = "creditTuition") public Integer getCreditTuition() {
+    @Basic
+    @Column(name = "creditTuition")
+    public Integer getCreditTuition() {
         return creditTuition;
     }
 
@@ -40,37 +66,41 @@ import javax.persistence.*;
         this.creditTuition = creditTuition;
     }
 
-    @Override public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        TblSubject that = (TblSubject) o;
-
-        if (idSubject != that.idSubject) {
-            return false;
-        }
-        if (name != null ? !name.equals(that.name) : that.name != null) {
-            return false;
-        }
-        if (creditSubject != null ? !creditSubject.equals(that.creditSubject) : that.creditSubject != null) {
-            return false;
-        }
-        if (creditTuition != null ? !creditTuition.equals(that.creditTuition) : that.creditTuition != null) {
-            return false;
-        }
-
-        return true;
+    @Basic
+    @Column(name = "stt")
+    public Integer getStt() {
+        return stt;
     }
 
-    @Override public int hashCode() {
-        int result = idSubject;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (creditSubject != null ? creditSubject.hashCode() : 0);
-        result = 31 * result + (creditTuition != null ? creditTuition.hashCode() : 0);
-        return result;
+    public void setStt(Integer stt) {
+        this.stt = stt;
+    }
+
+    @Basic
+    @Column(name = "timeModified")
+    public String getTimeModified() {
+        return timeModified;
+    }
+
+    public void setTimeModified(String timeModified) {
+        this.timeModified = timeModified;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TblSubject that = (TblSubject) o;
+        return idSubject == that.idSubject &&
+                Objects.equals(name, that.name) &&
+                Objects.equals(creditSubject, that.creditSubject) &&
+                Objects.equals(creditTuition, that.creditTuition) &&
+                Objects.equals(stt, that.stt) &&
+                Objects.equals(timeModified, that.timeModified);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idSubject, name, creditSubject, creditTuition, stt, timeModified);
     }
 }

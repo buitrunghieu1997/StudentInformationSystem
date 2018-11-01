@@ -1,4 +1,5 @@
 -- drop schema SIS_DB;
+drop schema SIS_DB;
 create
 database
 if
@@ -17,10 +18,21 @@ CREATE TABLE IF NOT EXISTS Permission
   VARCHAR
 (
   50
-) ,
-  content VARCHAR(255),
-  PRIMARY KEY (idPermission)
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+),
+  content VARCHAR
+(
+  255
+),
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idPermission
+)
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS DetailPermission
 (
   idPermission
@@ -31,13 +43,32 @@ CREATE TABLE IF NOT EXISTS DetailPermission
   VARCHAR
 (
   50
-) ,
-  status VARCHAR(20),
-  PRIMARY KEY (idPermission , idDetailPermission),
-  FOREIGN KEY (idPermission)
-  REFERENCES Permission (idPermission)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+),
+  status VARCHAR
+(
+  20
+),
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idPermission,
+  idDetailPermission
+),
+  FOREIGN KEY
+(
+  idPermission
+)
+  REFERENCES Permission
+(
+  idPermission
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS Account
 (
   idAccount
@@ -48,13 +79,31 @@ CREATE TABLE IF NOT EXISTS Account
   VARCHAR
 (
   16
-) ,
-  `password` VARCHAR(255),
-  PRIMARY KEY (idAccount),
-  FOREIGN KEY (idPermission)
-  REFERENCES Permission (idPermission)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+),
+  `password` VARCHAR
+(
+  255
+),
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idAccount
+),
+  FOREIGN KEY
+(
+  idPermission
+)
+  REFERENCES Permission
+(
+  idPermission
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS Student
 (
   idStudent
@@ -63,17 +112,44 @@ CREATE TABLE IF NOT EXISTS Student
   VARCHAR
 (
   50
-) ,
-  address VARCHAR(255),
-  phonenumber VARCHAR(15),
+),
+  address VARCHAR
+(
+  255
+),
+  phonenumber VARCHAR
+(
+  15
+),
   dateofbirth DATE,
-  email VARCHAR(50),
-  position VARCHAR(255),
-  PRIMARY KEY (idStudent),
-  FOREIGN KEY (idStudent)
-  REFERENCES Account (idAccount)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+  email VARCHAR
+(
+  50
+),
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  position VARCHAR
+(
+  255
+),
+  PRIMARY KEY
+(
+  idStudent
+),
+  FOREIGN KEY
+(
+  idStudent
+)
+  REFERENCES Account
+(
+  idAccount
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS RegisterFee
 (
   idRegister
@@ -84,13 +160,28 @@ CREATE TABLE IF NOT EXISTS RegisterFee
   VARCHAR
 (
   5
-) ,
+),
   totalCredit INT,
-  PRIMARY KEY (idRegister),
-  FOREIGN KEY (idStudent)
-  REFERENCES Student (idStudent)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idRegister
+),
+  FOREIGN KEY
+(
+  idStudent
+)
+  REFERENCES Student
+(
+  idStudent
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS Subject
 (
   idSubject
@@ -99,11 +190,19 @@ CREATE TABLE IF NOT EXISTS Subject
   VARCHAR
 (
   255
-) ,
+),
   creditSubject INT,
   creditTuition INT,
-  PRIMARY KEY (idSubject)
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idSubject
+)
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS DetailRegisterFee
 (
   idRegiter
@@ -112,19 +211,39 @@ CREATE TABLE IF NOT EXISTS DetailRegisterFee
   INT,
   credit
   INT,
-  PRIMARY
-  KEY
+  stt
+  INT,
+  timeModified
+  varchar
+(
+  20
+),
+  PRIMARY KEY
 (
   idSubject,
   idRegiter
-) ,
-  FOREIGN KEY (idRegiter)
-  REFERENCES RegisterFee (idRegister)
-  ON UPDATE CASCADE ON DELETE NO ACTION,
-  FOREIGN KEY (idSubject)
-  REFERENCES Subject (idSubject)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+),
+  FOREIGN KEY
+(
+  idRegiter
+)
+  REFERENCES RegisterFee
+(
+  idRegister
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION,
+  FOREIGN KEY
+(
+  idSubject
+)
+  REFERENCES Subject
+(
+  idSubject
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS DetailSubject
 (
   idDetailSubject
@@ -135,14 +254,36 @@ CREATE TABLE IF NOT EXISTS DetailSubject
   VARCHAR
 (
   5
-) ,
-  room VARCHAR(10),
-  time VARCHAR(20),
-  PRIMARY KEY (idDetailSubject , idSubject),
-  FOREIGN KEY (idSubject)
-  REFERENCES Subject (idSubject)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+),
+  room VARCHAR
+(
+  10
+),
+  time VARCHAR
+(
+  20
+),
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idDetailSubject,
+  idSubject
+),
+  FOREIGN KEY
+(
+  idSubject
+)
+  REFERENCES Subject
+(
+  idSubject
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS RegisterSubject
 (
   idRegister
@@ -153,13 +294,29 @@ CREATE TABLE IF NOT EXISTS RegisterSubject
   VARCHAR
 (
   5
-) ,
+),
   credit INT,
-  PRIMARY KEY (idRegister , idSubject),
-  FOREIGN KEY (idSubject)
-  REFERENCES Subject (idSubject)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idRegister,
+  idSubject
+),
+  FOREIGN KEY
+(
+  idSubject
+)
+  REFERENCES Subject
+(
+  idSubject
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS DetailRegisterSubject
 (
   idRegister
@@ -168,19 +325,39 @@ CREATE TABLE IF NOT EXISTS DetailRegisterSubject
   INT,
   idSubject
   INT,
-  PRIMARY
-  KEY
+  stt
+  INT,
+  timeModified
+  varchar
+(
+  20
+),
+  PRIMARY KEY
 (
   idRegister,
   idDetailRegister
-) ,
-  FOREIGN KEY (idRegister)
-  REFERENCES RegisterSubject (idRegister)
-  ON UPDATE CASCADE ON DELETE NO ACTION,
-  FOREIGN KEY (idSubject)
-  REFERENCES Subject (idSubject)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+),
+  FOREIGN KEY
+(
+  idRegister
+)
+  REFERENCES RegisterSubject
+(
+  idRegister
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION,
+  FOREIGN KEY
+(
+  idSubject
+)
+  REFERENCES Subject
+(
+  idSubject
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS TimeTable
 (
   idTimeTable
@@ -191,13 +368,28 @@ CREATE TABLE IF NOT EXISTS TimeTable
   VARCHAR
 (
   5
-) ,
+),
   totalCredit INT,
-  PRIMARY KEY (idTimeTable),
-  FOREIGN KEY (idStudent)
-  REFERENCES Student (idStudent)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idTimeTable
+),
+  FOREIGN KEY
+(
+  idStudent
+)
+  REFERENCES Student
+(
+  idStudent
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS DetailTimeTable
 (
   idDetailTimeTable
@@ -212,19 +404,39 @@ CREATE TABLE IF NOT EXISTS DetailTimeTable
   INT,
   endSemPoint
   INT,
-  PRIMARY
-  KEY
+  stt
+  INT,
+  timeModified
+  varchar
+(
+  20
+),
+  PRIMARY KEY
 (
   idTimeTable,
   idDetailTimeTable
-) ,
-  FOREIGN KEY (idTimeTable)
-  REFERENCES TimeTable (idTimeTable)
-  ON UPDATE CASCADE ON DELETE NO ACTION,
-  FOREIGN KEY (idDetailSubject)
-  REFERENCES DetailSubject (idDetailSubject)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+),
+  FOREIGN KEY
+(
+  idTimeTable
+)
+  REFERENCES TimeTable
+(
+  idTimeTable
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION,
+  FOREIGN KEY
+(
+  idDetailSubject
+)
+  REFERENCES DetailSubject
+(
+  idDetailSubject
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS Toeic
 (
   idstudent
@@ -233,13 +445,27 @@ CREATE TABLE IF NOT EXISTS Toeic
   VARCHAR
 (
   5
-) ,
+),
   `date` DATE,
   point INT,
-  PRIMARY KEY (idstudent),
-  FOREIGN KEY (idstudent)
-  REFERENCES Student (idStudent)
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idstudent
+),
+  FOREIGN KEY
+(
+  idstudent
+)
+  REFERENCES Student
+(
+  idStudent
+)
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS Manager
 (
   idManager
@@ -248,32 +474,72 @@ CREATE TABLE IF NOT EXISTS Manager
   VARCHAR
 (
   50
-) ,
-  address VARCHAR(255),
-  phonenumber VARCHAR(15),
+),
+  address VARCHAR
+(
+  255
+),
+  phonenumber VARCHAR
+(
+  15
+),
   dateofbirth DATE,
-  email VARCHAR(25),
-  position VARCHAR(255),
-  PRIMARY KEY (idManager),
-  FOREIGN KEY (idManager)
-  REFERENCES Account (idAccount)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+  email VARCHAR
+(
+  25
+),
+  position VARCHAR
+(
+  255
+),
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idManager
+),
+  FOREIGN KEY
+(
+  idManager
+)
+  REFERENCES Account
+(
+  idAccount
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS LearningChart
 (
   idLearningChart
   INT,
   idStudent
   INT,
-  PRIMARY
-  KEY
+  stt
+  INT,
+  timeModified
+  varchar
+(
+  20
+),
+  PRIMARY KEY
 (
   idLearningChart
-) ,
-  FOREIGN KEY (idStudent)
-  REFERENCES Student (idStudent)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+),
+  FOREIGN KEY
+(
+  idStudent
+)
+  REFERENCES Student
+(
+  idStudent
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;
 CREATE TABLE IF NOT EXISTS DetailLearningChart
 (
   idLearningChart
@@ -286,13 +552,36 @@ CREATE TABLE IF NOT EXISTS DetailLearningChart
   VARCHAR
 (
   5
-) ,
+),
   credit INT,
-  PRIMARY KEY (idLearningChart , idDetailLeaningChart),
-  FOREIGN KEY (idLearningChart)
-  REFERENCES LearningChart (idLearningChart)
-  ON UPDATE CASCADE ON DELETE NO ACTION,
-  FOREIGN KEY (idSubject)
-  REFERENCES Subject (idSubject)
-  ON UPDATE CASCADE ON DELETE NO ACTION
-  ) DEFAULT CHARACTER SET=UTF8MB4;
+  stt INT,
+  timeModified varchar
+(
+  20
+),
+  PRIMARY KEY
+(
+  idLearningChart,
+  idDetailLeaningChart
+),
+  FOREIGN KEY
+(
+  idLearningChart
+)
+  REFERENCES LearningChart
+(
+  idLearningChart
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION,
+  FOREIGN KEY
+(
+  idSubject
+)
+  REFERENCES Subject
+(
+  idSubject
+)
+  ON UPDATE CASCADE
+  ON DELETE NO ACTION
+  ) DEFAULT CHARACTER SET =UTF8MB4;

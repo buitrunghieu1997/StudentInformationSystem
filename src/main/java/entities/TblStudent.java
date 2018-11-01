@@ -1,18 +1,38 @@
-package src.main.java.entities;
+/*
+ * Copyright(C) 2018 buitr
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblStudent.java
+ * Created at 05:45 ~ 02/11/2018 by buitr
+ */
+
+package entities;
 
 import javax.persistence.*;
 import java.sql.Date;
+import java.util.Objects;
 
-@Entity @Table(name = "student", schema = "sis_db", catalog = "") public class TblStudent {
-    private int idStudent;
-    private String fullname;
-    private String address;
-    private String phonenumber;
-    private Date dateofbirth;
-    private String email;
-    private String position;
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author buitr
+ * Created: 05:45 ~ 02/11/2018
+ */
+@Entity
+@Table(name = "student", schema = "sis_db", catalog = "")
+public class TblStudent {
+    private int     idStudent;
+    private String  fullname;
+    private String  address;
+    private String  phonenumber;
+    private Date    dateofbirth;
+    private String  email;
+    private Integer stt;
+    private String  timeModified;
+    private String  position;
 
-    @Id @Column(name = "idStudent") public int getIdStudent() {
+    @Id
+    @Column(name = "idStudent")
+    public int getIdStudent() {
         return idStudent;
     }
 
@@ -20,7 +40,9 @@ import java.sql.Date;
         this.idStudent = idStudent;
     }
 
-    @Basic @Column(name = "fullname") public String getFullname() {
+    @Basic
+    @Column(name = "fullname")
+    public String getFullname() {
         return fullname;
     }
 
@@ -28,7 +50,9 @@ import java.sql.Date;
         this.fullname = fullname;
     }
 
-    @Basic @Column(name = "address") public String getAddress() {
+    @Basic
+    @Column(name = "address")
+    public String getAddress() {
         return address;
     }
 
@@ -36,7 +60,9 @@ import java.sql.Date;
         this.address = address;
     }
 
-    @Basic @Column(name = "phonenumber") public String getPhonenumber() {
+    @Basic
+    @Column(name = "phonenumber")
+    public String getPhonenumber() {
         return phonenumber;
     }
 
@@ -44,7 +70,9 @@ import java.sql.Date;
         this.phonenumber = phonenumber;
     }
 
-    @Basic @Column(name = "dateofbirth") public Date getDateofbirth() {
+    @Basic
+    @Column(name = "dateofbirth")
+    public Date getDateofbirth() {
         return dateofbirth;
     }
 
@@ -52,7 +80,9 @@ import java.sql.Date;
         this.dateofbirth = dateofbirth;
     }
 
-    @Basic @Column(name = "email") public String getEmail() {
+    @Basic
+    @Column(name = "email")
+    public String getEmail() {
         return email;
     }
 
@@ -60,7 +90,29 @@ import java.sql.Date;
         this.email = email;
     }
 
-    @Basic @Column(name = "position") public String getPosition() {
+    @Basic
+    @Column(name = "stt")
+    public Integer getStt() {
+        return stt;
+    }
+
+    public void setStt(Integer stt) {
+        this.stt = stt;
+    }
+
+    @Basic
+    @Column(name = "timeModified")
+    public String getTimeModified() {
+        return timeModified;
+    }
+
+    public void setTimeModified(String timeModified) {
+        this.timeModified = timeModified;
+    }
+
+    @Basic
+    @Column(name = "position")
+    public String getPosition() {
         return position;
     }
 
@@ -68,49 +120,24 @@ import java.sql.Date;
         this.position = position;
     }
 
-    @Override public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         TblStudent that = (TblStudent) o;
-
-        if (idStudent != that.idStudent) {
-            return false;
-        }
-        if (fullname != null ? !fullname.equals(that.fullname) : that.fullname != null) {
-            return false;
-        }
-        if (address != null ? !address.equals(that.address) : that.address != null) {
-            return false;
-        }
-        if (phonenumber != null ? !phonenumber.equals(that.phonenumber) : that.phonenumber != null) {
-            return false;
-        }
-        if (dateofbirth != null ? !dateofbirth.equals(that.dateofbirth) : that.dateofbirth != null) {
-            return false;
-        }
-        if (email != null ? !email.equals(that.email) : that.email != null) {
-            return false;
-        }
-        if (position != null ? !position.equals(that.position) : that.position != null) {
-            return false;
-        }
-
-        return true;
+        return idStudent == that.idStudent &&
+                Objects.equals(fullname, that.fullname) &&
+                Objects.equals(address, that.address) &&
+                Objects.equals(phonenumber, that.phonenumber) &&
+                Objects.equals(dateofbirth, that.dateofbirth) &&
+                Objects.equals(email, that.email) &&
+                Objects.equals(stt, that.stt) &&
+                Objects.equals(timeModified, that.timeModified) &&
+                Objects.equals(position, that.position);
     }
 
-    @Override public int hashCode() {
-        int result = idStudent;
-        result = 31 * result + (fullname != null ? fullname.hashCode() : 0);
-        result = 31 * result + (address != null ? address.hashCode() : 0);
-        result = 31 * result + (phonenumber != null ? phonenumber.hashCode() : 0);
-        result = 31 * result + (dateofbirth != null ? dateofbirth.hashCode() : 0);
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (position != null ? position.hashCode() : 0);
-        return result;
+    @Override
+    public int hashCode() {
+        return Objects.hash(idStudent, fullname, address, phonenumber, dateofbirth, email, stt, timeModified, position);
     }
 }

@@ -8,6 +8,8 @@ package utils;
 import java.nio.charset.Charset;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Base64;
 import java.util.UUID;
 import java.util.logging.Level;
@@ -114,5 +116,10 @@ public class Commons {
                          .replace("_", "\\_");
         }
         return null;
+    }
+
+    public static String getCurrentTime() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return LocalDateTime.now().format(formatter);
     }
 }

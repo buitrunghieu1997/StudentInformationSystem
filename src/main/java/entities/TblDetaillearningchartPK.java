@@ -1,14 +1,30 @@
-package src.main.java.entities;
+/*
+ * Copyright(C) 2018 buitr
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblDetaillearningchartPK.java
+ * Created at 05:45 ~ 02/11/2018 by buitr
+ */
+
+package entities;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author buitr
+ * Created: 05:45 ~ 02/11/2018
+ */
 public class TblDetaillearningchartPK implements Serializable {
     private int idLearningChart;
     private int idDetailLeaningChart;
 
-    @Column(name = "idLearningChart") @Id public int getIdLearningChart() {
+    @Column(name = "idLearningChart")
+    @Id
+    public int getIdLearningChart() {
         return idLearningChart;
     }
 
@@ -16,7 +32,9 @@ public class TblDetaillearningchartPK implements Serializable {
         this.idLearningChart = idLearningChart;
     }
 
-    @Column(name = "idDetailLeaningChart") @Id public int getIdDetailLeaningChart() {
+    @Column(name = "idDetailLeaningChart")
+    @Id
+    public int getIdDetailLeaningChart() {
         return idDetailLeaningChart;
     }
 
@@ -24,29 +42,17 @@ public class TblDetaillearningchartPK implements Serializable {
         this.idDetailLeaningChart = idDetailLeaningChart;
     }
 
-    @Override public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         TblDetaillearningchartPK that = (TblDetaillearningchartPK) o;
-
-        if (idLearningChart != that.idLearningChart) {
-            return false;
-        }
-        if (idDetailLeaningChart != that.idDetailLeaningChart) {
-            return false;
-        }
-
-        return true;
+        return idLearningChart == that.idLearningChart &&
+                idDetailLeaningChart == that.idDetailLeaningChart;
     }
 
-    @Override public int hashCode() {
-        int result = idLearningChart;
-        result = 31 * result + idDetailLeaningChart;
-        return result;
+    @Override
+    public int hashCode() {
+        return Objects.hash(idLearningChart, idDetailLeaningChart);
     }
 }

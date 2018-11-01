@@ -1,14 +1,30 @@
-package src.main.java.entities;
+/*
+ * Copyright(C) 2018 buitr
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblRegistersubjectPK.java
+ * Created at 05:45 ~ 02/11/2018 by buitr
+ */
+
+package entities;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author buitr
+ * Created: 05:45 ~ 02/11/2018
+ */
 public class TblRegistersubjectPK implements Serializable {
     private int idRegister;
     private int idSubject;
 
-    @Column(name = "idRegister") @Id public int getIdRegister() {
+    @Column(name = "idRegister")
+    @Id
+    public int getIdRegister() {
         return idRegister;
     }
 
@@ -16,7 +32,9 @@ public class TblRegistersubjectPK implements Serializable {
         this.idRegister = idRegister;
     }
 
-    @Column(name = "idSubject") @Id public int getIdSubject() {
+    @Column(name = "idSubject")
+    @Id
+    public int getIdSubject() {
         return idSubject;
     }
 
@@ -24,29 +42,17 @@ public class TblRegistersubjectPK implements Serializable {
         this.idSubject = idSubject;
     }
 
-    @Override public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         TblRegistersubjectPK that = (TblRegistersubjectPK) o;
-
-        if (idRegister != that.idRegister) {
-            return false;
-        }
-        if (idSubject != that.idSubject) {
-            return false;
-        }
-
-        return true;
+        return idRegister == that.idRegister &&
+                idSubject == that.idSubject;
     }
 
-    @Override public int hashCode() {
-        int result = idRegister;
-        result = 31 * result + idSubject;
-        return result;
+    @Override
+    public int hashCode() {
+        return Objects.hash(idRegister, idSubject);
     }
 }

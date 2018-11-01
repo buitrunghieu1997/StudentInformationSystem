@@ -1,14 +1,30 @@
-package src.main.java.entities;
+/*
+ * Copyright(C) 2018 buitr
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblDetailregisterfeePK.java
+ * Created at 05:45 ~ 02/11/2018 by buitr
+ */
+
+package entities;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author buitr
+ * Created: 05:45 ~ 02/11/2018
+ */
 public class TblDetailregisterfeePK implements Serializable {
     private int idRegiter;
     private int idSubject;
 
-    @Column(name = "idRegiter") @Id public int getIdRegiter() {
+    @Column(name = "idRegiter")
+    @Id
+    public int getIdRegiter() {
         return idRegiter;
     }
 
@@ -16,7 +32,9 @@ public class TblDetailregisterfeePK implements Serializable {
         this.idRegiter = idRegiter;
     }
 
-    @Column(name = "idSubject") @Id public int getIdSubject() {
+    @Column(name = "idSubject")
+    @Id
+    public int getIdSubject() {
         return idSubject;
     }
 
@@ -24,29 +42,17 @@ public class TblDetailregisterfeePK implements Serializable {
         this.idSubject = idSubject;
     }
 
-    @Override public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         TblDetailregisterfeePK that = (TblDetailregisterfeePK) o;
-
-        if (idRegiter != that.idRegiter) {
-            return false;
-        }
-        if (idSubject != that.idSubject) {
-            return false;
-        }
-
-        return true;
+        return idRegiter == that.idRegiter &&
+                idSubject == that.idSubject;
     }
 
-    @Override public int hashCode() {
-        int result = idRegiter;
-        result = 31 * result + idSubject;
-        return result;
+    @Override
+    public int hashCode() {
+        return Objects.hash(idRegiter, idSubject);
     }
 }

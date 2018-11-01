@@ -1,16 +1,36 @@
-package src.main.java.entities;
+/*
+ * Copyright(C) 2018 buitr
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblDetailsubject.java
+ * Created at 05:45 ~ 02/11/2018 by buitr
+ */
+
+package entities;
 
 import javax.persistence.*;
+import java.util.Objects;
 
-@Entity @Table(name = "detailsubject", schema = "sis_db", catalog = "")
-@IdClass(TblDetailsubjectPK.class) public class TblDetailsubject {
-    private int idDetailSubject;
-    private int idSubject;
-    private String semester;
-    private String room;
-    private String time;
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author buitr
+ * Created: 05:45 ~ 02/11/2018
+ */
+@Entity
+@Table(name = "detailsubject", schema = "sis_db", catalog = "")
+@IdClass(TblDetailsubjectPK.class)
+public class TblDetailsubject {
+    private int     idDetailSubject;
+    private int     idSubject;
+    private String  semester;
+    private String  room;
+    private String  time;
+    private Integer stt;
+    private String  timeModified;
 
-    @Id @Column(name = "idDetailSubject") public int getIdDetailSubject() {
+    @Id
+    @Column(name = "idDetailSubject")
+    public int getIdDetailSubject() {
         return idDetailSubject;
     }
 
@@ -18,7 +38,9 @@ import javax.persistence.*;
         this.idDetailSubject = idDetailSubject;
     }
 
-    @Id @Column(name = "idSubject") public int getIdSubject() {
+    @Id
+    @Column(name = "idSubject")
+    public int getIdSubject() {
         return idSubject;
     }
 
@@ -26,7 +48,9 @@ import javax.persistence.*;
         this.idSubject = idSubject;
     }
 
-    @Basic @Column(name = "semester") public String getSemester() {
+    @Basic
+    @Column(name = "semester")
+    public String getSemester() {
         return semester;
     }
 
@@ -34,7 +58,9 @@ import javax.persistence.*;
         this.semester = semester;
     }
 
-    @Basic @Column(name = "room") public String getRoom() {
+    @Basic
+    @Column(name = "room")
+    public String getRoom() {
         return room;
     }
 
@@ -42,7 +68,9 @@ import javax.persistence.*;
         this.room = room;
     }
 
-    @Basic @Column(name = "time") public String getTime() {
+    @Basic
+    @Column(name = "time")
+    public String getTime() {
         return time;
     }
 
@@ -50,41 +78,42 @@ import javax.persistence.*;
         this.time = time;
     }
 
-    @Override public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
-        TblDetailsubject that = (TblDetailsubject) o;
-
-        if (idDetailSubject != that.idDetailSubject) {
-            return false;
-        }
-        if (idSubject != that.idSubject) {
-            return false;
-        }
-        if (semester != null ? !semester.equals(that.semester) : that.semester != null) {
-            return false;
-        }
-        if (room != null ? !room.equals(that.room) : that.room != null) {
-            return false;
-        }
-        if (time != null ? !time.equals(that.time) : that.time != null) {
-            return false;
-        }
-
-        return true;
+    @Basic
+    @Column(name = "stt")
+    public Integer getStt() {
+        return stt;
     }
 
-    @Override public int hashCode() {
-        int result = idDetailSubject;
-        result = 31 * result + idSubject;
-        result = 31 * result + (semester != null ? semester.hashCode() : 0);
-        result = 31 * result + (room != null ? room.hashCode() : 0);
-        result = 31 * result + (time != null ? time.hashCode() : 0);
-        return result;
+    public void setStt(Integer stt) {
+        this.stt = stt;
+    }
+
+    @Basic
+    @Column(name = "timeModified")
+    public String getTimeModified() {
+        return timeModified;
+    }
+
+    public void setTimeModified(String timeModified) {
+        this.timeModified = timeModified;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        TblDetailsubject that = (TblDetailsubject) o;
+        return idDetailSubject == that.idDetailSubject &&
+                idSubject == that.idSubject &&
+                Objects.equals(semester, that.semester) &&
+                Objects.equals(room, that.room) &&
+                Objects.equals(time, that.time) &&
+                Objects.equals(stt, that.stt) &&
+                Objects.equals(timeModified, that.timeModified);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idDetailSubject, idSubject, semester, room, time, stt, timeModified);
     }
 }

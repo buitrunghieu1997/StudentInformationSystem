@@ -1,14 +1,30 @@
-package src.main.java.entities;
+/*
+ * Copyright(C) 2018 buitr
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblDetailpermissionPK.java
+ * Created at 05:45 ~ 02/11/2018 by buitr
+ */
+
+package entities;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import java.io.Serializable;
+import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author buitr
+ * Created: 05:45 ~ 02/11/2018
+ */
 public class TblDetailpermissionPK implements Serializable {
     private int idPermission;
     private int idDetailPermission;
 
-    @Column(name = "idPermission") @Id public int getIdPermission() {
+    @Column(name = "idPermission")
+    @Id
+    public int getIdPermission() {
         return idPermission;
     }
 
@@ -16,7 +32,9 @@ public class TblDetailpermissionPK implements Serializable {
         this.idPermission = idPermission;
     }
 
-    @Column(name = "idDetailPermission") @Id public int getIdDetailPermission() {
+    @Column(name = "idDetailPermission")
+    @Id
+    public int getIdDetailPermission() {
         return idDetailPermission;
     }
 
@@ -24,29 +42,17 @@ public class TblDetailpermissionPK implements Serializable {
         this.idDetailPermission = idDetailPermission;
     }
 
-    @Override public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
         TblDetailpermissionPK that = (TblDetailpermissionPK) o;
-
-        if (idPermission != that.idPermission) {
-            return false;
-        }
-        if (idDetailPermission != that.idDetailPermission) {
-            return false;
-        }
-
-        return true;
+        return idPermission == that.idPermission &&
+                idDetailPermission == that.idDetailPermission;
     }
 
-    @Override public int hashCode() {
-        int result = idPermission;
-        result = 31 * result + idDetailPermission;
-        return result;
+    @Override
+    public int hashCode() {
+        return Objects.hash(idPermission, idDetailPermission);
     }
 }

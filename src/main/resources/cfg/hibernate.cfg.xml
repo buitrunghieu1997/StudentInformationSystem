@@ -11,7 +11,8 @@
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sis_db</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">critical</property>
-
+        <!--<property name="hibernate.connection.username">root</property>-->
+        <!--<property name="hibernate.connection.password">critical</property>-->
         <property name="hibernate.show_sql">true</property>
 
         <!-- JDBC connection pool (use the built-in) -->
@@ -25,22 +26,21 @@
 
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
-
-        <mapping class="src.main.java.entities.TblAccount"/>
-        <mapping class="src.main.java.entities.TblDetaillearningchart"/>
-        <mapping class="src.main.java.entities.TblDetailpermission"/>
-        <mapping class="src.main.java.entities.TblDetailregisterfee"/>
-        <mapping class="src.main.java.entities.TblDetailregistersubject"/>
-        <mapping class="src.main.java.entities.TblDetailsubject"/>
-        <mapping class="src.main.java.entities.TblDetailtimetable"/>
-        <mapping class="src.main.java.entities.TblLearningchart"/>
-        <mapping class="src.main.java.entities.TblManager"/>
-        <mapping class="src.main.java.entities.TblPermission"/>
-        <mapping class="src.main.java.entities.TblRegisterfee"/>
-        <mapping class="src.main.java.entities.TblRegistersubject"/>
-        <mapping class="src.main.java.entities.TblStudent"/>
-        <mapping class="src.main.java.entities.TblSubject"/>
-        <mapping class="src.main.java.entities.TblTimetable"/>
-        <mapping class="src.main.java.entities.TblToeic"/>
+        <mapping class="entities.TblAccount"/>
+        <mapping class="entities.TblDetaillearningchart"/>
+        <mapping class="entities.TblDetailpermission"/>
+        <mapping class="entities.TblDetailregisterfee"/>
+        <mapping class="entities.TblDetailregistersubject"/>
+        <mapping class="entities.TblDetailsubject"/>
+        <mapping class="entities.TblDetailtimetable"/>
+        <mapping class="entities.TblLearningchart"/>
+        <mapping class="entities.TblManager"/>
+        <mapping class="entities.TblPermission"/>
+        <mapping class="entities.TblRegisterfee"/>
+        <mapping class="entities.TblRegistersubject"/>
+        <mapping class="entities.TblStudent"/>
+        <mapping class="entities.TblSubject"/>
+        <mapping class="entities.TblTimetable"/>
+        <mapping class="entities.TblToeic"/>
     </session-factory>
 </hibernate-configuration>

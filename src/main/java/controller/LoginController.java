@@ -12,7 +12,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -68,7 +67,6 @@ public class LoginController extends BaseController implements Initializable {
             Index.getStage().hide();
             stage.setFullScreen(true);
             stage.setResizable(false);
-            addDoubleClickEvent();
             stage.show();
         } catch (IOException e) {
             Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, this.getClass().getName(), e);
@@ -85,13 +83,5 @@ public class LoginController extends BaseController implements Initializable {
         if (true) {
             switchScene();
         }
-    }
-
-    private void addDoubleClickEvent() {
-        stage.getScene().setOnMouseClicked(event -> {
-            if (event.getButton().equals(MouseButton.PRIMARY) && event.getClickCount() == 2) {
-                stage.setFullScreen(true);
-            }
-        });
     }
 }
