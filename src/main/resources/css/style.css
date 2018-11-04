@@ -289,3 +289,7 @@
 .titled-pane:focused > .title > .arrow-button .arrow {
     -fx-background-color: white;
 }
+
+#icon-menu-top:hover {
+    -fx-rotate: 90;
+}

@@ -9,9 +9,9 @@ import entities.TblAccount;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
-import src.main.java.utils.HibernateUtils;
 import utils.Commons;
 import utils.Constants;
+import utils.HibernateUtils;
 
 import java.util.List;
 import java.util.logging.Level;

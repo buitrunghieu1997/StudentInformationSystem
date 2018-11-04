@@ -10,11 +10,11 @@
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1000.0"
+            minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0"
             stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171"
             fx:controller="controller.MainMenuController">
    <left>
-      <VBox maxWidth="-Infinity" prefWidth="255.0" styleClass="vbox" BorderPane.alignment="CENTER">
+      <VBox maxWidth="-Infinity" prefWidth="270.0" styleClass="vbox" BorderPane.alignment="CENTER">
          <children>
             <HBox fx:id="db" alignment="CENTER_LEFT" styleClass="hover-border">
                <children>
@@ -1079,7 +1079,7 @@
    <top>
       <HBox BorderPane.alignment="CENTER">
          <children>
-            <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="255.0" styleClass="water-mark-box">
+            <HBox alignment="CENTER" maxWidth="-Infinity" prefWidth="270.0" styleClass="water-mark-box">
                <children>
                   <FontAwesomeIconView fx:id="logo" glyphName="LASTFM" size="35">
                      <styleClass>
@@ -1111,13 +1111,13 @@
                               <Insets left="5.0" right="10.0"/>
                            </HBox.margin>
                         </TextField>
-                        <Button fx:id="searchbtn" mnemonicParsing="false">
+                        <Button id="button-top" fx:id="searchbtn" mnemonicParsing="false">
                            <styleClass>
                               <String fx:value="vbox"/>
                               <String fx:value="hover-fade"/>
                            </styleClass>
                            <graphic>
-                              <FontAwesomeIconView id="search" glyphName="SEARCH" size="18" text="">
+                              <FontAwesomeIconView id="icon-button-top" glyphName="SEARCH" size="18" text="">
                                  <styleClass>
                                     <String fx:value="cursor-hand"/>
                                     <String fx:value="menu-color"/>
@@ -1129,9 +1129,9 @@
                   </HBox>
                   <HBox alignment="CENTER_RIGHT" nodeOrientation="LEFT_TO_RIGHT" HBox.hgrow="ALWAYS">
                      <children>
-                        <Button fx:id="noti" mnemonicParsing="false">
+                        <Button id="button-top" fx:id="noti" mnemonicParsing="false">
                            <graphic>
-                              <FontAwesomeIconView glyphName="BELL_ALT" size="18">
+                              <FontAwesomeIconView id="icon-button-top" glyphName="BELL_ALT" size="18">
                                  <styleClass>
                                     <String fx:value="cursor-hand"/>
                                     <String fx:value="menu-color"/>
@@ -1139,17 +1139,21 @@
                               </FontAwesomeIconView>
                            </graphic>
                            <styleClass>
-                              <String fx:value="vbox"/>
+                              <String fx:value="button-inside"/>
                               <String fx:value="hover-fade"/>
                            </styleClass>
+                           <HBox.margin>
+                              <Insets right="10.0"/>
+                           </HBox.margin>
                         </Button>
-                        <Button fx:id="setting" mnemonicParsing="false">
+                        <Button id="button-top" fx:id="setting" mnemonicParsing="false">
                            <styleClass>
-                              <String fx:value="vbox"/>
+                              <String fx:value="button-inside"/>
                               <String fx:value="hover-fade"/>
                            </styleClass>
                            <graphic>
-                              <FontAwesomeIconView glyphName="COG" size="18" styleClass="menu-color"/>
+                              <FontAwesomeIconView id="icon-button-top" glyphName="COG" size="18"
+                                                   styleClass="menu-color"/>
                            </graphic>
                            <HBox.margin>
                               <Insets left="10.0"/>
@@ -1179,7 +1183,7 @@
                         </Text>
                      </children>
                   </HBox>
-                  <MenuButton fx:id="dropdown" mnemonicParsing="false" popupSide="LEFT">
+                  <MenuButton id="drop" fx:id="dropdown" mnemonicParsing="false" popupSide="LEFT">
                      <items>
                         <MenuItem mnemonicParsing="false" text="Contact Support">
                            <graphic>
@@ -1198,7 +1202,7 @@
                         </MenuItem>
                      </items>
                      <graphic>
-                        <FontAwesomeIconView glyphName="ANGLE_DOWN" size="18">
+                        <FontAwesomeIconView id="icon-menu-top" glyphName="ANGLE_DOWN" size="18">
                            <styleClass>
                               <String fx:value="cursor-hand"/>
                               <String fx:value="menu-color"/>

@@ -8,9 +8,10 @@
 package controller;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.TextField;
@@ -20,7 +21,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import utils.FXMLUtils;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -30,11 +34,11 @@ import java.util.ResourceBundle;
  * @author buitr Created: 22:14 ~ 28/10/2018
  */
 public class MainMenuController extends BaseController implements Initializable {
-    private Stage      stage;
+    private static Stage      stage;
     @FXML
-    private BorderPane parent;
-    private double     xOffset = 0;
-    private double     yOffset = 0;
+    private        BorderPane parent;
+    private        double     xOffset = 0;
+    private        double     yOffset = 0;
 
     @FXML
     private TitledPane ui, pr, sc, sr, rs, lu;
@@ -54,19 +58,11 @@ public class MainMenuController extends BaseController implements Initializable 
     @FXML
     private FontAwesomeIconView logo;
 
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        stage = LoginController.getStage();
-        makeStageDraggable();
-        db.setOnMouseClicked(e -> {
-            collapseAll();
-        });
-
-        Platform.runLater(() -> {
-            addDoubleClickEvent();
+    private static void addDoubleClickEvent() {
+        stage.getScene().setOnMouseClicked(event -> {
+            if (event.getButton().equals(MouseButton.PRIMARY) && event.getClickCount() == 2) {
+                stage.setFullScreen(true);
+            }
         });
     }
 
@@ -96,11 +92,25 @@ public class MainMenuController extends BaseController implements Initializable 
         lu.setExpanded(false);
     }
 
-    private void addDoubleClickEvent() {
-        stage.getScene().setOnMouseClicked(event -> {
-            if (event.getButton().equals(MouseButton.PRIMARY) && event.getClickCount() == 2) {
-                stage.setFullScreen(true);
-            }
-        });
+    public static void loadFXML() throws IOException {
+        Parent root  = FXMLUtils.load("../views/main_menu.fxml");
+        Scene  scene = new Scene(root);
+        stage.setScene(scene);
+        addDoubleClickEvent();
+        stage.centerOnScreen();
+        stage.initStyle(StageStyle.DECORATED);
+        stage.setFullScreen(true);
+        stage.setResizable(false);
+        stage.show();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        makeStageDraggable();
+        stage = new Stage();
+        db.setOnMouseClicked(e -> collapseAll());
     }
 }

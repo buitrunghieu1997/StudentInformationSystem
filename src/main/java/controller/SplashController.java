@@ -8,21 +8,15 @@ package controller;
 import application.Index;
 import assets.transitions.FadeTransition;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import utils.FXMLUtils;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * What is this class usage?
@@ -47,12 +41,9 @@ public class SplashController extends BaseController implements Initializable {
         makeStageDraggable();
         FadeTransition.applyFadeTransition(parent, Duration.seconds(2), event -> {
             try {
-                Parent               fxml     = FXMLUtils.load("../views/login.fxml");
-                ObservableList<Node> children = parent.getChildren();
-                children.removeAll();
-                children.setAll(fxml);
+                LoginController.loadFXML(parent);
             } catch (IOException e) {
-                Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, null, e);
+                e.printStackTrace();
             }
         }, 0.5, 1, 1, true);
     }

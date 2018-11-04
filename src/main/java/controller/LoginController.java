@@ -8,13 +8,14 @@
 package controller;
 
 import application.Index;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import utils.FXMLUtils;
 
 import java.io.IOException;
@@ -49,28 +50,19 @@ public class LoginController extends BaseController implements Initializable {
         LoginController.stage = stage;
     }
 
+    public static void loadFXML(AnchorPane parent) throws IOException {
+        Parent               fxml     = FXMLUtils.load("../views/login.fxml");
+        ObservableList<Node> children = parent.getChildren();
+        children.removeAll();
+        children.setAll(fxml);
+    }
+
     /**
      * {@inheritDoc}
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        stage = new Stage();
-    }
-
-    private void switchScene() {
-        try {
-            Parent root  = FXMLUtils.load("../views/main_menu.fxml");
-            Scene  scene = new Scene(root, 1000, 680);
-            stage.setScene(scene);
-            stage.centerOnScreen();
-            stage.initStyle(StageStyle.DECORATED);
-            Index.getStage().hide();
-            stage.setFullScreen(true);
-            stage.setResizable(false);
-            stage.show();
-        } catch (IOException e) {
-            Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, this.getClass().getName(), e);
-        }
+        stage = Index.getStage();
     }
 
     /**
@@ -82,6 +74,15 @@ public class LoginController extends BaseController implements Initializable {
     void signIn(MouseEvent event) {
         if (true) {
             switchScene();
+        }
+    }
+
+    private void switchScene() {
+        try {
+            Index.getStage().hide();
+            MainMenuController.loadFXML();
+        } catch (IOException e) {
+            Logger.getLogger(SplashController.class.getName()).log(Level.SEVERE, this.getClass().getName(), e);
         }
     }
 }
