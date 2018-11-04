@@ -117,6 +117,11 @@
 .button-inside {
     -fx-background-color: white;
     -fx-background-radius: 0px;
+    -fx-text-fill: #485460;
+    /*-fx-font-size: 1.1em;*/
+    -fx-font-family: quicksand;
+    -fx-font-weight: bold;
+    -fx-underline: true;
 }
 
 .button-text {
@@ -292,4 +297,52 @@
 
 #icon-menu-top:hover {
     -fx-rotate: 90;
+}
+
+.red {
+    -fx-text-fill: red;
+    -fx-fill: red;
+    -fx-font-weight: bold;
+    -fx-font-family: quicksand;
+}
+
+.acc-info {
+    -fx-font-weight: bold;
+    -fx-font-family: quicksand;
+    -fx-fill: #485460;
+    -fx-font-size: 1.2em;
+}
+
+#back-box {
+    -fx-background-color: #f2f2f2;
+}
+
+#label_cp {
+    -fx-font-weight: bold;
+    -fx-font-family: quicksand;
+    -fx-fill: #485460;
+    -fx-font-size: 1.2em;
+    -fx-underline: true;
+}
+
+#pass_cp {
+    -fx-font-weight: bold;
+    -fx-font-family: quicksand;
+    -fx-fill: #485460;
+    -fx-font-size: 1.2em;
+    -fx-text-fill: #485460;
+}
+
+#border_need {
+    -fx-border-width: 2 0 0 2;
+    -fx-border-color: #e2e2e2;
+}
+
+#border_under_need {
+    /*-fx-border-width: 0 0 2 0;*/
+    /*-fx-border-color: #f2f2f2;*/
+}
+
+.hover-zoom {
+    -fx-font-size: 18;
 }

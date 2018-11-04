@@ -289,3 +289,7 @@
 .titled-pane:focused > .title > .arrow-button .arrow {
     -fx-background-color: white;
 }
+
+#button_icon_top:hover {
+    -fx-font-size: 25;
+}
