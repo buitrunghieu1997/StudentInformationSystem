@@ -1,4 +1,5 @@
 -- drop schema SIS_DB;
+-- Có thể tạo thêm bảng khoa viện bộ môn, bảng nhóm ngành |-> lớp -> sinh viên. Nếu có điều kiện sẽ sửa lại db sau
 drop schema SIS_DB;
 create
 database

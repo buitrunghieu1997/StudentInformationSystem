@@ -3,7 +3,7 @@
  * StudentInformationSystemPro, utils - IntelliJ IDEA
  * HibernateUtils.java, 21/10/2018 Trung Hieu Bui (Mr)
  */
-package src.main.java.utils;
+package utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
