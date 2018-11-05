@@ -12,18 +12,18 @@
 <?import java.lang.*?>
 <AnchorPane fx:id="parent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="parent" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
    <children>
-      <MaterialDesignIconView fx:id="cross" glyphName="CLOSE_CIRCLE_OUTLINE" layoutX="575.0" layoutY="25.0"
-                              onMouseClicked="#closeApp" size="20">
+       <MaterialDesignIconView fx:id="cross" glyphName="CLOSE_CIRCLE_OUTLINE" layoutX="575.0" layoutY="25.0"
+                               onMouseClicked="#closeApp" size="20">
          <styleClass>
-            <String fx:value="component"/>
-            <String fx:value="cursor-hand"/>
+             <String fx:value="component"/>
+             <String fx:value="cursor-hand"/>
          </styleClass>
       </MaterialDesignIconView>
-      <MaterialDesignIconView id="minimize" fx:id="minimize" glyphName="MINUS_CIRCLE_OUTLINE" layoutX="550.0"
-                              layoutY="25.0" onMouseClicked="#hideApp" size="20">
+       <MaterialDesignIconView id="minimize" fx:id="minimize" glyphName="MINUS_CIRCLE_OUTLINE" layoutX="550.0"
+                               layoutY="25.0" onMouseClicked="#hideApp" size="20">
          <styleClass>
-            <String fx:value="component"/>
-            <String fx:value="cursor-hand"/>
+             <String fx:value="component"/>
+             <String fx:value="cursor-hand"/>
          </styleClass>
       </MaterialDesignIconView>
       <VBox layoutX="150.0" layoutY="141.0" styleClass="vbox">
@@ -34,7 +34,7 @@
                </padding>
                <children>
                   <FontAwesomeIconView glyphName="USER" size="16.0" styleClass="icon-inside" />
-                  <TextField promptText="Username" HBox.hgrow="ALWAYS">
+                   <TextField fx:id="username" promptText="Username" HBox.hgrow="ALWAYS">
                      <styleClass>
                         <String fx:value="txt-fields" />
                         <String fx:value="txt-color" />
@@ -49,7 +49,7 @@
                </padding>
                <children>
                   <FontAwesomeIconView glyphName="LOCK" size="16" styleClass="icon-inside" />
-                  <PasswordField promptText="Password" HBox.hgrow="ALWAYS">
+                   <PasswordField fx:id="password" promptText="Password" HBox.hgrow="ALWAYS">
                      <styleClass>
                         <String fx:value="font-size" />
                         <String fx:value="txt-fields" />
@@ -62,17 +62,17 @@
       </VBox>
       <VBox layoutX="150.0" layoutY="225.0" styleClass="vbox" />
       <Label id="water-mark" layoutX="519.0" layoutY="366.0" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="80.0" styleClass="component" text="Design by B.T.Hieu" textAlignment="CENTER" wrapText="true" />
-      <JFXCheckBox id="remember-me" checkedColor="#ffffff00" layoutX="150.0" layoutY="251.0" styleClass="cursor-hand"
-                   text="Remember me" unCheckedColor="WHITE"/>
-      <JFXButton fx:id="signInBtn" layoutX="300.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity"
-                 onMouseClicked="#signIn" prefHeight="35.0" prefWidth="150.0" ripplerFill="#c9c9c9" text="Sign In"
-                 textAlignment="CENTER" underline="true">
+       <JFXCheckBox id="remember-me" checkedColor="#ffffff00" layoutX="150.0" layoutY="251.0" styleClass="cursor-hand"
+                    text="Remember me" unCheckedColor="WHITE"/>
+       <JFXButton fx:id="signInBtn" layoutX="300.0" layoutY="243.0" maxHeight="-Infinity" maxWidth="-Infinity"
+                  onMouseClicked="#signIn" prefHeight="35.0" prefWidth="150.0" ripplerFill="#c9c9c9" text="Sign In"
+                  textAlignment="CENTER" underline="true">
          <styleClass>
             <String fx:value="txt-fields" />
             <String fx:value="txt-color" />
             <String fx:value="font-size-bold" />
             <String fx:value="vbox" />
-            <String fx:value="cursor-hand"/>
+             <String fx:value="cursor-hand"/>
          </styleClass>
       </JFXButton>
    </children>

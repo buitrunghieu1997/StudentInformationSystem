@@ -73,19 +73,20 @@ CREATE TABLE IF NOT EXISTS DetailPermission
 CREATE TABLE IF NOT EXISTS Account
 (
   idAccount
-  INT,
+               INT,
   idPermission
-  INT,
+               INT,
   username
-  VARCHAR
+               VARCHAR
 (
   16
 ),
-  `password` VARCHAR
+  `password`   VARCHAR
 (
   255
 ),
-  stt INT,
+  salt         varchar(255),
+  stt          INT,
   timeModified varchar
 (
   20

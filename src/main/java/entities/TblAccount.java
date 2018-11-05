@@ -25,6 +25,7 @@ public class TblAccount {
     private String  password;
     private Integer stt;
     private String  timeModified;
+    private String  salt;
 
     @Id
     @Column(name = "idAccount")
@@ -102,5 +103,15 @@ public class TblAccount {
     @Override
     public int hashCode() {
         return Objects.hash(idAccount, idPermission, username, password, stt, timeModified);
+    }
+
+    @Basic
+    @Column(name = "salt")
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 }

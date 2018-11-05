@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -30,7 +31,11 @@ import java.util.logging.Logger;
  * @author buitr Created: 10:50 ~ 27/10/2018
  */
 public class LoginController extends BaseController implements Initializable {
-    private static Stage stage;
+    private static Stage     stage;
+    @FXML
+    private        TextField username;
+    @FXML
+    private        TextField password;
 
     /**
      * Getter for property 'stage'.
