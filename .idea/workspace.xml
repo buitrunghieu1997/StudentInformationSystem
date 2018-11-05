@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3444f002-458d-41d0-94a6-6655dcd7c2ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5bef2dd8-2d9e-4780-a37a-1b2d3936f378.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c5d3433b-42a6-4f43-b370-69b97adb3f18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c5d3433b-42a6-4f43-b370-69b97adb3f18.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sql/sis.sql" beforeDir="false" afterPath="$PROJECT_DIR$/.sql/sis.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StudentInformationSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentInformationSystem.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblAccount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/cfg/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/cfg/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/login.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -409,7 +398,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541389968929" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541390011812" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -569,7 +558,7 @@
       <workItem from="1541383934284" duration="832000" />
       <workItem from="1541384892260" duration="33000" />
       <workItem from="1541385083876" duration="487000" />
-      <workItem from="1541385720160" duration="1412000" />
+      <workItem from="1541385720160" duration="1652000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1541103947418</created>
@@ -620,14 +609,28 @@
       <option name="project" value="LOCAL" />
       <updated>1541350062026</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update">
+      <created>1541389994568</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1541389994568</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update">
+      <created>1541390017561</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1541390017561</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174599000" />
+    <option name="totallyTimeSpent" value="174839000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48899755" visible="true" weight="0.23524962" />
