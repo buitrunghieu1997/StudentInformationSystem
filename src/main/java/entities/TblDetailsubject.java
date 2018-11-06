@@ -2,7 +2,7 @@
  * Copyright(C) 2018 buitr
  * StudentInformationSystem, entities - IntelliJ IDEA
  * TblDetailsubject.java
- * Created at 05:45 ~ 02/11/2018 by buitr
+ * Created at 09:24 ~ 06/11/2018 by buitr
  */
 
 package entities;
@@ -14,17 +14,17 @@ import java.util.Objects;
  * Description about this Class/Interface/Enum...
  *
  * @author buitr
- * Created: 05:45 ~ 02/11/2018
+ * Created: 09:24 ~ 06/11/2018
  */
 @Entity
 @Table(name = "detailsubject", schema = "sis_db", catalog = "")
-@IdClass(TblDetailsubjectPK.class)
 public class TblDetailsubject {
     private int     idDetailSubject;
-    private int     idSubject;
-    private String  semester;
-    private String  room;
-    private String  time;
+    private Integer idSubject;
+    private Integer idSubjectParent;
+    private Integer creditSubject;
+    private Integer creditTuition;
+    private Integer lenght;
     private Integer stt;
     private String  timeModified;
 
@@ -38,44 +38,54 @@ public class TblDetailsubject {
         this.idDetailSubject = idDetailSubject;
     }
 
-    @Id
+    @Basic
     @Column(name = "idSubject")
-    public int getIdSubject() {
+    public Integer getIdSubject() {
         return idSubject;
     }
 
-    public void setIdSubject(int idSubject) {
+    public void setIdSubject(Integer idSubject) {
         this.idSubject = idSubject;
     }
 
     @Basic
-    @Column(name = "semester")
-    public String getSemester() {
-        return semester;
+    @Column(name = "idSubjectParent")
+    public Integer getIdSubjectParent() {
+        return idSubjectParent;
     }
 
-    public void setSemester(String semester) {
-        this.semester = semester;
-    }
-
-    @Basic
-    @Column(name = "room")
-    public String getRoom() {
-        return room;
-    }
-
-    public void setRoom(String room) {
-        this.room = room;
+    public void setIdSubjectParent(Integer idSubjectParent) {
+        this.idSubjectParent = idSubjectParent;
     }
 
     @Basic
-    @Column(name = "time")
-    public String getTime() {
-        return time;
+    @Column(name = "creditSubject")
+    public Integer getCreditSubject() {
+        return creditSubject;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setCreditSubject(Integer creditSubject) {
+        this.creditSubject = creditSubject;
+    }
+
+    @Basic
+    @Column(name = "creditTuition")
+    public Integer getCreditTuition() {
+        return creditTuition;
+    }
+
+    public void setCreditTuition(Integer creditTuition) {
+        this.creditTuition = creditTuition;
+    }
+
+    @Basic
+    @Column(name = "lenght")
+    public Integer getLenght() {
+        return lenght;
+    }
+
+    public void setLenght(Integer lenght) {
+        this.lenght = lenght;
     }
 
     @Basic
@@ -104,16 +114,17 @@ public class TblDetailsubject {
         if (o == null || getClass() != o.getClass()) return false;
         TblDetailsubject that = (TblDetailsubject) o;
         return idDetailSubject == that.idDetailSubject &&
-                idSubject == that.idSubject &&
-                Objects.equals(semester, that.semester) &&
-                Objects.equals(room, that.room) &&
-                Objects.equals(time, that.time) &&
+                Objects.equals(idSubject, that.idSubject) &&
+                Objects.equals(idSubjectParent, that.idSubjectParent) &&
+                Objects.equals(creditSubject, that.creditSubject) &&
+                Objects.equals(creditTuition, that.creditTuition) &&
+                Objects.equals(lenght, that.lenght) &&
                 Objects.equals(stt, that.stt) &&
                 Objects.equals(timeModified, that.timeModified);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idDetailSubject, idSubject, semester, room, time, stt, timeModified);
+        return Objects.hash(idDetailSubject, idSubject, idSubjectParent, creditSubject, creditTuition, lenght, stt, timeModified);
     }
 }

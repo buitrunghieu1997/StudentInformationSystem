@@ -1,7 +1,7 @@
 /*
  * Copyright(C) 2018 buitr
  * StudentInformationSystem, entities - IntelliJ IDEA
- * TblPermission.java
+ * TblDetailsubjectregister.java
  * Created at 09:24 ~ 06/11/2018 by buitr
  */
 
@@ -17,42 +17,32 @@ import java.util.Objects;
  * Created: 09:24 ~ 06/11/2018
  */
 @Entity
-@Table(name = "permission", schema = "sis_db", catalog = "")
-public class TblPermission {
-    private int     idPermission;
-    private String  name;
-    private String  content;
+@Table(name = "detailsubjectregister", schema = "sis_db", catalog = "")
+@IdClass(TblDetailsubjectregisterPK.class)
+public class TblDetailsubjectregister {
+    private int     idRegister;
+    private int     idDetailSubject;
     private Integer stt;
     private String  timeModified;
 
     @Id
-    @Column(name = "idPermission")
-    public int getIdPermission() {
-        return idPermission;
+    @Column(name = "idRegister")
+    public int getIdRegister() {
+        return idRegister;
     }
 
-    public void setIdPermission(int idPermission) {
-        this.idPermission = idPermission;
+    public void setIdRegister(int idRegister) {
+        this.idRegister = idRegister;
     }
 
-    @Basic
-    @Column(name = "name")
-    public String getName() {
-        return name;
+    @Id
+    @Column(name = "idDetailSubject")
+    public int getIdDetailSubject() {
+        return idDetailSubject;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    @Basic
-    @Column(name = "content")
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    public void setIdDetailSubject(int idDetailSubject) {
+        this.idDetailSubject = idDetailSubject;
     }
 
     @Basic
@@ -79,16 +69,15 @@ public class TblPermission {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TblPermission that = (TblPermission) o;
-        return idPermission == that.idPermission &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(content, that.content) &&
+        TblDetailsubjectregister that = (TblDetailsubjectregister) o;
+        return idRegister == that.idRegister &&
+                idDetailSubject == that.idDetailSubject &&
                 Objects.equals(stt, that.stt) &&
                 Objects.equals(timeModified, that.timeModified);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idPermission, name, content, stt, timeModified);
+        return Objects.hash(idRegister, idDetailSubject, stt, timeModified);
     }
 }

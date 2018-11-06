@@ -2,7 +2,7 @@
  * Copyright(C) 2018 buitr
  * StudentInformationSystem, entities - IntelliJ IDEA
  * TblDetailpermissionPK.java
- * Created at 05:45 ~ 02/11/2018 by buitr
+ * Created at 09:24 ~ 06/11/2018 by buitr
  */
 
 package entities;
@@ -16,7 +16,7 @@ import java.util.Objects;
  * Description about this Class/Interface/Enum...
  *
  * @author buitr
- * Created: 05:45 ~ 02/11/2018
+ * Created: 09:24 ~ 06/11/2018
  */
 public class TblDetailpermissionPK implements Serializable {
     private int idPermission;

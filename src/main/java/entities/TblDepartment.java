@@ -1,8 +1,8 @@
 /*
  * Copyright(C) 2018 buitr
  * StudentInformationSystem, entities - IntelliJ IDEA
- * TblPermission.java
- * Created at 09:24 ~ 06/11/2018 by buitr
+ * TblDepartment.java
+ * Created at 09:23 ~ 06/11/2018 by buitr
  */
 
 package entities;
@@ -14,25 +14,25 @@ import java.util.Objects;
  * Description about this Class/Interface/Enum...
  *
  * @author buitr
- * Created: 09:24 ~ 06/11/2018
+ * Created: 09:23 ~ 06/11/2018
  */
 @Entity
-@Table(name = "permission", schema = "sis_db", catalog = "")
-public class TblPermission {
-    private int     idPermission;
+@Table(name = "department", schema = "sis_db", catalog = "")
+public class TblDepartment {
+    private int     idDepartment;
     private String  name;
-    private String  content;
+    private String  description;
     private Integer stt;
     private String  timeModified;
 
     @Id
-    @Column(name = "idPermission")
-    public int getIdPermission() {
-        return idPermission;
+    @Column(name = "idDepartment")
+    public int getIdDepartment() {
+        return idDepartment;
     }
 
-    public void setIdPermission(int idPermission) {
-        this.idPermission = idPermission;
+    public void setIdDepartment(int idDepartment) {
+        this.idDepartment = idDepartment;
     }
 
     @Basic
@@ -46,13 +46,13 @@ public class TblPermission {
     }
 
     @Basic
-    @Column(name = "content")
-    public String getContent() {
-        return content;
+    @Column(name = "description")
+    public String getDescription() {
+        return description;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Basic
@@ -79,16 +79,16 @@ public class TblPermission {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TblPermission that = (TblPermission) o;
-        return idPermission == that.idPermission &&
+        TblDepartment that = (TblDepartment) o;
+        return idDepartment == that.idDepartment &&
                 Objects.equals(name, that.name) &&
-                Objects.equals(content, that.content) &&
+                Objects.equals(description, that.description) &&
                 Objects.equals(stt, that.stt) &&
                 Objects.equals(timeModified, that.timeModified);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idPermission, name, content, stt, timeModified);
+        return Objects.hash(idDepartment, name, description, stt, timeModified);
     }
 }

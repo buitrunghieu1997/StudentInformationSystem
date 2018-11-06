@@ -15,9 +15,24 @@ import java.util.List;
  */
 public interface InfomationStudentLogic {
 
-    // Ham lay thong tin sinh vien theo 'idStudent'
+    /**
+     * Ham lay thong tin sinh vien theo 'idStudent'
+     *
+     * @param idStudent
+     * @return
+     */
     List<TblStudent> displayInfomationStudent(int idStudent);
 
-    // Ham xu ly logic cap nhat thong tin sinh vien theo 'idStudent'
-    boolean updateInfomationStudent(int idStudent, String fullName, String address, String phone, Date dateOfBith, String email);
+    /**
+     * Ham xu ly logic cap nhat thong tin sinh vien theo 'idStudent'
+     *
+     * @param idStudent
+     * @param fullName
+     * @param address
+     * @param phone
+     * @param dateOfBirth
+     * @param email
+     * @return
+     */
+    boolean updateInfomationStudent(int idStudent, String fullName, String address, String phone, Date dateOfBirth, String email);
 }

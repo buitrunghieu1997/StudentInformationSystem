@@ -9,6 +9,8 @@
 
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/sis_db</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">critical</property>
         <!--<property name="hibernate.connection.username">root</property>-->
         <!--<property name="hibernate.connection.password">critical</property>-->
         <property name="hibernate.show_sql">true</property>
@@ -25,20 +27,22 @@
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
         <mapping class="entities.TblAccount"/>
+        <mapping class="entities.TblDepartment"/>
         <mapping class="entities.TblDetaillearningchart"/>
         <mapping class="entities.TblDetailpermission"/>
-        <mapping class="entities.TblDetailregisterfee"/>
-        <mapping class="entities.TblDetailregistersubject"/>
         <mapping class="entities.TblDetailsubject"/>
-        <mapping class="entities.TblDetailtimetable"/>
+        <mapping class="entities.TblGenre"/>
         <mapping class="entities.TblLearningchart"/>
         <mapping class="entities.TblManager"/>
         <mapping class="entities.TblPermission"/>
-        <mapping class="entities.TblRegisterfee"/>
-        <mapping class="entities.TblRegistersubject"/>
+        <mapping class="entities.TblProgram"/>
         <mapping class="entities.TblStudent"/>
         <mapping class="entities.TblSubject"/>
-        <mapping class="entities.TblTimetable"/>
         <mapping class="entities.TblToeic"/>
+        <mapping class="entities.TblSchedule"/>
+        <mapping class="entities.TblDetailregisterclass"/>
+        <mapping class="entities.TblDetailsubjectregister"/>
+        <mapping class="entities.TblRegisterclass"/>
+        <mapping class="entities.TblSubjectregister"/>
     </session-factory>
 </hibernate-configuration>

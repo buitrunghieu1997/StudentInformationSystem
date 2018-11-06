@@ -1,8 +1,9 @@
 package logics.impl;
 
 import dao.impl.AccountDAOImpl;
+import entities.TblAccount;
 import logics.AccountLogic;
-import src.main.java.entities.TblAccount;
+import utils.Commons;
 import validate.ChangePasswordValidate;
 import validate.LoginValidate;
 
@@ -19,6 +20,7 @@ public class AccountLogicImpl implements AccountLogic {
             TblAccount account = new TblAccount();
             account.setUsername(username);
             account.setPassword(password);
+            account.setSalt(Commons.createSalt());
             AccountDAOImpl   login = new AccountDAOImpl();
             List<TblAccount> tk    = login.getAccount(account.getUsername(), account.getPassword());
 
@@ -37,13 +39,12 @@ public class AccountLogicImpl implements AccountLogic {
         // Kiem tra du lieu nhap
         if (validate.passwordValidate(currentPassword, newPassword, confirmNewPassword)) {
             // Neu nhap dung mat khau hien tai
-            if (new AccountLogicImpl().login(username, currentPassword)) {
+            if (login(username, currentPassword)) {
                 AccountDAOImpl account = new AccountDAOImpl();
                 return account.changePassword(username, newPassword);
             }
 
         }
         return false;
-
     }
 }

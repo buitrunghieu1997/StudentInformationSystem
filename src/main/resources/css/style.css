@@ -6,6 +6,12 @@
     -fx-background-color: transparent;
 }
 
+.txt-field-main {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #48546050;
+}
+
 .vbox {
     -fx-background-color: #ffffff;
     -fx-background-radius: 3px;

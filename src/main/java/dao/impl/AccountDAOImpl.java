@@ -1,18 +1,17 @@
 package dao.impl;
 
 import dao.AccountDAO;
+import entities.TblAccount;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
-import src.main.java.entities.TblAccount;
 import utils.HibernateUtils;
 
-import java.sql.Date;
 import java.util.List;
 
 public class AccountDAOImpl implements AccountDAO {
 
     @Override
-    public boolean addAccount(int idAccount, String username, String password, Integer idPermission, Integer stt, Date dateModified) {
+    public boolean addAccount(int idAccount, String username, String password, Integer idPermission, Integer stt, String timeModified) {
 
         Session    session = HibernateUtils.getSessionFactory().getCurrentSession();
         TblAccount account = new TblAccount();
@@ -26,7 +25,7 @@ public class AccountDAOImpl implements AccountDAO {
             account.setPassword(password);
             account.setIdPermission(idPermission);
             account.setStt(stt);
-            account.setDateModified(dateModified);
+            account.setTimeModified(timeModified);
 
             session.save(account);
 
@@ -69,7 +68,7 @@ public class AccountDAOImpl implements AccountDAO {
     public boolean changePassword(String username, String password) {
 
         Session    session = HibernateUtils.getSessionFactory().getCurrentSession();
-        TblAccount account = new TblAccount();
+        TblAccount account;
 
         try {
 
@@ -99,7 +98,7 @@ public class AccountDAOImpl implements AccountDAO {
 
         try {
             session.getTransaction().begin();
-            String hql   = "from TblAccount where username = :username and password = :password;";
+            String hql   = "from TblAccount where username = :username and password = :password";
             Query  query = session.createQuery(hql);
             query.setParameter("username", username);
             query.setParameter("password", password);

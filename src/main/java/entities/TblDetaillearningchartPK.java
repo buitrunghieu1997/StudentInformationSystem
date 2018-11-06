@@ -2,7 +2,7 @@
  * Copyright(C) 2018 buitr
  * StudentInformationSystem, entities - IntelliJ IDEA
  * TblDetaillearningchartPK.java
- * Created at 05:45 ~ 02/11/2018 by buitr
+ * Created at 09:23 ~ 06/11/2018 by buitr
  */
 
 package entities;
@@ -16,11 +16,11 @@ import java.util.Objects;
  * Description about this Class/Interface/Enum...
  *
  * @author buitr
- * Created: 05:45 ~ 02/11/2018
+ * Created: 09:23 ~ 06/11/2018
  */
 public class TblDetaillearningchartPK implements Serializable {
     private int idLearningChart;
-    private int idDetailLeaningChart;
+    private int idSubject;
 
     @Column(name = "idLearningChart")
     @Id
@@ -32,14 +32,14 @@ public class TblDetaillearningchartPK implements Serializable {
         this.idLearningChart = idLearningChart;
     }
 
-    @Column(name = "idDetailLeaningChart")
+    @Column(name = "idSubject")
     @Id
-    public int getIdDetailLeaningChart() {
-        return idDetailLeaningChart;
+    public int getIdSubject() {
+        return idSubject;
     }
 
-    public void setIdDetailLeaningChart(int idDetailLeaningChart) {
-        this.idDetailLeaningChart = idDetailLeaningChart;
+    public void setIdSubject(int idSubject) {
+        this.idSubject = idSubject;
     }
 
     @Override
@@ -48,11 +48,11 @@ public class TblDetaillearningchartPK implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         TblDetaillearningchartPK that = (TblDetaillearningchartPK) o;
         return idLearningChart == that.idLearningChart &&
-                idDetailLeaningChart == that.idDetailLeaningChart;
+                idSubject == that.idSubject;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idLearningChart, idDetailLeaningChart);
+        return Objects.hash(idLearningChart, idSubject);
     }
 }

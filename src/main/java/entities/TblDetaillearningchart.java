@@ -2,7 +2,7 @@
  * Copyright(C) 2018 buitr
  * StudentInformationSystem, entities - IntelliJ IDEA
  * TblDetaillearningchart.java
- * Created at 05:45 ~ 02/11/2018 by buitr
+ * Created at 09:23 ~ 06/11/2018 by buitr
  */
 
 package entities;
@@ -14,15 +14,14 @@ import java.util.Objects;
  * Description about this Class/Interface/Enum...
  *
  * @author buitr
- * Created: 05:45 ~ 02/11/2018
+ * Created: 09:23 ~ 06/11/2018
  */
 @Entity
 @Table(name = "detaillearningchart", schema = "sis_db", catalog = "")
 @IdClass(TblDetaillearningchartPK.class)
 public class TblDetaillearningchart {
     private int     idLearningChart;
-    private int     idDetailLeaningChart;
-    private Integer idSubject;
+    private int     idSubject;
     private String  semester;
     private Integer credit;
     private Integer stt;
@@ -39,22 +38,12 @@ public class TblDetaillearningchart {
     }
 
     @Id
-    @Column(name = "idDetailLeaningChart")
-    public int getIdDetailLeaningChart() {
-        return idDetailLeaningChart;
-    }
-
-    public void setIdDetailLeaningChart(int idDetailLeaningChart) {
-        this.idDetailLeaningChart = idDetailLeaningChart;
-    }
-
-    @Basic
     @Column(name = "idSubject")
-    public Integer getIdSubject() {
+    public int getIdSubject() {
         return idSubject;
     }
 
-    public void setIdSubject(Integer idSubject) {
+    public void setIdSubject(int idSubject) {
         this.idSubject = idSubject;
     }
 
@@ -104,8 +93,7 @@ public class TblDetaillearningchart {
         if (o == null || getClass() != o.getClass()) return false;
         TblDetaillearningchart that = (TblDetaillearningchart) o;
         return idLearningChart == that.idLearningChart &&
-                idDetailLeaningChart == that.idDetailLeaningChart &&
-                Objects.equals(idSubject, that.idSubject) &&
+                idSubject == that.idSubject &&
                 Objects.equals(semester, that.semester) &&
                 Objects.equals(credit, that.credit) &&
                 Objects.equals(stt, that.stt) &&
@@ -114,6 +102,6 @@ public class TblDetaillearningchart {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idLearningChart, idDetailLeaningChart, idSubject, semester, credit, stt, timeModified);
+        return Objects.hash(idLearningChart, idSubject, semester, credit, stt, timeModified);
     }
 }

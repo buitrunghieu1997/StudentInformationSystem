@@ -20,6 +20,7 @@ import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import utils.FXMLUtils;
@@ -44,7 +45,10 @@ public class MainMenuController extends BaseController implements Initializable 
     private TitledPane ui, pr, sc, sr, rs, lu;
 
     @FXML
-    private HBox db;
+    private HBox db, cp;
+
+    @FXML
+    private VBox mainContainer;
 
     @FXML
     private TextField searchbox;
@@ -92,6 +96,11 @@ public class MainMenuController extends BaseController implements Initializable 
         lu.setExpanded(false);
     }
 
+    /**
+     * Load fxml.
+     *
+     * @throws IOException the io exception
+     */
     public static void loadFXML() throws IOException {
         Parent root  = FXMLUtils.load("../views/main_menu.fxml");
         Scene  scene = new Scene(root);
@@ -99,7 +108,7 @@ public class MainMenuController extends BaseController implements Initializable 
         addDoubleClickEvent();
         stage.centerOnScreen();
         stage.initStyle(StageStyle.DECORATED);
-        stage.setFullScreen(true);
+//        stage.setFullScreen(true);
         stage.setResizable(false);
         stage.show();
     }
@@ -112,5 +121,19 @@ public class MainMenuController extends BaseController implements Initializable 
         makeStageDraggable();
         stage = new Stage();
         db.setOnMouseClicked(e -> collapseAll());
+        cp.setOnMouseClicked(event -> {
+            mainContainer.getChildren().clear();
+            mainContainer.getChildren().addAll(ChangePasswordController.loadFXML());
+        });
+    }
+
+
+    /**
+     * Gets main container.
+     *
+     * @return the main container
+     */
+    public VBox getMainContainer() {
+        return mainContainer;
     }
 }

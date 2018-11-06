@@ -2,7 +2,7 @@
  * Copyright(C) 2018 buitr
  * StudentInformationSystem, entities - IntelliJ IDEA
  * TblSubject.java
- * Created at 05:45 ~ 02/11/2018 by buitr
+ * Created at 09:24 ~ 06/11/2018 by buitr
  */
 
 package entities;
@@ -14,15 +14,14 @@ import java.util.Objects;
  * Description about this Class/Interface/Enum...
  *
  * @author buitr
- * Created: 05:45 ~ 02/11/2018
+ * Created: 09:24 ~ 06/11/2018
  */
 @Entity
 @Table(name = "subject", schema = "sis_db", catalog = "")
 public class TblSubject {
     private int     idSubject;
+    private Integer idGenre;
     private String  name;
-    private Integer creditSubject;
-    private Integer creditTuition;
     private Integer stt;
     private String  timeModified;
 
@@ -37,6 +36,16 @@ public class TblSubject {
     }
 
     @Basic
+    @Column(name = "idGenre")
+    public Integer getIdGenre() {
+        return idGenre;
+    }
+
+    public void setIdGenre(Integer idGenre) {
+        this.idGenre = idGenre;
+    }
+
+    @Basic
     @Column(name = "name")
     public String getName() {
         return name;
@@ -44,26 +53,6 @@ public class TblSubject {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Basic
-    @Column(name = "creditSubject")
-    public Integer getCreditSubject() {
-        return creditSubject;
-    }
-
-    public void setCreditSubject(Integer creditSubject) {
-        this.creditSubject = creditSubject;
-    }
-
-    @Basic
-    @Column(name = "creditTuition")
-    public Integer getCreditTuition() {
-        return creditTuition;
-    }
-
-    public void setCreditTuition(Integer creditTuition) {
-        this.creditTuition = creditTuition;
     }
 
     @Basic
@@ -92,15 +81,14 @@ public class TblSubject {
         if (o == null || getClass() != o.getClass()) return false;
         TblSubject that = (TblSubject) o;
         return idSubject == that.idSubject &&
+                Objects.equals(idGenre, that.idGenre) &&
                 Objects.equals(name, that.name) &&
-                Objects.equals(creditSubject, that.creditSubject) &&
-                Objects.equals(creditTuition, that.creditTuition) &&
                 Objects.equals(stt, that.stt) &&
                 Objects.equals(timeModified, that.timeModified);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idSubject, name, creditSubject, creditTuition, stt, timeModified);
+        return Objects.hash(idSubject, idGenre, name, stt, timeModified);
     }
 }

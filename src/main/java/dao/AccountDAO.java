@@ -1,22 +1,45 @@
 package dao;
 
-import src.main.java.entities.TblAccount;
+import entities.TblAccount;
 
-import java.sql.Date;
 import java.util.List;
 
 public interface AccountDAO {
 
-    // Ham them tai khoan
-    boolean addAccount(int idAccount, String username, String password, Integer idPermission, Integer stt, Date dateModified);
+    /**
+     * Hàm dùng để thêm tài khoản vào CSDL
+     *
+     * @param idAccount
+     * @param username
+     * @param password
+     * @param idPermission
+     * @param stt
+     * @param timeModified
+     * @return
+     */
+    boolean addAccount(int idAccount, String username, String password, Integer idPermission, Integer stt, String timeModified);
 
-    // Ham xoa tai khoan
+    /**
+     * Hàm dùng để xoá tài khoản
+     *
+     * @param idAccount id của tài khoản
+     * @return true nếu delete thành công và ngược lại
+     */
     boolean deleteAccount(int idAccount);
 
-    // Ham doi mat khau
+    /**
+     * Hàm đổi mật khẩu
+     * @param username tên đn
+     * @param password mật khẩu
+     * @return true nếu đổi thành công và ngược lại
+     */
     boolean changePassword(String username, String password);
 
-    // Ham lay ra danh sach tai khoan theo username va password
+    /**
+     * Hàm trả về danh sách tài khoản
+     * @param username tên đn
+     * @param password mật khẩu
+     * @return List Account phù hợp
+     */
     List<TblAccount> getAccount(String username, String password);
-
 }

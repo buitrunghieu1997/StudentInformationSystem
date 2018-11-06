@@ -2,7 +2,7 @@
  * Copyright(C) 2018 buitr
  * StudentInformationSystem, entities - IntelliJ IDEA
  * TblAccount.java
- * Created at 05:45 ~ 02/11/2018 by buitr
+ * Created at 09:23 ~ 06/11/2018 by buitr
  */
 
 package entities;
@@ -14,7 +14,7 @@ import java.util.Objects;
  * Description about this Class/Interface/Enum...
  *
  * @author buitr
- * Created: 05:45 ~ 02/11/2018
+ * Created: 09:23 ~ 06/11/2018
  */
 @Entity
 @Table(name = "account", schema = "sis_db", catalog = "")
@@ -23,9 +23,9 @@ public class TblAccount {
     private Integer idPermission;
     private String  username;
     private String  password;
+    private String  salt;
     private Integer stt;
     private String  timeModified;
-    private String  salt;
 
     @Id
     @Column(name = "idAccount")
@@ -68,6 +68,16 @@ public class TblAccount {
     }
 
     @Basic
+    @Column(name = "salt")
+    public String getSalt() {
+        return salt;
+    }
+
+    public void setSalt(String salt) {
+        this.salt = salt;
+    }
+
+    @Basic
     @Column(name = "stt")
     public Integer getStt() {
         return stt;
@@ -96,22 +106,13 @@ public class TblAccount {
                 Objects.equals(idPermission, that.idPermission) &&
                 Objects.equals(username, that.username) &&
                 Objects.equals(password, that.password) &&
+                Objects.equals(salt, that.salt) &&
                 Objects.equals(stt, that.stt) &&
                 Objects.equals(timeModified, that.timeModified);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idAccount, idPermission, username, password, stt, timeModified);
-    }
-
-    @Basic
-    @Column(name = "salt")
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
+        return Objects.hash(idAccount, idPermission, username, password, salt, stt, timeModified);
     }
 }

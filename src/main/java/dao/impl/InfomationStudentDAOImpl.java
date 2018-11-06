@@ -50,10 +50,10 @@ public class InfomationStudentDAOImpl implements InfomationStudentDAO {
 
             session.getTransaction().begin();
             student = session.get(TblStudent.class, idStudent);
-            student.setFullname(fullName);
+            student.setFullName(fullName);
             student.setAddress(address);
-            student.setPhonenumber(phone);
-            student.setDateofbirth(dateOfBith);
+            student.setPhoneNumber(phone);
+            student.setDateOfBirth(dateOfBith);
             student.setEmail(email);
 
             session.update(student);
