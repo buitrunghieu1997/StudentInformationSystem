@@ -138,6 +138,11 @@
     -fx-font-weight: bold;
 }
 
+.button-text:hover {
+    -fx-background-color: #2196F3 !important;
+    -fx-cursor: hand;
+}
+
 .white {
     -fx-background-color: white;
 }

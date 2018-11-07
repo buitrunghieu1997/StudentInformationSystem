@@ -27,6 +27,7 @@ public class TblDetailsubject {
     private Integer lenght;
     private Integer stt;
     private String  timeModified;
+    private String  subjectCode;
 
     @Id
     @Column(name = "idDetailSubject")
@@ -126,5 +127,15 @@ public class TblDetailsubject {
     @Override
     public int hashCode() {
         return Objects.hash(idDetailSubject, idSubject, idSubjectParent, creditSubject, creditTuition, lenght, stt, timeModified);
+    }
+
+    @Basic
+    @Column(name = "subjectCode")
+    public String getSubjectCode() {
+        return subjectCode;
+    }
+
+    public void setSubjectCode(String subjectCode) {
+        this.subjectCode = subjectCode;
     }
 }

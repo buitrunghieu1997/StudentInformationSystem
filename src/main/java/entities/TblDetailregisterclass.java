@@ -27,6 +27,7 @@ public class TblDetailregisterclass {
     private Integer finalSemPoint;
     private Integer stt;
     private String  timeModified;
+    private String  classCode;
 
     @Id
     @Column(name = "idRegister")
@@ -115,5 +116,15 @@ public class TblDetailregisterclass {
     @Override
     public int hashCode() {
         return Objects.hash(idRegister, idSchedule, tuition, midSemPoint, finalSemPoint, stt, timeModified);
+    }
+
+    @Basic
+    @Column(name = "classCode")
+    public String getClassCode() {
+        return classCode;
+    }
+
+    public void setClassCode(String classCode) {
+        this.classCode = classCode;
     }
 }
