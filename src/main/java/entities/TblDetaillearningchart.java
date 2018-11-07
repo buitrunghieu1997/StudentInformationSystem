@@ -26,6 +26,7 @@ public class TblDetaillearningchart {
     private Integer credit;
     private Integer stt;
     private String  timeModified;
+    private int     idDetailSubject;
 
     @Id
     @Column(name = "idLearningChart")
@@ -103,5 +104,15 @@ public class TblDetaillearningchart {
     @Override
     public int hashCode() {
         return Objects.hash(idLearningChart, idSubject, semester, credit, stt, timeModified);
+    }
+
+    @Id
+    @Column(name = "idDetailSubject")
+    public int getIdDetailSubject() {
+        return idDetailSubject;
+    }
+
+    public void setIdDetailSubject(int idDetailSubject) {
+        this.idDetailSubject = idDetailSubject;
     }
 }

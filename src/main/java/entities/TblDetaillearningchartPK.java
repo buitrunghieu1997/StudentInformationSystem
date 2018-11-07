@@ -21,6 +21,7 @@ import java.util.Objects;
 public class TblDetaillearningchartPK implements Serializable {
     private int idLearningChart;
     private int idSubject;
+    private int idDetailSubject;
 
     @Column(name = "idLearningChart")
     @Id
@@ -54,5 +55,15 @@ public class TblDetaillearningchartPK implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(idLearningChart, idSubject);
+    }
+
+    @Column(name = "idDetailSubject")
+    @Id
+    public int getIdDetailSubject() {
+        return idDetailSubject;
+    }
+
+    public void setIdDetailSubject(int idDetailSubject) {
+        this.idDetailSubject = idDetailSubject;
     }
 }

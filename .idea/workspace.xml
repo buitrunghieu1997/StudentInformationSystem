@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3444f002-458d-41d0-94a6-6655dcd7c2ed" name="Default Changelist" comment="">
+    <list default="true" id="3444f002-458d-41d0-94a6-6655dcd7c2ed" name="Default Changelist" comment="Update">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f8356851-5332-42af-a7f1-a0f60790e252.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f8356851-5332-42af-a7f1-a0f60790e252.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.sql/model/model.mwb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.sql/sis.sql" beforeDir="false" afterPath="$PROJECT_DIR$/.sql/sis.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/views/change-password.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/views/change-password.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StudentInformationSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/StudentInformationSystem.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblDepartment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblDetaillearningchart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblDetaillearningchart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblDetaillearningchartPK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblDetaillearningchartPK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblDetailpermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblDetailpermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblDetailsubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblDetailsubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblDetailsubjectregister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblDetailsubjectregister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblGenre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblGenre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblLearningchart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblLearningchart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblPermission.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblPermission.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblRegisterclass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblRegisterclass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblSchedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblStudent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblSubject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblSubject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblSubjectregister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblSubjectregister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/TblToeic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/TblToeic.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,6 +69,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="sis_db: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="sis_db@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="sis_db: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="detailsubjectregister: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
@@ -62,20 +89,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="140" column="12" selection-start-line="140" selection-start-column="12" selection-end-line="140" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="153">
+              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -83,23 +101,100 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/application/Index.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/TblDetailregisterclass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+            <state relative-caret-position="267">
+              <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.sql/sis.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="273" lean-forward="true" selection-start-line="273" selection-end-line="273" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/f8356851-5332-42af-a7f1-a0f60790e252.SCHEMA:sis_db">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>f8356851-5332-42af-a7f1-a0f60790e252.SCHEMA:sis_db</OriginalElement>
+              <nodes />
+              <notes />
+              <edges />
+              <settings layout="Hierarchic Group" zoom="0.7543160690571047" x="246.16901408450713" y="806.1690140845071" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa882053-da24-4b0c-b6d2-fd917ebbf238/console.sql">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/TblDetailsubjectregister.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/BaseController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#558#559#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/utils/FXMLUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entities/TblDetailsubjectregisterPK.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/views/change-password.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -153,8 +248,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/viewsloader/Index.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/login.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/assets/transitions/FadeTransition.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/mainmenu.fxml" />
@@ -200,10 +293,12 @@
         <option value="$PROJECT_DIR$/src/main/java/logics/impl/AccountLogicImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/AccountDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/entities/TblSchedule.java" />
-        <option value="$PROJECT_DIR$/.sql/sis.sql" />
         <option value="$PROJECT_DIR$/src/main/java/dao/impl/InfomationStudentDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/cfg/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/entities/TblDetailregisterclass.java" />
+        <option value="$PROJECT_DIR$/.sql/sis.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/impl/UserDao.java" />
       </list>
     </option>
   </component>
@@ -244,7 +339,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <expand>
@@ -256,6 +350,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,7 +387,24 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudentInformationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudentInformationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudentInformationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudentInformationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StudentInformationSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -317,14 +429,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="f8356851-5332-42af-a7f1-a0f60790e252" />
+    <property name="JPA.DatabaseSchemaImportDialog" value="aa882053-da24-4b0c-b6d2-fd917ebbf238" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="true" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541483338995" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541582380292" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.12.jar" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -487,6 +599,8 @@
       <workItem from="1541466244890" duration="31000" />
       <workItem from="1541470125915" duration="5329000" />
       <workItem from="1541560772221" duration="35000" />
+      <workItem from="1541560878439" duration="199000" />
+      <workItem from="1541576648245" duration="1933000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <created>1541103947418</created>
@@ -572,20 +686,28 @@
       <option name="project" value="LOCAL" />
       <updated>1541472631040</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update">
+      <created>1541561051617</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1541561051617</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193336000" />
+    <option name="totallyTimeSpent" value="195468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48448688" visible="true" weight="0.2655068" />
-      <window_info id="Structure" order="1" sideWeight="0.5155131" side_tool="true" visible="true" weight="0.2655068" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48173517" visible="true" weight="0.2730711" />
+      <window_info id="Structure" order="1" sideWeight="0.5194508" side_tool="true" weight="0.2730711" />
       <window_info id="Designer" order="2" />
       <window_info id="JRebel" order="3" sideWeight="0.17839608" side_tool="true" weight="0.32980332" />
-      <window_info id="Persistence" order="4" sideWeight="0.51311475" side_tool="true" visible="true" weight="0.26172465" />
+      <window_info id="Persistence" order="4" sideWeight="0.51826483" side_tool="true" visible="true" weight="0.2730711" />
       <window_info id="Image Layers" order="5" />
       <window_info id="UI Designer" order="6" />
       <window_info id="Favorites" order="7" side_tool="true" weight="0.32980332" />
@@ -594,7 +716,7 @@
       <window_info id="Colour Chooser" order="10" sideWeight="0.82160395" weight="0.32980332" />
       <window_info anchor="bottom" id="Terminal" order="0" sideWeight="0.49848714" weight="0.3262295" />
       <window_info anchor="bottom" id="CheckStyle" order="1" weight="0.3295082" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.31198686" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.5030257" side_tool="true" weight="0.2885246" />
       <window_info anchor="bottom" id="Tail" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
@@ -605,7 +727,7 @@
       <window_info anchor="bottom" id="Find" order="10" weight="0.32786885" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49924356" weight="0.31311476" />
       <window_info anchor="bottom" id="Hybris Console [Experimental]" order="12" weight="0.3295082" />
-      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.4977307" weight="0.2885246" />
+      <window_info anchor="bottom" id="Run" order="13" sideWeight="0.4969743" visible="true" weight="0.28196722" />
       <window_info anchor="bottom" id="Debug" order="14" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="15" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="16" weight="0.4" />
@@ -628,7 +750,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="JRebel Setup Guide" order="9" weight="0.32980332" />
-      <window_info anchor="right" id="Database" order="10" weight="0.2934947" />
+      <window_info anchor="right" id="Database" order="10" visible="true" weight="0.2934947" />
       <window_info anchor="right" id="Color Manager" order="11" weight="0.32980332" />
       <window_info anchor="right" id="Copy/Paste" order="12" weight="0.32980332" />
       <window_info anchor="right" id="Material Palette" order="13" weight="0.32980332" />
@@ -703,17 +825,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/main/java/entities/TblDetaillearningchart.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c5d3433b-42a6-4f43-b370-69b97adb3f18/schema/sis_db/table/permission" />
-    <entry file="das://c5d3433b-42a6-4f43-b370-69b97adb3f18/schema/sis_db/table/account" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/src/main/java/entities/TblStudent.java" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-19376" />
@@ -722,26 +833,14 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/utils/Navigator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/news-pane.fxml" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/news-grid.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#589#590#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/navigator/Navigator.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/news-list.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/SplashController.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -751,20 +850,20 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/login.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/splash.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="16" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logics/UserLogic.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -810,16 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FXMLUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_192/javafx-src.zip!/javafx/scene/layout/VBox.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -828,12 +917,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/main_menu.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-19986">
           <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/logics/impl/UserLogicImpl.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -944,13 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.sql/sis.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2652">
-          <caret line="228" column="29" selection-start-line="228" selection-start-column="29" selection-end-line="228" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/AccountDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -1005,28 +1087,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UserDao.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/application/Index.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        <state relative-caret-position="510">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/change-password.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/TblDetailregisterclass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.sql/sis.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="273" lean-forward="true" selection-start-line="273" selection-end-line="273" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/f8356851-5332-42af-a7f1-a0f60790e252.SCHEMA:sis_db">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>f8356851-5332-42af-a7f1-a0f60790e252.SCHEMA:sis_db</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.7543160690571047" x="246.16901408450713" y="806.1690140845071" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/aa882053-da24-4b0c-b6d2-fd917ebbf238/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/TblDetailsubjectregisterPK.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="40" column="25" lean-forward="true" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/entities/TblDetailsubjectregister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="18" column="3" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FXMLUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/change-password.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/impl/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/application/Index.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        <state relative-caret-position="153">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
