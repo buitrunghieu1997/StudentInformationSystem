@@ -1,33 +1,16 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblDepartment.java
- * Created at 09:23 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:23 ~ 06/11/2018
- */
-@Entity
-@Table(name = "department", schema = "sis_db", catalog = "")
-public class TblDepartment {
-    private int     idDepartment;
-    private String  name;
-    private String  description;
+@Entity @Table(name = "department", schema = "sis_db", catalog = "") public class TblDepartment {
+    private int idDepartment;
+    private String name;
+    private String description;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idDepartment")
-    public int getIdDepartment() {
+    @Id @Column(name = "idDepartment") public int getIdDepartment() {
         return idDepartment;
     }
 
@@ -35,9 +18,7 @@ public class TblDepartment {
         this.idDepartment = idDepartment;
     }
 
-    @Basic
-    @Column(name = "name")
-    public String getName() {
+    @Basic @Column(name = "name") public String getName() {
         return name;
     }
 
@@ -45,9 +26,7 @@ public class TblDepartment {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "description")
-    public String getDescription() {
+    @Basic @Column(name = "description") public String getDescription() {
         return description;
     }
 
@@ -55,9 +34,7 @@ public class TblDepartment {
         this.description = description;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -65,9 +42,7 @@ public class TblDepartment {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -75,20 +50,22 @@ public class TblDepartment {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblDepartment that = (TblDepartment) o;
         return idDepartment == that.idDepartment &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(description, that.description) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(name, that.name) &&
+               Objects.equals(description, that.description) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idDepartment, name, description, stt, timeModified);
     }
 }

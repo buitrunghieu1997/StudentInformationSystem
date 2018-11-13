@@ -1,41 +1,24 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblStudent.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "student", schema = "sis_db", catalog = "")
-public class TblStudent {
-    private int     idStudent;
+@Entity @Table(name = "student", schema = "sis_db", catalog = "") public class TblStudent {
+    private int idStudent;
     private Integer idProgram;
-    private String  fullName;
-    private String  address;
-    private String  phoneNumber;
-    private Date    dateOfBirth;
-    private String  email;
+    private String fullName;
+    private String address;
+    private String phoneNumber;
+    private Date dateOfBirth;
+    private String email;
     private Integer type;
-    private String  position;
+    private String position;
     private Integer warningLevel;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idStudent")
-    public int getIdStudent() {
+    @Id @Column(name = "idStudent") public int getIdStudent() {
         return idStudent;
     }
 
@@ -43,9 +26,7 @@ public class TblStudent {
         this.idStudent = idStudent;
     }
 
-    @Basic
-    @Column(name = "idProgram")
-    public Integer getIdProgram() {
+    @Basic @Column(name = "idProgram") public Integer getIdProgram() {
         return idProgram;
     }
 
@@ -53,9 +34,7 @@ public class TblStudent {
         this.idProgram = idProgram;
     }
 
-    @Basic
-    @Column(name = "fullName")
-    public String getFullName() {
+    @Basic @Column(name = "fullName") public String getFullName() {
         return fullName;
     }
 
@@ -63,9 +42,7 @@ public class TblStudent {
         this.fullName = fullName;
     }
 
-    @Basic
-    @Column(name = "address")
-    public String getAddress() {
+    @Basic @Column(name = "address") public String getAddress() {
         return address;
     }
 
@@ -73,9 +50,7 @@ public class TblStudent {
         this.address = address;
     }
 
-    @Basic
-    @Column(name = "phoneNumber")
-    public String getPhoneNumber() {
+    @Basic @Column(name = "phoneNumber") public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -83,9 +58,7 @@ public class TblStudent {
         this.phoneNumber = phoneNumber;
     }
 
-    @Basic
-    @Column(name = "dateOfBirth")
-    public Date getDateOfBirth() {
+    @Basic @Column(name = "dateOfBirth") public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -93,9 +66,7 @@ public class TblStudent {
         this.dateOfBirth = dateOfBirth;
     }
 
-    @Basic
-    @Column(name = "email")
-    public String getEmail() {
+    @Basic @Column(name = "email") public String getEmail() {
         return email;
     }
 
@@ -103,9 +74,7 @@ public class TblStudent {
         this.email = email;
     }
 
-    @Basic
-    @Column(name = "type")
-    public Integer getType() {
+    @Basic @Column(name = "type") public Integer getType() {
         return type;
     }
 
@@ -113,9 +82,7 @@ public class TblStudent {
         this.type = type;
     }
 
-    @Basic
-    @Column(name = "position")
-    public String getPosition() {
+    @Basic @Column(name = "position") public String getPosition() {
         return position;
     }
 
@@ -123,9 +90,7 @@ public class TblStudent {
         this.position = position;
     }
 
-    @Basic
-    @Column(name = "warningLevel")
-    public Integer getWarningLevel() {
+    @Basic @Column(name = "warningLevel") public Integer getWarningLevel() {
         return warningLevel;
     }
 
@@ -133,9 +98,7 @@ public class TblStudent {
         this.warningLevel = warningLevel;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -143,9 +106,7 @@ public class TblStudent {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -153,27 +114,29 @@ public class TblStudent {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblStudent that = (TblStudent) o;
         return idStudent == that.idStudent &&
-                Objects.equals(idProgram, that.idProgram) &&
-                Objects.equals(fullName, that.fullName) &&
-                Objects.equals(address, that.address) &&
-                Objects.equals(phoneNumber, that.phoneNumber) &&
-                Objects.equals(dateOfBirth, that.dateOfBirth) &&
-                Objects.equals(email, that.email) &&
-                Objects.equals(type, that.type) &&
-                Objects.equals(position, that.position) &&
-                Objects.equals(warningLevel, that.warningLevel) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(idProgram, that.idProgram) &&
+               Objects.equals(fullName, that.fullName) &&
+               Objects.equals(address, that.address) &&
+               Objects.equals(phoneNumber, that.phoneNumber) &&
+               Objects.equals(dateOfBirth, that.dateOfBirth) &&
+               Objects.equals(email, that.email) &&
+               Objects.equals(type, that.type) &&
+               Objects.equals(position, that.position) &&
+               Objects.equals(warningLevel, that.warningLevel) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idStudent, idProgram, fullName, address, phoneNumber, dateOfBirth, email, type, position, warningLevel, stt, timeModified);
     }
 }

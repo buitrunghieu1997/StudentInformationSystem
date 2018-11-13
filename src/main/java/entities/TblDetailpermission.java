@@ -1,35 +1,18 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblDetailpermission.java
- * Created at 09:23 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:23 ~ 06/11/2018
- */
-@Entity
-@Table(name = "detailpermission", schema = "sis_db", catalog = "")
-@IdClass(TblDetailpermissionPK.class)
-public class TblDetailpermission {
-    private int     idPermission;
-    private int     idDetailPermission;
-    private String  name;
-    private String  status;
+@Entity @Table(name = "detailpermission", schema = "sis_db", catalog = "")
+@IdClass(TblDetailpermissionPK.class) public class TblDetailpermission {
+    private int idPermission;
+    private int idDetailPermission;
+    private String name;
+    private String status;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idPermission")
-    public int getIdPermission() {
+    @Id @Column(name = "idPermission") public int getIdPermission() {
         return idPermission;
     }
 
@@ -37,9 +20,7 @@ public class TblDetailpermission {
         this.idPermission = idPermission;
     }
 
-    @Id
-    @Column(name = "idDetailPermission")
-    public int getIdDetailPermission() {
+    @Id @Column(name = "idDetailPermission") public int getIdDetailPermission() {
         return idDetailPermission;
     }
 
@@ -47,9 +28,7 @@ public class TblDetailpermission {
         this.idDetailPermission = idDetailPermission;
     }
 
-    @Basic
-    @Column(name = "name")
-    public String getName() {
+    @Basic @Column(name = "name") public String getName() {
         return name;
     }
 
@@ -57,9 +36,7 @@ public class TblDetailpermission {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "status")
-    public String getStatus() {
+    @Basic @Column(name = "status") public String getStatus() {
         return status;
     }
 
@@ -67,9 +44,7 @@ public class TblDetailpermission {
         this.status = status;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -77,9 +52,7 @@ public class TblDetailpermission {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -87,21 +60,23 @@ public class TblDetailpermission {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblDetailpermission that = (TblDetailpermission) o;
         return idPermission == that.idPermission &&
-                idDetailPermission == that.idDetailPermission &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(status, that.status) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               idDetailPermission == that.idDetailPermission &&
+               Objects.equals(name, that.name) &&
+               Objects.equals(status, that.status) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idPermission, idDetailPermission, name, status, stt, timeModified);
     }
 }

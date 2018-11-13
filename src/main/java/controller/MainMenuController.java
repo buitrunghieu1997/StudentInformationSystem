@@ -101,16 +101,24 @@ public class MainMenuController extends BaseController implements Initializable 
      *
      * @throws IOException the io exception
      */
-    public static void loadFXML() throws IOException {
+     static void loadFXML() throws IOException {
         Parent root  = FXMLUtils.load("../views/main_menu.fxml");
         Scene  scene = new Scene(root);
         stage.setScene(scene);
         addDoubleClickEvent();
         stage.centerOnScreen();
         stage.initStyle(StageStyle.DECORATED);
-//        stage.setFullScreen(true);
         stage.setResizable(false);
         stage.show();
+    }
+
+    /**
+     * Load view trên mainContainer
+     * @param mainContainer Vbox chứa content cần thay thế
+     */
+    static void reloadView(VBox mainContainer) {
+        mainContainer.getChildren().clear();
+        mainContainer.getChildren().addAll(DashboardController.loadFXML());
     }
 
     /**
@@ -120,6 +128,7 @@ public class MainMenuController extends BaseController implements Initializable 
     public void initialize(URL location, ResourceBundle resources) {
         makeStageDraggable();
         stage = new Stage();
+
         db.setOnMouseClicked(e -> collapseAll());
         cp.setOnMouseClicked(event -> {
             mainContainer.getChildren().clear();

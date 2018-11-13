@@ -1,35 +1,18 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblSubjectregister.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "subjectregister", schema = "sis_db", catalog = "")
-public class TblSubjectregister {
-    private int     idRegister;
+@Entity @Table(name = "subjectregister", schema = "sis_db", catalog = "") public class TblSubjectregister {
+    private int idRegister;
     private Integer idStudent;
-    private String  semester;
+    private String semester;
     private Integer credit;
     private Integer maxCredit;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idRegister")
-    public int getIdRegister() {
+    @Id @Column(name = "idRegister") public int getIdRegister() {
         return idRegister;
     }
 
@@ -37,9 +20,7 @@ public class TblSubjectregister {
         this.idRegister = idRegister;
     }
 
-    @Basic
-    @Column(name = "idStudent")
-    public Integer getIdStudent() {
+    @Basic @Column(name = "idStudent") public Integer getIdStudent() {
         return idStudent;
     }
 
@@ -47,9 +28,7 @@ public class TblSubjectregister {
         this.idStudent = idStudent;
     }
 
-    @Basic
-    @Column(name = "semester")
-    public String getSemester() {
+    @Basic @Column(name = "semester") public String getSemester() {
         return semester;
     }
 
@@ -57,9 +36,7 @@ public class TblSubjectregister {
         this.semester = semester;
     }
 
-    @Basic
-    @Column(name = "credit")
-    public Integer getCredit() {
+    @Basic @Column(name = "credit") public Integer getCredit() {
         return credit;
     }
 
@@ -67,9 +44,7 @@ public class TblSubjectregister {
         this.credit = credit;
     }
 
-    @Basic
-    @Column(name = "maxCredit")
-    public Integer getMaxCredit() {
+    @Basic @Column(name = "maxCredit") public Integer getMaxCredit() {
         return maxCredit;
     }
 
@@ -77,9 +52,7 @@ public class TblSubjectregister {
         this.maxCredit = maxCredit;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -87,9 +60,7 @@ public class TblSubjectregister {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -97,22 +68,24 @@ public class TblSubjectregister {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblSubjectregister that = (TblSubjectregister) o;
         return idRegister == that.idRegister &&
-                Objects.equals(idStudent, that.idStudent) &&
-                Objects.equals(semester, that.semester) &&
-                Objects.equals(credit, that.credit) &&
-                Objects.equals(maxCredit, that.maxCredit) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(idStudent, that.idStudent) &&
+               Objects.equals(semester, that.semester) &&
+               Objects.equals(credit, that.credit) &&
+               Objects.equals(maxCredit, that.maxCredit) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idRegister, idStudent, semester, credit, maxCredit, stt, timeModified);
     }
 }

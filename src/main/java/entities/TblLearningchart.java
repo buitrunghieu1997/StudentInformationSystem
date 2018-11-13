@@ -1,33 +1,16 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblLearningchart.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "learningchart", schema = "sis_db", catalog = "")
-public class TblLearningchart {
-    private int     idLearningChart;
+@Entity @Table(name = "learningchart", schema = "sis_db", catalog = "") public class TblLearningchart {
+    private int idLearningChart;
     private Integer idStudent;
     private Integer totalCredit;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idLearningChart")
-    public int getIdLearningChart() {
+    @Id @Column(name = "idLearningChart") public int getIdLearningChart() {
         return idLearningChart;
     }
 
@@ -35,9 +18,7 @@ public class TblLearningchart {
         this.idLearningChart = idLearningChart;
     }
 
-    @Basic
-    @Column(name = "idStudent")
-    public Integer getIdStudent() {
+    @Basic @Column(name = "idStudent") public Integer getIdStudent() {
         return idStudent;
     }
 
@@ -45,9 +26,7 @@ public class TblLearningchart {
         this.idStudent = idStudent;
     }
 
-    @Basic
-    @Column(name = "totalCredit")
-    public Integer getTotalCredit() {
+    @Basic @Column(name = "totalCredit") public Integer getTotalCredit() {
         return totalCredit;
     }
 
@@ -55,9 +34,7 @@ public class TblLearningchart {
         this.totalCredit = totalCredit;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -65,9 +42,7 @@ public class TblLearningchart {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -75,20 +50,22 @@ public class TblLearningchart {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblLearningchart that = (TblLearningchart) o;
         return idLearningChart == that.idLearningChart &&
-                Objects.equals(idStudent, that.idStudent) &&
-                Objects.equals(totalCredit, that.totalCredit) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(idStudent, that.idStudent) &&
+               Objects.equals(totalCredit, that.totalCredit) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idLearningChart, idStudent, totalCredit, stt, timeModified);
     }
 }

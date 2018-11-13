@@ -1,33 +1,16 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblSubject.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "subject", schema = "sis_db", catalog = "")
-public class TblSubject {
-    private int     idSubject;
+@Entity @Table(name = "subject", schema = "sis_db", catalog = "") public class TblSubject {
+    private int idSubject;
     private Integer idGenre;
-    private String  name;
+    private String name;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idSubject")
-    public int getIdSubject() {
+    @Id @Column(name = "idSubject") public int getIdSubject() {
         return idSubject;
     }
 
@@ -35,9 +18,7 @@ public class TblSubject {
         this.idSubject = idSubject;
     }
 
-    @Basic
-    @Column(name = "idGenre")
-    public Integer getIdGenre() {
+    @Basic @Column(name = "idGenre") public Integer getIdGenre() {
         return idGenre;
     }
 
@@ -45,9 +26,7 @@ public class TblSubject {
         this.idGenre = idGenre;
     }
 
-    @Basic
-    @Column(name = "name")
-    public String getName() {
+    @Basic @Column(name = "name") public String getName() {
         return name;
     }
 
@@ -55,9 +34,7 @@ public class TblSubject {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -65,9 +42,7 @@ public class TblSubject {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -75,20 +50,22 @@ public class TblSubject {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblSubject that = (TblSubject) o;
         return idSubject == that.idSubject &&
-                Objects.equals(idGenre, that.idGenre) &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(idGenre, that.idGenre) &&
+               Objects.equals(name, that.name) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idSubject, idGenre, name, stt, timeModified);
     }
 }

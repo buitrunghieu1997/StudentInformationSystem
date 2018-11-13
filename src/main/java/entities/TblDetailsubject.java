@@ -1,37 +1,20 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblDetailsubject.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "detailsubject", schema = "sis_db", catalog = "")
-public class TblDetailsubject {
-    private int     idDetailSubject;
+@Entity @Table(name = "detailsubject", schema = "sis_db", catalog = "") public class TblDetailsubject {
+    private int idDetailSubject;
     private Integer idSubject;
     private Integer idSubjectParent;
+    private String subjectCode;
     private Integer creditSubject;
     private Integer creditTuition;
     private Integer lenght;
     private Integer stt;
-    private String  timeModified;
-    private String  subjectCode;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idDetailSubject")
-    public int getIdDetailSubject() {
+    @Id @Column(name = "idDetailSubject") public int getIdDetailSubject() {
         return idDetailSubject;
     }
 
@@ -39,9 +22,7 @@ public class TblDetailsubject {
         this.idDetailSubject = idDetailSubject;
     }
 
-    @Basic
-    @Column(name = "idSubject")
-    public Integer getIdSubject() {
+    @Basic @Column(name = "idSubject") public Integer getIdSubject() {
         return idSubject;
     }
 
@@ -49,9 +30,7 @@ public class TblDetailsubject {
         this.idSubject = idSubject;
     }
 
-    @Basic
-    @Column(name = "idSubjectParent")
-    public Integer getIdSubjectParent() {
+    @Basic @Column(name = "idSubjectParent") public Integer getIdSubjectParent() {
         return idSubjectParent;
     }
 
@@ -59,9 +38,15 @@ public class TblDetailsubject {
         this.idSubjectParent = idSubjectParent;
     }
 
-    @Basic
-    @Column(name = "creditSubject")
-    public Integer getCreditSubject() {
+    @Basic @Column(name = "subjectCode") public String getSubjectCode() {
+        return subjectCode;
+    }
+
+    public void setSubjectCode(String subjectCode) {
+        this.subjectCode = subjectCode;
+    }
+
+    @Basic @Column(name = "creditSubject") public Integer getCreditSubject() {
         return creditSubject;
     }
 
@@ -69,9 +54,7 @@ public class TblDetailsubject {
         this.creditSubject = creditSubject;
     }
 
-    @Basic
-    @Column(name = "creditTuition")
-    public Integer getCreditTuition() {
+    @Basic @Column(name = "creditTuition") public Integer getCreditTuition() {
         return creditTuition;
     }
 
@@ -79,9 +62,7 @@ public class TblDetailsubject {
         this.creditTuition = creditTuition;
     }
 
-    @Basic
-    @Column(name = "lenght")
-    public Integer getLenght() {
+    @Basic @Column(name = "lenght") public Integer getLenght() {
         return lenght;
     }
 
@@ -89,9 +70,7 @@ public class TblDetailsubject {
         this.lenght = lenght;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -99,9 +78,7 @@ public class TblDetailsubject {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -109,33 +86,26 @@ public class TblDetailsubject {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblDetailsubject that = (TblDetailsubject) o;
         return idDetailSubject == that.idDetailSubject &&
-                Objects.equals(idSubject, that.idSubject) &&
-                Objects.equals(idSubjectParent, that.idSubjectParent) &&
-                Objects.equals(creditSubject, that.creditSubject) &&
-                Objects.equals(creditTuition, that.creditTuition) &&
-                Objects.equals(lenght, that.lenght) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(idSubject, that.idSubject) &&
+               Objects.equals(idSubjectParent, that.idSubjectParent) &&
+               Objects.equals(subjectCode, that.subjectCode) &&
+               Objects.equals(creditSubject, that.creditSubject) &&
+               Objects.equals(creditTuition, that.creditTuition) &&
+               Objects.equals(lenght, that.lenght) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(idDetailSubject, idSubject, idSubjectParent, creditSubject, creditTuition, lenght, stt, timeModified);
-    }
-
-    @Basic
-    @Column(name = "subjectCode")
-    public String getSubjectCode() {
-        return subjectCode;
-    }
-
-    public void setSubjectCode(String subjectCode) {
-        this.subjectCode = subjectCode;
+    @Override public int hashCode() {
+        return Objects.hash(idDetailSubject, idSubject, idSubjectParent, subjectCode, creditSubject, creditTuition, lenght, stt, timeModified);
     }
 }
