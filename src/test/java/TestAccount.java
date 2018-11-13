@@ -46,7 +46,7 @@ public class TestAccount {
         System.out.println("Nhap nam: ");
         int nam = new Scanner(System.in).nextInt();
 
-        if (accountDAOImpl.addAccount(id, username, password, idPermission, stt, (java.sql.Date) new Date(ngay, thang, nam))) {
+        if (accountDAOImpl.addAccount(id, username, password, idPermission, stt, new Date(ngay, thang, nam).toString())) {
             System.out.println("Them thanh cong");
         } else {
             System.out.println("Them that bai");

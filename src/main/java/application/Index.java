@@ -60,4 +60,8 @@ public class Index extends Application {
     public static void setStage(Stage stage) {
         Index.stage = stage;
     }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 }

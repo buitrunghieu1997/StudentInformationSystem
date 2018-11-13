@@ -25,11 +25,11 @@ public class TestInfomationStudent {
 
         List<TblStudent> listInfo = info.displayInfomationStudent(idStudent);
 
-        System.out.println("Ho ten SV: " + listInfo.get(0).getFullname());
-        System.out.println("Dia chi: " + listInfo.get(0).getAddress());
-        System.out.println("Ngay sinh: " + listInfo.get(0).getDateofbirth());
-        System.out.println("Dien thoai: " + listInfo.get(0).getPhonenumber());
-        System.out.println("Email: " + listInfo.get(0).getEmail());
+//        System.out.println("Ho ten SV: " + listInfo.get(0).getFullname());
+//        System.out.println("Dia chi: " + listInfo.get(0).getAddress());
+//        System.out.println("Ngay sinh: " + listInfo.get(0).getDateofbirth());
+//        System.out.println("Dien thoai: " + listInfo.get(0).getPhonenumber());
+//        System.out.println("Email: " + listInfo.get(0).getEmail());
     }
 
     public void update() {
