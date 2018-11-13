@@ -1,35 +1,18 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblToeic.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "toeic", schema = "sis_db", catalog = "")
-public class TblToeic {
-    private int     idstudent;
-    private String  semester;
-    private Date    date;
+@Entity @Table(name = "toeic", schema = "sis_db", catalog = "") public class TblToeic {
+    private int idstudent;
+    private String semester;
+    private Date date;
     private Integer point;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idstudent")
-    public int getIdstudent() {
+    @Id @Column(name = "idstudent") public int getIdstudent() {
         return idstudent;
     }
 
@@ -37,9 +20,7 @@ public class TblToeic {
         this.idstudent = idstudent;
     }
 
-    @Basic
-    @Column(name = "semester")
-    public String getSemester() {
+    @Basic @Column(name = "semester") public String getSemester() {
         return semester;
     }
 
@@ -47,9 +28,7 @@ public class TblToeic {
         this.semester = semester;
     }
 
-    @Basic
-    @Column(name = "date")
-    public Date getDate() {
+    @Basic @Column(name = "date") public Date getDate() {
         return date;
     }
 
@@ -57,9 +36,7 @@ public class TblToeic {
         this.date = date;
     }
 
-    @Basic
-    @Column(name = "point")
-    public Integer getPoint() {
+    @Basic @Column(name = "point") public Integer getPoint() {
         return point;
     }
 
@@ -67,9 +44,7 @@ public class TblToeic {
         this.point = point;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -77,9 +52,7 @@ public class TblToeic {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -87,21 +60,23 @@ public class TblToeic {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblToeic tblToeic = (TblToeic) o;
         return idstudent == tblToeic.idstudent &&
-                Objects.equals(semester, tblToeic.semester) &&
-                Objects.equals(date, tblToeic.date) &&
-                Objects.equals(point, tblToeic.point) &&
-                Objects.equals(stt, tblToeic.stt) &&
-                Objects.equals(timeModified, tblToeic.timeModified);
+               Objects.equals(semester, tblToeic.semester) &&
+               Objects.equals(date, tblToeic.date) &&
+               Objects.equals(point, tblToeic.point) &&
+               Objects.equals(stt, tblToeic.stt) &&
+               Objects.equals(timeModified, tblToeic.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idstudent, semester, date, point, stt, timeModified);
     }
 }

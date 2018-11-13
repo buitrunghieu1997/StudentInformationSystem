@@ -1,37 +1,20 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblDetailregisterclass.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "detailregisterclass", schema = "sis_db", catalog = "")
-@IdClass(TblDetailregisterclassPK.class)
-public class TblDetailregisterclass {
-    private int     idRegister;
-    private int     idSchedule;
+@Entity @Table(name = "detailregisterclass", schema = "sis_db", catalog = "")
+@IdClass(TblDetailregisterclassPK.class) public class TblDetailregisterclass {
+    private int idRegister;
+    private int idSchedule;
+    private String classCode;
     private Integer tuition;
     private Integer midSemPoint;
     private Integer finalSemPoint;
     private Integer stt;
-    private String  timeModified;
-    private String  classCode;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idRegister")
-    public int getIdRegister() {
+    @Id @Column(name = "idRegister") public int getIdRegister() {
         return idRegister;
     }
 
@@ -39,9 +22,7 @@ public class TblDetailregisterclass {
         this.idRegister = idRegister;
     }
 
-    @Id
-    @Column(name = "idSchedule")
-    public int getIdSchedule() {
+    @Id @Column(name = "idSchedule") public int getIdSchedule() {
         return idSchedule;
     }
 
@@ -49,9 +30,15 @@ public class TblDetailregisterclass {
         this.idSchedule = idSchedule;
     }
 
-    @Basic
-    @Column(name = "tuition")
-    public Integer getTuition() {
+    @Basic @Column(name = "classCode") public String getClassCode() {
+        return classCode;
+    }
+
+    public void setClassCode(String classCode) {
+        this.classCode = classCode;
+    }
+
+    @Basic @Column(name = "tuition") public Integer getTuition() {
         return tuition;
     }
 
@@ -59,9 +46,7 @@ public class TblDetailregisterclass {
         this.tuition = tuition;
     }
 
-    @Basic
-    @Column(name = "midSemPoint")
-    public Integer getMidSemPoint() {
+    @Basic @Column(name = "midSemPoint") public Integer getMidSemPoint() {
         return midSemPoint;
     }
 
@@ -69,9 +54,7 @@ public class TblDetailregisterclass {
         this.midSemPoint = midSemPoint;
     }
 
-    @Basic
-    @Column(name = "finalSemPoint")
-    public Integer getFinalSemPoint() {
+    @Basic @Column(name = "finalSemPoint") public Integer getFinalSemPoint() {
         return finalSemPoint;
     }
 
@@ -79,9 +62,7 @@ public class TblDetailregisterclass {
         this.finalSemPoint = finalSemPoint;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -89,9 +70,7 @@ public class TblDetailregisterclass {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -99,32 +78,25 @@ public class TblDetailregisterclass {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblDetailregisterclass that = (TblDetailregisterclass) o;
         return idRegister == that.idRegister &&
-                idSchedule == that.idSchedule &&
-                Objects.equals(tuition, that.tuition) &&
-                Objects.equals(midSemPoint, that.midSemPoint) &&
-                Objects.equals(finalSemPoint, that.finalSemPoint) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               idSchedule == that.idSchedule &&
+               Objects.equals(classCode, that.classCode) &&
+               Objects.equals(tuition, that.tuition) &&
+               Objects.equals(midSemPoint, that.midSemPoint) &&
+               Objects.equals(finalSemPoint, that.finalSemPoint) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(idRegister, idSchedule, tuition, midSemPoint, finalSemPoint, stt, timeModified);
-    }
-
-    @Basic
-    @Column(name = "classCode")
-    public String getClassCode() {
-        return classCode;
-    }
-
-    public void setClassCode(String classCode) {
-        this.classCode = classCode;
+    @Override public int hashCode() {
+        return Objects.hash(idRegister, idSchedule, classCode, tuition, midSemPoint, finalSemPoint, stt, timeModified);
     }
 }

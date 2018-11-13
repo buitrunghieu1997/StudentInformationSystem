@@ -1,34 +1,17 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblGenre.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "genre", schema = "sis_db", catalog = "")
-public class TblGenre {
-    private int     idGenre;
+@Entity @Table(name = "genre", schema = "sis_db", catalog = "") public class TblGenre {
+    private int idGenre;
     private Integer idDepartment;
-    private String  name;
-    private String  description;
+    private String name;
+    private String description;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idGenre")
-    public int getIdGenre() {
+    @Id @Column(name = "idGenre") public int getIdGenre() {
         return idGenre;
     }
 
@@ -36,9 +19,7 @@ public class TblGenre {
         this.idGenre = idGenre;
     }
 
-    @Basic
-    @Column(name = "idDepartment")
-    public Integer getIdDepartment() {
+    @Basic @Column(name = "idDepartment") public Integer getIdDepartment() {
         return idDepartment;
     }
 
@@ -46,9 +27,7 @@ public class TblGenre {
         this.idDepartment = idDepartment;
     }
 
-    @Basic
-    @Column(name = "name")
-    public String getName() {
+    @Basic @Column(name = "name") public String getName() {
         return name;
     }
 
@@ -56,9 +35,7 @@ public class TblGenre {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "description")
-    public String getDescription() {
+    @Basic @Column(name = "description") public String getDescription() {
         return description;
     }
 
@@ -66,9 +43,7 @@ public class TblGenre {
         this.description = description;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -76,9 +51,7 @@ public class TblGenre {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -86,21 +59,23 @@ public class TblGenre {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblGenre tblGenre = (TblGenre) o;
         return idGenre == tblGenre.idGenre &&
-                Objects.equals(idDepartment, tblGenre.idDepartment) &&
-                Objects.equals(name, tblGenre.name) &&
-                Objects.equals(description, tblGenre.description) &&
-                Objects.equals(stt, tblGenre.stt) &&
-                Objects.equals(timeModified, tblGenre.timeModified);
+               Objects.equals(idDepartment, tblGenre.idDepartment) &&
+               Objects.equals(name, tblGenre.name) &&
+               Objects.equals(description, tblGenre.description) &&
+               Objects.equals(stt, tblGenre.stt) &&
+               Objects.equals(timeModified, tblGenre.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idGenre, idDepartment, name, description, stt, timeModified);
     }
 }

@@ -1,33 +1,16 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblPermission.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "permission", schema = "sis_db", catalog = "")
-public class TblPermission {
-    private int     idPermission;
-    private String  name;
-    private String  content;
+@Entity @Table(name = "permission", schema = "sis_db", catalog = "") public class TblPermission {
+    private int idPermission;
+    private String name;
+    private String content;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idPermission")
-    public int getIdPermission() {
+    @Id @Column(name = "idPermission") public int getIdPermission() {
         return idPermission;
     }
 
@@ -35,9 +18,7 @@ public class TblPermission {
         this.idPermission = idPermission;
     }
 
-    @Basic
-    @Column(name = "name")
-    public String getName() {
+    @Basic @Column(name = "name") public String getName() {
         return name;
     }
 
@@ -45,9 +26,7 @@ public class TblPermission {
         this.name = name;
     }
 
-    @Basic
-    @Column(name = "content")
-    public String getContent() {
+    @Basic @Column(name = "content") public String getContent() {
         return content;
     }
 
@@ -55,9 +34,7 @@ public class TblPermission {
         this.content = content;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -65,9 +42,7 @@ public class TblPermission {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -75,20 +50,22 @@ public class TblPermission {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblPermission that = (TblPermission) o;
         return idPermission == that.idPermission &&
-                Objects.equals(name, that.name) &&
-                Objects.equals(content, that.content) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(name, that.name) &&
+               Objects.equals(content, that.content) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idPermission, name, content, stt, timeModified);
     }
 }

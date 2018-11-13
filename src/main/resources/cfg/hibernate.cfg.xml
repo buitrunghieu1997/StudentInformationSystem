@@ -24,23 +24,24 @@
 
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
+        <!-- entities linking -->
         <mapping class="entities.TblAccount"/>
         <mapping class="entities.TblDepartment"/>
         <mapping class="entities.TblDetaillearningchart"/>
         <mapping class="entities.TblDetailpermission"/>
+        <mapping class="entities.TblDetailregisterclass"/>
         <mapping class="entities.TblDetailsubject"/>
+        <mapping class="entities.TblDetailsubjectregister"/>
         <mapping class="entities.TblGenre"/>
         <mapping class="entities.TblLearningchart"/>
         <mapping class="entities.TblManager"/>
         <mapping class="entities.TblPermission"/>
         <mapping class="entities.TblProgram"/>
+        <mapping class="entities.TblRegisterclass"/>
+        <mapping class="entities.TblSchedule"/>
         <mapping class="entities.TblStudent"/>
         <mapping class="entities.TblSubject"/>
-        <mapping class="entities.TblToeic"/>
-        <mapping class="entities.TblSchedule"/>
-        <mapping class="entities.TblDetailregisterclass"/>
-        <mapping class="entities.TblDetailsubjectregister"/>
-        <mapping class="entities.TblRegisterclass"/>
         <mapping class="entities.TblSubjectregister"/>
+        <mapping class="entities.TblToeic"/>
     </session-factory>
 </hibernate-configuration>

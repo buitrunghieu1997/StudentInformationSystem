@@ -1,38 +1,21 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblManager.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "manager", schema = "sis_db", catalog = "")
-public class TblManager {
-    private int     idManager;
-    private String  fullname;
-    private String  address;
-    private String  phonenumber;
-    private Date    dateofbirth;
-    private String  email;
-    private String  position;
+@Entity @Table(name = "manager", schema = "sis_db", catalog = "") public class TblManager {
+    private int idManager;
+    private String fullname;
+    private String address;
+    private String phonenumber;
+    private Date dateofbirth;
+    private String email;
+    private String position;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Id
-    @Column(name = "idManager")
-    public int getIdManager() {
+    @Id @Column(name = "idManager") public int getIdManager() {
         return idManager;
     }
 
@@ -40,9 +23,7 @@ public class TblManager {
         this.idManager = idManager;
     }
 
-    @Basic
-    @Column(name = "fullname")
-    public String getFullname() {
+    @Basic @Column(name = "fullname") public String getFullname() {
         return fullname;
     }
 
@@ -50,9 +31,7 @@ public class TblManager {
         this.fullname = fullname;
     }
 
-    @Basic
-    @Column(name = "address")
-    public String getAddress() {
+    @Basic @Column(name = "address") public String getAddress() {
         return address;
     }
 
@@ -60,9 +39,7 @@ public class TblManager {
         this.address = address;
     }
 
-    @Basic
-    @Column(name = "phonenumber")
-    public String getPhonenumber() {
+    @Basic @Column(name = "phonenumber") public String getPhonenumber() {
         return phonenumber;
     }
 
@@ -70,9 +47,7 @@ public class TblManager {
         this.phonenumber = phonenumber;
     }
 
-    @Basic
-    @Column(name = "dateofbirth")
-    public Date getDateofbirth() {
+    @Basic @Column(name = "dateofbirth") public Date getDateofbirth() {
         return dateofbirth;
     }
 
@@ -80,9 +55,7 @@ public class TblManager {
         this.dateofbirth = dateofbirth;
     }
 
-    @Basic
-    @Column(name = "email")
-    public String getEmail() {
+    @Basic @Column(name = "email") public String getEmail() {
         return email;
     }
 
@@ -90,9 +63,7 @@ public class TblManager {
         this.email = email;
     }
 
-    @Basic
-    @Column(name = "position")
-    public String getPosition() {
+    @Basic @Column(name = "position") public String getPosition() {
         return position;
     }
 
@@ -100,9 +71,7 @@ public class TblManager {
         this.position = position;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -110,9 +79,7 @@ public class TblManager {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -120,24 +87,26 @@ public class TblManager {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblManager that = (TblManager) o;
         return idManager == that.idManager &&
-                Objects.equals(fullname, that.fullname) &&
-                Objects.equals(address, that.address) &&
-                Objects.equals(phonenumber, that.phonenumber) &&
-                Objects.equals(dateofbirth, that.dateofbirth) &&
-                Objects.equals(email, that.email) &&
-                Objects.equals(position, that.position) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(fullname, that.fullname) &&
+               Objects.equals(address, that.address) &&
+               Objects.equals(phonenumber, that.phonenumber) &&
+               Objects.equals(dateofbirth, that.dateofbirth) &&
+               Objects.equals(email, that.email) &&
+               Objects.equals(position, that.position) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idManager, fullname, address, phonenumber, dateofbirth, email, position, stt, timeModified);
     }
 }

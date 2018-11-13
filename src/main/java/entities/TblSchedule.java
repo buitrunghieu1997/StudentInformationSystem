@@ -1,38 +1,21 @@
-/*
- * Copyright(C) 2018 buitr
- * StudentInformationSystem, entities - IntelliJ IDEA
- * TblSchedule.java
- * Created at 09:24 ~ 06/11/2018 by buitr
- */
-
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
-/**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 09:24 ~ 06/11/2018
- */
-@Entity
-@Table(name = "schedule", schema = "sis_db", catalog = "")
-public class TblSchedule {
+@Entity @Table(name = "schedule", schema = "sis_db", catalog = "") public class TblSchedule {
     private Integer idDetailSubject;
-    private int     idSchedule;
-    private String  room;
-    private String  time;
+    private int idSchedule;
+    private String room;
+    private String time;
     private Integer startWeek;
     private Integer size;
     private Integer maxSize;
     private Integer status;
     private Integer stt;
-    private String  timeModified;
+    private String timeModified;
 
-    @Basic
-    @Column(name = "idDetailSubject")
-    public Integer getIdDetailSubject() {
+    @Basic @Column(name = "idDetailSubject") public Integer getIdDetailSubject() {
         return idDetailSubject;
     }
 
@@ -40,9 +23,7 @@ public class TblSchedule {
         this.idDetailSubject = idDetailSubject;
     }
 
-    @Id
-    @Column(name = "idSchedule")
-    public int getIdSchedule() {
+    @Id @Column(name = "idSchedule") public int getIdSchedule() {
         return idSchedule;
     }
 
@@ -50,9 +31,7 @@ public class TblSchedule {
         this.idSchedule = idSchedule;
     }
 
-    @Basic
-    @Column(name = "room")
-    public String getRoom() {
+    @Basic @Column(name = "room") public String getRoom() {
         return room;
     }
 
@@ -60,9 +39,7 @@ public class TblSchedule {
         this.room = room;
     }
 
-    @Basic
-    @Column(name = "time")
-    public String getTime() {
+    @Basic @Column(name = "time") public String getTime() {
         return time;
     }
 
@@ -70,9 +47,7 @@ public class TblSchedule {
         this.time = time;
     }
 
-    @Basic
-    @Column(name = "startWeek")
-    public Integer getStartWeek() {
+    @Basic @Column(name = "startWeek") public Integer getStartWeek() {
         return startWeek;
     }
 
@@ -80,9 +55,7 @@ public class TblSchedule {
         this.startWeek = startWeek;
     }
 
-    @Basic
-    @Column(name = "size")
-    public Integer getSize() {
+    @Basic @Column(name = "size") public Integer getSize() {
         return size;
     }
 
@@ -90,9 +63,7 @@ public class TblSchedule {
         this.size = size;
     }
 
-    @Basic
-    @Column(name = "maxSize")
-    public Integer getMaxSize() {
+    @Basic @Column(name = "maxSize") public Integer getMaxSize() {
         return maxSize;
     }
 
@@ -100,9 +71,7 @@ public class TblSchedule {
         this.maxSize = maxSize;
     }
 
-    @Basic
-    @Column(name = "status")
-    public Integer getStatus() {
+    @Basic @Column(name = "status") public Integer getStatus() {
         return status;
     }
 
@@ -110,9 +79,7 @@ public class TblSchedule {
         this.status = status;
     }
 
-    @Basic
-    @Column(name = "stt")
-    public Integer getStt() {
+    @Basic @Column(name = "stt") public Integer getStt() {
         return stt;
     }
 
@@ -120,9 +87,7 @@ public class TblSchedule {
         this.stt = stt;
     }
 
-    @Basic
-    @Column(name = "timeModified")
-    public String getTimeModified() {
+    @Basic @Column(name = "timeModified") public String getTimeModified() {
         return timeModified;
     }
 
@@ -130,25 +95,27 @@ public class TblSchedule {
         this.timeModified = timeModified;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    @Override public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
         TblSchedule that = (TblSchedule) o;
         return idSchedule == that.idSchedule &&
-                Objects.equals(idDetailSubject, that.idDetailSubject) &&
-                Objects.equals(room, that.room) &&
-                Objects.equals(time, that.time) &&
-                Objects.equals(startWeek, that.startWeek) &&
-                Objects.equals(size, that.size) &&
-                Objects.equals(maxSize, that.maxSize) &&
-                Objects.equals(status, that.status) &&
-                Objects.equals(stt, that.stt) &&
-                Objects.equals(timeModified, that.timeModified);
+               Objects.equals(idDetailSubject, that.idDetailSubject) &&
+               Objects.equals(room, that.room) &&
+               Objects.equals(time, that.time) &&
+               Objects.equals(startWeek, that.startWeek) &&
+               Objects.equals(size, that.size) &&
+               Objects.equals(maxSize, that.maxSize) &&
+               Objects.equals(status, that.status) &&
+               Objects.equals(stt, that.stt) &&
+               Objects.equals(timeModified, that.timeModified);
     }
 
-    @Override
-    public int hashCode() {
+    @Override public int hashCode() {
         return Objects.hash(idDetailSubject, idSchedule, room, time, startWeek, size, maxSize, status, stt, timeModified);
     }
 }
