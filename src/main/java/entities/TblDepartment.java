@@ -1,8 +1,19 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblDepartment.java
+ * Created at 08:57 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:57 ~ 22/11/2018
+ */
 @Entity @Table(name = "department", schema = "sis_db", catalog = "") public class TblDepartment {
     private int idDepartment;
     private String name;
@@ -10,7 +21,7 @@ import java.util.Objects;
     private Integer stt;
     private String timeModified;
 
-    @Id @Column(name = "idDepartment") public int getIdDepartment() {
+    @Id @Column(name = "idDepartment") @GeneratedValue(strategy = GenerationType.AUTO) public int getIdDepartment() {
         return idDepartment;
     }
 

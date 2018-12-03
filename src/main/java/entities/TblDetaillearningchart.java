@@ -1,12 +1,23 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblDetaillearningchart.java
+ * Created at 08:57 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:57 ~ 22/11/2018
+ */
 @Entity @Table(name = "detaillearningchart", schema = "sis_db", catalog = "")
 @IdClass(TblDetaillearningchartPK.class) public class TblDetaillearningchart {
     private int idLearningChart;
-    private int idDetailSubject;
+    private String idSubject;
     private String semester;
     private Integer credit;
     private Integer stt;
@@ -20,12 +31,12 @@ import java.util.Objects;
         this.idLearningChart = idLearningChart;
     }
 
-    @Id @Column(name = "idDetailSubject") public int getIdDetailSubject() {
-        return idDetailSubject;
+    @Id @Column(name = "idSubject") public String getIdSubject() {
+        return idSubject;
     }
 
-    public void setIdDetailSubject(int idDetailSubject) {
-        this.idDetailSubject = idDetailSubject;
+    public void setIdSubject(String idSubject) {
+        this.idSubject = idSubject;
     }
 
     @Basic @Column(name = "semester") public String getSemester() {
@@ -69,7 +80,7 @@ import java.util.Objects;
         }
         TblDetaillearningchart that = (TblDetaillearningchart) o;
         return idLearningChart == that.idLearningChart &&
-               idDetailSubject == that.idDetailSubject &&
+               Objects.equals(idSubject, that.idSubject) &&
                Objects.equals(semester, that.semester) &&
                Objects.equals(credit, that.credit) &&
                Objects.equals(stt, that.stt) &&
@@ -77,6 +88,6 @@ import java.util.Objects;
     }
 
     @Override public int hashCode() {
-        return Objects.hash(idLearningChart, idDetailSubject, semester, credit, stt, timeModified);
+        return Objects.hash(idLearningChart, idSubject, semester, credit, stt, timeModified);
     }
 }

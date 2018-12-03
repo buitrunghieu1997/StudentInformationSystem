@@ -1,3 +1,9 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblDetailsubjectregisterPK.java
+ * Created at 08:57 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.Column;
@@ -5,9 +11,14 @@ import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:57 ~ 22/11/2018
+ */
 public class TblDetailsubjectregisterPK implements Serializable {
     private int idRegister;
-    private int idDetailSubject;
+    private String idSubject;
 
     @Column(name = "idRegister") @Id public int getIdRegister() {
         return idRegister;
@@ -17,12 +28,12 @@ public class TblDetailsubjectregisterPK implements Serializable {
         this.idRegister = idRegister;
     }
 
-    @Column(name = "idDetailSubject") @Id public int getIdDetailSubject() {
-        return idDetailSubject;
+    @Column(name = "idSubject") @Id public String getIdSubject() {
+        return idSubject;
     }
 
-    public void setIdDetailSubject(int idDetailSubject) {
-        this.idDetailSubject = idDetailSubject;
+    public void setIdSubject(String idSubject) {
+        this.idSubject = idSubject;
     }
 
     @Override public boolean equals(Object o) {
@@ -34,10 +45,10 @@ public class TblDetailsubjectregisterPK implements Serializable {
         }
         TblDetailsubjectregisterPK that = (TblDetailsubjectregisterPK) o;
         return idRegister == that.idRegister &&
-               idDetailSubject == that.idDetailSubject;
+               Objects.equals(idSubject, that.idSubject);
     }
 
     @Override public int hashCode() {
-        return Objects.hash(idRegister, idDetailSubject);
+        return Objects.hash(idRegister, idSubject);
     }
 }

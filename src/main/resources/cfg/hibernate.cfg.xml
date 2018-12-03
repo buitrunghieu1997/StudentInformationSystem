@@ -18,19 +18,18 @@
 
         <!-- Enable Hibernate's automatic session context management -->
         <property name="current_session_context_class">thread</property>
+        <property name="hibernate.id.new_generator_mappings">false</property>
 
         <!-- Disable the second-level cache -->
         <!--<property name="cache.provider_class">org.cfg.cache.internal.NoCacheProvider</property>-->
 
         <!-- DB schema will be updated if needed -->
         <property name="hbm2ddl.auto">update</property>
-        <!-- entities linking -->
         <mapping class="entities.TblAccount"/>
         <mapping class="entities.TblDepartment"/>
         <mapping class="entities.TblDetaillearningchart"/>
         <mapping class="entities.TblDetailpermission"/>
         <mapping class="entities.TblDetailregisterclass"/>
-        <mapping class="entities.TblDetailsubject"/>
         <mapping class="entities.TblDetailsubjectregister"/>
         <mapping class="entities.TblGenre"/>
         <mapping class="entities.TblLearningchart"/>
@@ -41,7 +40,15 @@
         <mapping class="entities.TblSchedule"/>
         <mapping class="entities.TblStudent"/>
         <mapping class="entities.TblSubject"/>
+        <mapping class="entities.TblSubjectparent"/>
         <mapping class="entities.TblSubjectregister"/>
         <mapping class="entities.TblToeic"/>
+        <mapping class="entities.TblVDetailregisterclass"/>
+        <mapping class="entities.TblVPersonalscoreboard"/>
+        <mapping class="entities.TblVSchedule"/>
+        <mapping class="entities.TblVToeic"/>
+        <mapping class="entities.TblVTuitionfee"/>
+        <!-- entities linking -->
+        <!--<mapping resource="mapping.hbm.xml"/> dùng để include file mapping vào-->
     </session-factory>
 </hibernate-configuration>

@@ -1,16 +1,28 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblLearningchart.java
+ * Created at 08:57 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:57 ~ 22/11/2018
+ */
 @Entity @Table(name = "learningchart", schema = "sis_db", catalog = "") public class TblLearningchart {
-    private int idLearningChart;
+    @GeneratedValue(strategy = GenerationType.AUTO) private int idLearningChart;
     private Integer idStudent;
     private Integer totalCredit;
     private Integer stt;
     private String timeModified;
 
-    @Id @Column(name = "idLearningChart") public int getIdLearningChart() {
+    @Id
+    @Column(name = "idLearningChart") @GeneratedValue(strategy = GenerationType.AUTO) public int getIdLearningChart() {
         return idLearningChart;
     }
 

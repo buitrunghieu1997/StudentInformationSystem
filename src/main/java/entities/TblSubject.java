@@ -1,20 +1,35 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblSubject.java
+ * Created at 08:59 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:59 ~ 22/11/2018
+ */
 @Entity @Table(name = "subject", schema = "sis_db", catalog = "") public class TblSubject {
-    private int idSubject;
+    private String idSubject;
     private Integer idGenre;
     private String name;
+    private Integer creditSubject;
+    private Integer creditTuition;
+    private Integer lenght;
     private Integer stt;
     private String timeModified;
+    private Double coefficient;
 
-    @Id @Column(name = "idSubject") public int getIdSubject() {
+    @Id @Column(name = "idSubject") public String getIdSubject() {
         return idSubject;
     }
 
-    public void setIdSubject(int idSubject) {
+    public void setIdSubject(String idSubject) {
         this.idSubject = idSubject;
     }
 
@@ -32,6 +47,30 @@ import java.util.Objects;
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Basic @Column(name = "creditSubject") public Integer getCreditSubject() {
+        return creditSubject;
+    }
+
+    public void setCreditSubject(Integer creditSubject) {
+        this.creditSubject = creditSubject;
+    }
+
+    @Basic @Column(name = "creditTuition") public Integer getCreditTuition() {
+        return creditTuition;
+    }
+
+    public void setCreditTuition(Integer creditTuition) {
+        this.creditTuition = creditTuition;
+    }
+
+    @Basic @Column(name = "lenght") public Integer getLenght() {
+        return lenght;
+    }
+
+    public void setLenght(Integer lenght) {
+        this.lenght = lenght;
     }
 
     @Basic @Column(name = "stt") public Integer getStt() {
@@ -58,14 +97,25 @@ import java.util.Objects;
             return false;
         }
         TblSubject that = (TblSubject) o;
-        return idSubject == that.idSubject &&
+        return Objects.equals(idSubject, that.idSubject) &&
                Objects.equals(idGenre, that.idGenre) &&
                Objects.equals(name, that.name) &&
+               Objects.equals(creditSubject, that.creditSubject) &&
+               Objects.equals(creditTuition, that.creditTuition) &&
+               Objects.equals(lenght, that.lenght) &&
                Objects.equals(stt, that.stt) &&
                Objects.equals(timeModified, that.timeModified);
     }
 
     @Override public int hashCode() {
-        return Objects.hash(idSubject, idGenre, name, stt, timeModified);
+        return Objects.hash(idSubject, idGenre, name, creditSubject, creditTuition, lenght, stt, timeModified);
+    }
+
+    @Basic @Column(name = "coefficient") public Double getCoefficient() {
+        return coefficient;
+    }
+
+    public void setCoefficient(Double coefficient) {
+        this.coefficient = coefficient;
     }
 }

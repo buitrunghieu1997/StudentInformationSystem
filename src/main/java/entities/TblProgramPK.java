@@ -1,15 +1,28 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblProgramPK.java
+ * Created at 08:58 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:58 ~ 22/11/2018
+ */
 public class TblProgramPK implements Serializable {
     private int idProgram;
     private int idDepartment;
 
-    @Column(name = "idProgram") @Id public int getIdProgram() {
+    @GeneratedValue(strategy = GenerationType.AUTO) @Column(name = "idProgram") @Id public int getIdProgram() {
         return idProgram;
     }
 

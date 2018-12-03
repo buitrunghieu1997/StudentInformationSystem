@@ -1,8 +1,19 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblDetailpermission.java
+ * Created at 08:57 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:57 ~ 22/11/2018
+ */
 @Entity @Table(name = "detailpermission", schema = "sis_db", catalog = "")
 @IdClass(TblDetailpermissionPK.class) public class TblDetailpermission {
     private int idPermission;

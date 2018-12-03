@@ -1,9 +1,20 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblRegisterclass.java
+ * Created at 08:58 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:58 ~ 22/11/2018
+ */
 @Entity @Table(name = "registerclass", schema = "sis_db", catalog = "") public class TblRegisterclass {
     private int idRegister;
     private Integer idStudent;
@@ -16,7 +27,7 @@ import java.util.Objects;
     private Integer stt;
     private String timeModified;
 
-    @Id @Column(name = "idRegister") public int getIdRegister() {
+    @Id @Column(name = "idRegister") @GeneratedValue(strategy = GenerationType.AUTO) public int getIdRegister() {
         return idRegister;
     }
 

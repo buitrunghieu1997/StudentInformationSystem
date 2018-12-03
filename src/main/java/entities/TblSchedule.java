@@ -1,10 +1,21 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblSchedule.java
+ * Created at 08:58 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:58 ~ 22/11/2018
+ */
 @Entity @Table(name = "schedule", schema = "sis_db", catalog = "") public class TblSchedule {
-    private Integer idDetailSubject;
+    private String idSubject;
     private int idSchedule;
     private String room;
     private String time;
@@ -15,15 +26,15 @@ import java.util.Objects;
     private Integer stt;
     private String timeModified;
 
-    @Basic @Column(name = "idDetailSubject") public Integer getIdDetailSubject() {
-        return idDetailSubject;
+    @Basic @Column(name = "idSubject") public String getIdSubject() {
+        return idSubject;
     }
 
-    public void setIdDetailSubject(Integer idDetailSubject) {
-        this.idDetailSubject = idDetailSubject;
+    public void setIdSubject(String idSubject) {
+        this.idSubject = idSubject;
     }
 
-    @Id @Column(name = "idSchedule") public int getIdSchedule() {
+    @Id @Column(name = "idSchedule") @GeneratedValue(strategy = GenerationType.AUTO) public int getIdSchedule() {
         return idSchedule;
     }
 
@@ -104,7 +115,7 @@ import java.util.Objects;
         }
         TblSchedule that = (TblSchedule) o;
         return idSchedule == that.idSchedule &&
-               Objects.equals(idDetailSubject, that.idDetailSubject) &&
+               Objects.equals(idSubject, that.idSubject) &&
                Objects.equals(room, that.room) &&
                Objects.equals(time, that.time) &&
                Objects.equals(startWeek, that.startWeek) &&
@@ -116,6 +127,6 @@ import java.util.Objects;
     }
 
     @Override public int hashCode() {
-        return Objects.hash(idDetailSubject, idSchedule, room, time, startWeek, size, maxSize, status, stt, timeModified);
+        return Objects.hash(idSubject, idSchedule, room, time, startWeek, size, maxSize, status, stt, timeModified);
     }
 }

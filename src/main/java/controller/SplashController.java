@@ -10,9 +10,12 @@ import assets.transitions.FadeTransition;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import utils.Constants;
+import utils.FXMLUtils;
 
 import java.io.IOException;
 import java.net.URL;
@@ -65,5 +68,14 @@ public class SplashController extends BaseController implements Initializable {
         parent.setOnMouseReleased(e -> {
             stage.setOpacity(1.0f);
         });
+    }
+    
+    public static Parent loadFxml() {
+        try {
+            return FXMLUtils.load(Constants.FXML_SPLASH);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

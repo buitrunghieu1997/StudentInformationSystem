@@ -1,9 +1,20 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblToeic.java
+ * Created at 08:59 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.sql.Date;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:59 ~ 22/11/2018
+ */
 @Entity @Table(name = "toeic", schema = "sis_db", catalog = "") public class TblToeic {
     private int idstudent;
     private String semester;

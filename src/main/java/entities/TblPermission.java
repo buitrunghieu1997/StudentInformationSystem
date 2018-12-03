@@ -1,8 +1,19 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblPermission.java
+ * Created at 08:58 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:58 ~ 22/11/2018
+ */
 @Entity @Table(name = "permission", schema = "sis_db", catalog = "") public class TblPermission {
     private int idPermission;
     private String name;
@@ -10,7 +21,7 @@ import java.util.Objects;
     private Integer stt;
     private String timeModified;
 
-    @Id @Column(name = "idPermission") public int getIdPermission() {
+    @Id @Column(name = "idPermission") @GeneratedValue(strategy = GenerationType.AUTO) public int getIdPermission() {
         return idPermission;
     }
 

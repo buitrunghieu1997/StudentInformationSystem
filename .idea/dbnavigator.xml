@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="adc07940-babf-4553-9014-2130099eaad4">
-        <schema name="sis_db" object-types="table" />
+        <schema name="sis_db" object-types="column, function, table, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -41,7 +41,8 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.FileConnectionMappingManager">
-    <mapping file-url="file://$PROJECT_DIR$/.sql/sis.sql" connection-id="adc07940-babf-4553-9014-2130099eaad4" session-id="MAIN" current-schema="sis_db" />
+    <mapping file-url="file://$PROJECT_DIR$/../tkxdpm.20181-09/Programming/StudentInformationSystem/.sql/sis_db_view_n_index.sql" connection-id="adc07940-babf-4553-9014-2130099eaad4" session-id="MAIN" current-schema="sis_db" />
+    <mapping file-url="file://$PROJECT_DIR$/.sql/sis_db_view_n_index.sql" connection-id="adc07940-babf-4553-9014-2130099eaad4" session-id="MAIN" current-schema="sis_db" />
   </component>
   <component name="DBNavigator.Project.MethodExecutionManager">
     <method-browser />

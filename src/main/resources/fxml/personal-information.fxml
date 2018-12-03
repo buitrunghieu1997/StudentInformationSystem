@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox id="back-box" prefHeight="604.0" prefWidth="930.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PersonalInformationController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox alignment="CENTER_LEFT" styleClass="vbox">
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="component-inside" text="Personal Information" />
+         </children>
+      </HBox>
+      <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+         <children>
+            <HBox alignment="CENTER" prefHeight="351.0" prefWidth="890.0" styleClass="vbox" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER" styleClass="vbox" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Student ID" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Student ID" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="163.0" styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Full Name" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Full Name" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="186.0" styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Date of Birth" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Date of Birth" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="209.0" styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Email" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Email" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="232.0" styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Phone Number" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Phone Number" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" styleClass="vbox" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Program" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Program" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="163.0" styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Department" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Department" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="186.0" styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Class" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Class" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="209.0" styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Status" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Status" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="232.0" styleClass="vbox">
+                           <children>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="acc-info" text="Address" HBox.hgrow="ALWAYS" />
+                                 </children>
+                              </HBox>
+                              <HBox styleClass="vbox">
+                                 <children>
+                                    <TextField promptText="Address" styleClass="txt-field-border" HBox.hgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </TextField>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" styleClass="vbox">
+               <children>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Button fx:id="back" maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" text="Back">
+                           <styleClass>
+                              <String fx:value="button-text" />
+                              <String fx:value="cursor-hand" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Button maxWidth="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="36.0" prefWidth="100.0" text="Confirm">
+                           <styleClass>
+                              <String fx:value="button-text" />
+                              <String fx:value="cursor-hand" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

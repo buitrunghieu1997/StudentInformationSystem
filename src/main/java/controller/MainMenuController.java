@@ -7,14 +7,10 @@
 
 package controller;
 
-import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuButton;
-import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
@@ -23,6 +19,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import utils.Constants;
 import utils.FXMLUtils;
 
 import java.io.IOException;
@@ -40,27 +37,29 @@ public class MainMenuController extends BaseController implements Initializable 
     private        BorderPane parent;
     private        double     xOffset = 0;
     private        double     yOffset = 0;
-
     @FXML
-    private TitledPane ui, pr, sc, sr, rs, lu;
-
+    private TitledPane ui;
     @FXML
-    private HBox db, cp;
-
+    private TitledPane pr;
+    @FXML
+    private TitledPane sc;
+    @FXML
+    private TitledPane sr;
+    @FXML
+    private TitledPane rs;
+    @FXML
+    private TitledPane lu;
+    @FXML
+    private HBox db;
+    @FXML
+    private HBox cp;
+    @FXML
+    private HBox pi;
+    @FXML
+    private HBox tt;
+    
     @FXML
     private VBox mainContainer;
-
-    @FXML
-    private TextField searchbox;
-
-    @FXML
-    private Button setting, noti;
-
-    @FXML
-    private MenuButton dropdown;
-
-    @FXML
-    private FontAwesomeIconView logo;
 
     private static void addDoubleClickEvent() {
         stage.getScene().setOnMouseClicked(event -> {
@@ -102,7 +101,7 @@ public class MainMenuController extends BaseController implements Initializable 
      * @throws IOException the io exception
      */
      static void loadFXML() throws IOException {
-        Parent root  = FXMLUtils.load("../views/main_menu.fxml");
+        Parent root  = FXMLUtils.load(Constants.FXML_MAIN_MENU);
         Scene  scene = new Scene(root);
         stage.setScene(scene);
         addDoubleClickEvent();
@@ -129,11 +128,22 @@ public class MainMenuController extends BaseController implements Initializable 
         makeStageDraggable();
         stage = new Stage();
 
-        db.setOnMouseClicked(e -> collapseAll());
+        db.setOnMouseClicked(e -> {
+            collapseAll();
+            reloadView(mainContainer);
+        });
         cp.setOnMouseClicked(event -> {
             mainContainer.getChildren().clear();
             mainContainer.getChildren().addAll(ChangePasswordController.loadFXML());
         });
+        pi.setOnMouseClicked(e -> {
+            mainContainer.getChildren().clear();
+            mainContainer.getChildren().addAll(PersonalInformationController.loadFXML());
+        });
+	    tt.setOnMouseClicked(e -> {
+		    mainContainer.getChildren().clear();
+		    mainContainer.getChildren().addAll(TimetableController.loadFXML());
+	    });
     }
 
 

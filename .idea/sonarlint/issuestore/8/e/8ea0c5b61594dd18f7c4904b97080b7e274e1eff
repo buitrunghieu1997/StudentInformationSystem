@@ -1,0 +1,7 @@
+
+ssquid:S1450"URemove the "window" field and declare it as a local variable in the relevant methods.(…Öı 8üæ¿úé,
+esquid:UselessImportCheck"5Remove this unused import 'javafx.event.ActionEvent'.(î•¯¼ıÿÿÿÿ8Å»¾úé,
+xsquid:S1450"URemove the "scene2" field and declare it as a local variable in the relevant methods.(è«øùÿÿÿÿ8êŠÀúé,
+asquid:UselessImportCheck"6Remove this unused import 'javafx.event.EventHandler'.(º»û˜8Å»¾úé,
+Gsquid:S1659"$Declare "scene2" on a separate line.(è«øùÿÿÿÿ8ÔİŞùé,
+xsquid:S1450"URemove the "scene1" field and declare it as a local variable in the relevant methods.(è«øùÿÿÿÿ8êŠÀúé,

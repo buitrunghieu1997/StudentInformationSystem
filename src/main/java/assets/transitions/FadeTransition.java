@@ -1,5 +1,5 @@
 /*
- * src.main.java.views.transitions
+ * src.main.java.fxml.transitions
  * Version: (Default) 1.0.0
  * Created: 00:09 ~ 27/10/2018
  * buitr Copyright

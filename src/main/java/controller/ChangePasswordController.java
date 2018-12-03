@@ -7,15 +7,12 @@
 
 package controller;
 
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
-import javafx.scene.layout.VBox;
+import utils.Constants;
 import utils.FXMLUtils;
-
-import java.beans.EventHandler;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -38,7 +35,7 @@ public class ChangePasswordController extends BaseController implements Initiali
     static Parent loadFXML() {
         Parent fxml;
         try {
-            fxml = FXMLUtils.load("../views/change-password.fxml");
+            fxml = FXMLUtils.load(Constants.FXML_CHANGE_PASSWORD);
             return fxml;
         } catch (IOException e) {
             e.printStackTrace();
@@ -48,9 +45,6 @@ public class ChangePasswordController extends BaseController implements Initiali
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        back.setOnMouseClicked(e -> {
-            VBox mainContainer = (VBox) back.getScene().lookup("#mainContainer");
-            MainMenuController.reloadView(mainContainer);
-        });
+        back(back);
     }
 }

@@ -17,6 +17,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import utils.Constants;
 import utils.FXMLUtils;
 
 import java.io.IOException;
@@ -56,7 +57,7 @@ public class LoginController extends BaseController implements Initializable {
     }
 
     public static void loadFXML(AnchorPane parent) throws IOException {
-        Parent               fxml     = FXMLUtils.load("../views/login.fxml");
+        Parent               fxml     = FXMLUtils.load(Constants.FXML_LOGIN);
         ObservableList<Node> children = parent.getChildren();
         children.removeAll();
         children.setAll(fxml);

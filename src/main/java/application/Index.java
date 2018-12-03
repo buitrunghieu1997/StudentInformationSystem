@@ -5,19 +5,16 @@ package application; /**
  * Created: 15:54 ~ 27/10/2018
  */
 
+import controller.SplashController;
 import javafx.application.Application;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import utils.FXMLUtils;
-
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import jfxtras.styles.jmetro8.JMetro;
 
 /**
- * The type views.Index.
+ * The type fxml.Index.
  */
 public class Index extends Application {
     /**
@@ -31,16 +28,13 @@ public class Index extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
-        try {
-            setStage(primaryStage);
-            Parent root  = FXMLUtils.load("../views/splash.fxml");
-            Scene  scene = new Scene(root);
-            primaryStage.setScene(scene);
-            primaryStage.initStyle(StageStyle.UNDECORATED);
-            primaryStage.show();
-        } catch (IOException e) {
-            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, Index.class.getName(), e);
-        }
+	    setStage(primaryStage);
+	    Parent root  = SplashController.loadFxml();
+	    new JMetro(JMetro.Style.LIGHT).applyTheme(root);
+	    Scene  scene = new Scene(root);
+	    primaryStage.setScene(scene);
+	    primaryStage.initStyle(StageStyle.UNDECORATED);
+	    primaryStage.show();
     }
 
     /**

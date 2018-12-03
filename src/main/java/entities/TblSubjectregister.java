@@ -1,8 +1,19 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblSubjectregister.java
+ * Created at 08:59 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:59 ~ 22/11/2018
+ */
 @Entity @Table(name = "subjectregister", schema = "sis_db", catalog = "") public class TblSubjectregister {
     private int idRegister;
     private Integer idStudent;
@@ -12,7 +23,7 @@ import java.util.Objects;
     private Integer stt;
     private String timeModified;
 
-    @Id @Column(name = "idRegister") public int getIdRegister() {
+    @Id @Column(name = "idRegister") @GeneratedValue(strategy = GenerationType.AUTO) public int getIdRegister() {
         return idRegister;
     }
 

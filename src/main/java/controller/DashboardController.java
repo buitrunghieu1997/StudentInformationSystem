@@ -8,6 +8,7 @@ package controller;
 
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import utils.Constants;
 import utils.FXMLUtils;
 
 import java.io.IOException;
@@ -19,7 +20,7 @@ import java.util.ResourceBundle;
  *
  * @author Bùi Trung Hiếu  Created: 09:07 ~ 14/11/2018
  */
-public class DashboardController implements Initializable {
+public class DashboardController extends BaseController implements Initializable {
 
     @Override public void initialize(URL location, ResourceBundle resources) {
 
@@ -33,7 +34,8 @@ public class DashboardController implements Initializable {
     static Parent loadFXML() {
         Parent fxml;
         try {
-            fxml = FXMLUtils.load("../views/dashboard.fxml");
+            fxml = FXMLUtils.load(Constants.FXML_DASHBOARD);
+            
             return fxml;
         } catch (IOException e) {
             e.printStackTrace();

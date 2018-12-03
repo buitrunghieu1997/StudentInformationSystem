@@ -1,8 +1,19 @@
+/*
+ * Copyright(C) 2018 Bùi Trung Hiếu
+ * StudentInformationSystem, entities - IntelliJ IDEA
+ * TblAccount.java
+ * Created at 08:57 ~ 22/11/2018 by Bùi Trung Hiếu
+ */
 package entities;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+/**
+ * Description about this Class/Interface/Enum...
+ *
+ * @author Bùi Trung Hiếu  Created: 08:57 ~ 22/11/2018
+ */
 @Entity @Table(name = "account", schema = "sis_db", catalog = "") public class TblAccount {
     private int idAccount;
     private Integer idPermission;
@@ -12,7 +23,7 @@ import java.util.Objects;
     private Integer stt;
     private String timeModified;
 
-    @Id @Column(name = "idAccount") public int getIdAccount() {
+    @Id @Column(name = "idAccount") @GeneratedValue(strategy = GenerationType.AUTO) public int getIdAccount() {
         return idAccount;
     }
 
