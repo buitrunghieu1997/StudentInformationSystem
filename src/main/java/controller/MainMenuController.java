@@ -19,6 +19,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import jfxtras.styles.jmetro8.JMetro;
 import utils.Constants;
 import utils.FXMLUtils;
 
@@ -32,127 +33,134 @@ import java.util.ResourceBundle;
  * @author buitr Created: 22:14 ~ 28/10/2018
  */
 public class MainMenuController extends BaseController implements Initializable {
-    private static Stage      stage;
-    @FXML
-    private        BorderPane parent;
-    private        double     xOffset = 0;
-    private        double     yOffset = 0;
-    @FXML
-    private TitledPane ui;
-    @FXML
-    private TitledPane pr;
-    @FXML
-    private TitledPane sc;
-    @FXML
-    private TitledPane sr;
-    @FXML
-    private TitledPane rs;
-    @FXML
-    private TitledPane lu;
-    @FXML
-    private HBox db;
-    @FXML
-    private HBox cp;
-    @FXML
-    private HBox pi;
-    @FXML
-    private HBox tt;
-    
-    @FXML
-    private VBox mainContainer;
-
-    private static void addDoubleClickEvent() {
-        stage.getScene().setOnMouseClicked(event -> {
-            if (event.getButton().equals(MouseButton.PRIMARY) && event.getClickCount() == 2) {
-                stage.setFullScreen(true);
-            }
-        });
-    }
-
-    private void makeStageDraggable() {
-        parent.addEventHandler(MouseEvent.MOUSE_PRESSED, e -> {
-            xOffset = e.getSceneX();
-            yOffset = e.getSceneY();
-        });
-
-        parent.addEventHandler(MouseEvent.MOUSE_DRAGGED, e -> {
-            stage.setX(e.getScreenX() - xOffset);
-            stage.setY(e.getScreenY() - yOffset);
-            stage.setOpacity(0.7f);
-        });
-
-        parent.addEventHandler(MouseEvent.MOUSE_RELEASED, e -> stage.setOpacity(1.0f));
-
-        parent.setOnDragDone(e -> stage.setOpacity(1.0f));
-    }
-
-    private void collapseAll() {
-        ui.setExpanded(false);
-        pr.setExpanded(false);
-        sc.setExpanded(false);
-        sr.setExpanded(false);
-        rs.setExpanded(false);
-        lu.setExpanded(false);
-    }
-
-    /**
-     * Load fxml.
-     *
-     * @throws IOException the io exception
-     */
-     static void loadFXML() throws IOException {
-        Parent root  = FXMLUtils.load(Constants.FXML_MAIN_MENU);
-        Scene  scene = new Scene(root);
-        stage.setScene(scene);
-        addDoubleClickEvent();
-        stage.centerOnScreen();
-        stage.initStyle(StageStyle.DECORATED);
-        stage.setResizable(false);
-        stage.show();
-    }
-
-    /**
-     * Load view trên mainContainer
-     * @param mainContainer Vbox chứa content cần thay thế
-     */
-    static void reloadView(VBox mainContainer) {
-        mainContainer.getChildren().clear();
-        mainContainer.getChildren().addAll(DashboardController.loadFXML());
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        makeStageDraggable();
-        stage = new Stage();
-
-        db.setOnMouseClicked(e -> {
-            collapseAll();
-            reloadView(mainContainer);
-        });
-        cp.setOnMouseClicked(event -> {
-            mainContainer.getChildren().clear();
-            mainContainer.getChildren().addAll(ChangePasswordController.loadFXML());
-        });
-        pi.setOnMouseClicked(e -> {
-            mainContainer.getChildren().clear();
-            mainContainer.getChildren().addAll(PersonalInformationController.loadFXML());
-        });
-	    tt.setOnMouseClicked(e -> {
-		    mainContainer.getChildren().clear();
-		    mainContainer.getChildren().addAll(TimetableController.loadFXML());
-	    });
-    }
-
-
-    /**
-     * Gets main container.
-     *
-     * @return the main container
-     */
-    public VBox getMainContainer() {
-        return mainContainer;
-    }
+	private static Stage      stage;
+	@FXML
+	private        BorderPane parent;
+	private        double     xOffset = 0;
+	private        double     yOffset = 0;
+	@FXML
+	private        TitledPane ui;
+	@FXML
+	private        TitledPane pr;
+	@FXML
+	private        TitledPane sc;
+	@FXML
+	private        TitledPane sr;
+	@FXML
+	private        TitledPane rs;
+	@FXML
+	private        TitledPane lu;
+	@FXML
+	private        HBox       db;
+	@FXML
+	private        HBox       cp;
+	@FXML
+	private        HBox       pi;
+	@FXML
+	private        HBox       tt;
+	@FXML
+	private        HBox       upi;
+	
+	@FXML
+	private VBox mainContainer;
+	
+	private static void addDoubleClickEvent() {
+		stage.getScene().setOnMouseClicked(event -> {
+			if (event.getButton().equals(MouseButton.PRIMARY) && event.getClickCount() == 2) {
+				stage.setFullScreen(true);
+			}
+		});
+	}
+	
+	private void makeStageDraggable() {
+		parent.addEventHandler(MouseEvent.MOUSE_PRESSED, e -> {
+			xOffset = e.getSceneX();
+			yOffset = e.getSceneY();
+		});
+		
+		parent.addEventHandler(MouseEvent.MOUSE_DRAGGED, e -> {
+			stage.setX(e.getScreenX() - xOffset);
+			stage.setY(e.getScreenY() - yOffset);
+			stage.setOpacity(0.7f);
+		});
+		
+		parent.addEventHandler(MouseEvent.MOUSE_RELEASED, e -> stage.setOpacity(1.0f));
+		
+		parent.setOnDragDone(e -> stage.setOpacity(1.0f));
+	}
+	
+	private void collapseAll() {
+		ui.setExpanded(false);
+		pr.setExpanded(false);
+		sc.setExpanded(false);
+		sr.setExpanded(false);
+		rs.setExpanded(false);
+		lu.setExpanded(false);
+	}
+	
+	/**
+	 * Load fxml.
+	 *
+	 * @throws IOException the io exception
+	 */
+	static void loadFXML() throws IOException {
+		Parent root = FXMLUtils.load(Constants.FXML_MAIN_MENU);
+		Scene scene = new Scene(root);
+		stage.setScene(scene);
+		addDoubleClickEvent();
+		stage.centerOnScreen();
+		stage.initStyle(StageStyle.DECORATED);
+		stage.setResizable(false);
+		stage.show();
+	}
+	
+	/**
+	 * Load view trên mainContainer
+	 *
+	 * @param mainContainer Vbox chứa content cần thay thế
+	 */
+	static void reloadView(VBox mainContainer) {
+		mainContainer.getChildren().clear();
+		mainContainer.getChildren().addAll(DashboardController.loadFXML());
+	}
+	
+	/**
+	 * {@inheritDoc}
+	 */
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		makeStageDraggable();
+		stage = new Stage();
+		
+		db.setOnMouseClicked(e -> {
+			collapseAll();
+			reloadView(mainContainer);
+		});
+		cp.setOnMouseClicked(event -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(ChangePasswordController.loadFXML());
+		});
+		pi.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(PersonalInformationController.loadFXML());
+		});
+		upi.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(UpdatePersonalInformationController.loadFXML());
+		});
+		tt.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(TimetableController.loadFXML());
+		});
+	}
+	
+	
+	/**
+	 * Gets main container.
+	 *
+	 * @return the main container
+	 */
+	public VBox getMainContainer() {
+		return mainContainer;
+	}
 }

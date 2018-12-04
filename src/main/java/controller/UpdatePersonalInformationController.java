@@ -30,10 +30,14 @@ public class UpdatePersonalInformationController extends BaseController implemen
      * Load Fxml follow the path
      *
      * @return loaded fxml
-     * @throws IOException the io exception
      */
-    static Parent loadFXML() throws IOException {
-        return FXMLUtils.load(Constants.FXML_UPDATE_PERSONAL_INFORMATION);
+    static Parent loadFXML() {
+    	try {
+		    return FXMLUtils.load(Constants.FXML_UPDATE_PERSONAL_INFORMATION);
+	    } catch(IOException e) {
+    		e.printStackTrace();
+	    }
+    	return null;
     }
 
     /**
