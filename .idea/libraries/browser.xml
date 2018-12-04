@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="browser">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/browser.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

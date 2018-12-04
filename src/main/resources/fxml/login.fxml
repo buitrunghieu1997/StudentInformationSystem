@@ -48,7 +48,11 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <FontAwesomeIconView glyphName="LOCK" size="16" styleClass="icon-inside" />
+                   <FontAwesomeIconView glyphName="LOCK" size="16" styleClass="icon-inside">
+                       <HBox.margin>
+                           <Insets right="2.0"/>
+                       </HBox.margin>
+                   </FontAwesomeIconView>
                    <PasswordField fx:id="password" promptText="Password" HBox.hgrow="ALWAYS">
                      <styleClass>
                         <String fx:value="font-size" />

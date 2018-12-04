@@ -11,6 +11,8 @@ package utils;
  * @author Trung Hieu Bui (Mr)
  */
 public class Constants {
+    public static final String FXML_SPLASH = "../fxml/splash.fxml";
+    
     public static final String EMPTY_STRING = "";
 
     public static final int CREATED     = 1;
@@ -31,15 +33,18 @@ public class Constants {
     public static final String MAIN_MENU = "6";
     public static final String PERSONAL_INFORMATION = "7";
     public static final String TIMETABLE = "8";
-
+    
     public static final String FXML_UPDATE_PERSONAL_INFORMATION = "../fxml/update-personal-information.fxml";
-    public static final String FXML_SPLASH = "../fxml/splash.fxml";
-    public static final String FXML_CHANGE_PASSWORD = "../fxml/change-password.fxml";
-    public static final String FXML_DASHBOARD = "../fxml/dashboard.fxml";
-    public static final String FXML_LOGIN = "../fxml/login.fxml";
-    public static final String FXML_MAIN_MENU = "../fxml/main_menu.fxml";
-    public static final String FXML_PERSONAL_INFORMATION = "../fxml/personal-information.fxml";
-    public static final String FXML_TIMETABLE = "../fxml/time-table.fxml";
+    public static final String FXML_CHANGE_PASSWORD             = "../fxml/change-password.fxml";
+    public static final String FXML_DASHBOARD                   = "../fxml/dashboard.fxml";
+    public static final String FXML_LOGIN                       = "../fxml/login.fxml";
+    public static final String FXML_MAIN_MENU                   = "../fxml/main_menu.fxml";
+    public static final String FXML_PERSONAL_INFORMATION        = "../fxml/personal-information.fxml";
+    public static final String FXML_TIMETABLE                   = "../fxml/time-table.fxml";
+    public static final String FXML_SUBJECT_CATEGORY            = "../fxml/subject-categoryfxml";
+    
+    private Constants() {
+    }
 
     public static final String EXCEL_WORKBOOK_LOCATION = ".sql/18bangdate.xlsx";
 }

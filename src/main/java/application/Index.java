@@ -1,9 +1,4 @@
-package application; /**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 15:54 ~ 27/10/2018
- */
+package application;
 
 import controller.SplashController;
 import javafx.application.Application;
@@ -11,10 +6,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import jfxtras.styles.jmetro8.JMetro;
+
 
 /**
- * The type fxml.Index.
+ * Description about this Class/Interface/Enum...
+ *
+ * @author buitr
+ * Created: 15:54 ~ 27/10/2018
  */
 public class Index extends Application {
     /**
@@ -22,6 +20,24 @@ public class Index extends Application {
      * để có thể truy cập và thay đổi stage sau dó
      */
     private static Stage stage = null;
+	
+	/**
+	 * Getter for property 'stage'.
+	 *
+	 * @return Value for property 'stage'.
+	 */
+	public static Stage getStage() {
+		return stage;
+	}
+	
+	/**
+	 * Setter for property 'stage'.
+	 *
+	 * @param stage Value to set for property 'stage'.
+	 */
+	private static void setStage(Stage stage) {
+		Index.stage = stage;
+	}
 
     /**
      * {@inheritDoc}
@@ -30,29 +46,12 @@ public class Index extends Application {
     public void start(Stage primaryStage) {
 	    setStage(primaryStage);
 	    Parent root  = SplashController.loadFxml();
-	    new JMetro(JMetro.Style.LIGHT).applyTheme(root);
-	    Scene  scene = new Scene(root);
-	    primaryStage.setScene(scene);
-	    primaryStage.initStyle(StageStyle.UNDECORATED);
+	    if (root != null) {
+		    Scene scene = new Scene(root);
+		    primaryStage.setScene(scene);
+		    primaryStage.initStyle(StageStyle.UNDECORATED);
+	    }
 	    primaryStage.show();
-    }
-
-    /**
-     * Getter for property 'stage'.
-     *
-     * @return Value for property 'stage'.
-     */
-    public static Stage getStage() {
-        return stage;
-    }
-
-    /**
-     * Setter for property 'stage'.
-     *
-     * @param stage Value to set for property 'stage'.
-     */
-    public static void setStage(Stage stage) {
-        Index.stage = stage;
     }
 
     public static void main(String[] args) {
