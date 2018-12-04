@@ -30,7 +30,6 @@ public class Index extends Application {
     public void start(Stage primaryStage) {
 	    setStage(primaryStage);
 	    Parent root  = SplashController.loadFxml();
-	    new JMetro(JMetro.Style.LIGHT).applyTheme(root);
 	    Scene  scene = new Scene(root);
 	    primaryStage.setScene(scene);
 	    primaryStage.initStyle(StageStyle.UNDECORATED);

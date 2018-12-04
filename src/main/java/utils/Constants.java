@@ -40,6 +40,7 @@ public class Constants {
     public static final String FXML_MAIN_MENU = "../fxml/main_menu.fxml";
     public static final String FXML_PERSONAL_INFORMATION = "../fxml/personal-information.fxml";
     public static final String FXML_TIMETABLE = "../fxml/time-table.fxml";
+    public static final String FXML_SUBJECT_CATEGORY = "../fxml/subject-category.fxml";
 
     public static final String EXCEL_WORKBOOK_LOCATION = ".sql/18bangdate.xlsx";
 }

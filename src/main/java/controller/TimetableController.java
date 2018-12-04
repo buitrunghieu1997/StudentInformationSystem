@@ -64,13 +64,15 @@ public class TimetableController extends BaseController implements Initializable
 	 * Khởi tạo bảng thòi khoá biểu
 	 */
 	private void initializeTable() {
-		TableColumn<TblVSchedule, String>  timeCol      = new TableColumn<>("Time");
+		table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+		
+		TableColumn<TblVSchedule, String> timeCol      = new TableColumn<>("Time");
 		TableColumn<TblVSchedule, String> weekCol      = new TableColumn<>("Week");
-		TableColumn                        lengthCol    = new TableColumn<>("Length");
-		TableColumn<TblVSchedule, String>  classCodeCol = new TableColumn<>("Class Id");
-		TableColumn                        groupCol     = new TableColumn<>("Group");
-		TableColumn<TblVSchedule, String>  idSubjectCol = new TableColumn<>("Subject Id");
-		TableColumn<TblVSchedule, String>  classNameCol = new TableColumn<>("Class Name");
+		TableColumn                       lengthCol    = new TableColumn<>("Length");
+		TableColumn<TblVSchedule, String> classCodeCol = new TableColumn<>("Class Id");
+		TableColumn                       groupCol     = new TableColumn<>("Group");
+		TableColumn<TblVSchedule, String> idSubjectCol = new TableColumn<>("Subject Id");
+		TableColumn<TblVSchedule, String> classNameCol = new TableColumn<>("Class Name");
 		
 		
 		timeCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTime()));
@@ -83,6 +85,7 @@ public class TimetableController extends BaseController implements Initializable
 	
 	/**
 	 * Add data to table
+	 *
 	 * @param timetable listdata
 	 */
 	private void addItems(ArrayList<TblVSchedule> timetable) {
@@ -91,6 +94,7 @@ public class TimetableController extends BaseController implements Initializable
 	
 	/**
 	 * Hàm lấy data từ logic
+	 *
 	 * @return
 	 */
 	private ArrayList<TblVSchedule> getData() {
