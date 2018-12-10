@@ -2,29 +2,31 @@
  * Copyright(C) 2018 Bùi Trung Hiếu
  * StudentInformationSystem, entities - IntelliJ IDEA
  * TblVSchedule.java
- * Created at 09:00 ~ 22/11/2018 by Bùi Trung Hiếu
+ * Created at 16:11 ~ 06/12/2018 by Bùi Trung Hiếu
  */
 package entities;
 
-import javax.persistence.*;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.util.Objects;
 
 /**
  * Description about this Class/Interface/Enum...
  *
- * @author Bùi Trung Hiếu  Created: 09:00 ~ 22/11/2018
+ * @author Bùi Trung Hiếu  Created: 16:11 ~ 06/12/2018
  */
 @Entity @Table(name = "v_schedule", schema = "sis_db", catalog = "") public class TblVSchedule {
-	@Id private int     idStudent;
-	private     String  time;
-	private     Integer startWeek;
-	private     String  room;
-	private     String  classCode;
-	private     String  idSubject;
-	private     String  name;
-	private     Integer lenght;
-	private     String  nameSubject;
-	private     String  semester;
+	private int idStudent;
+	private String time;
+	private Integer startWeek;
+	private Integer lenght;
+	private String room;
+	private String classCode;
+	private String idSubject;
+	private String name;
+	private String semester;
 	
 	@Basic @Column(name = "idStudent") public int getIdStudent() {
 		return idStudent;
@@ -48,6 +50,14 @@ import java.util.Objects;
 	
 	public void setStartWeek(Integer startWeek) {
 		this.startWeek = startWeek;
+	}
+	
+	@Basic @Column(name = "lenght") public Integer getLenght() {
+		return lenght;
+	}
+	
+	public void setLenght(Integer lenght) {
+		this.lenght = lenght;
 	}
 	
 	@Basic @Column(name = "room") public String getRoom() {
@@ -82,6 +92,14 @@ import java.util.Objects;
 		this.name = name;
 	}
 	
+	@Basic @Column(name = "semester") public String getSemester() {
+		return semester;
+	}
+	
+	public void setSemester(String semester) {
+		this.semester = semester;
+	}
+	
 	@Override public boolean equals(Object o) {
 		if (this == o) {
 			return true;
@@ -93,37 +111,15 @@ import java.util.Objects;
 		return idStudent == that.idStudent &&
 		       Objects.equals(time, that.time) &&
 		       Objects.equals(startWeek, that.startWeek) &&
+		       Objects.equals(lenght, that.lenght) &&
 		       Objects.equals(room, that.room) &&
 		       Objects.equals(classCode, that.classCode) &&
 		       Objects.equals(idSubject, that.idSubject) &&
-		       Objects.equals(name, that.name);
+		       Objects.equals(name, that.name) &&
+		       Objects.equals(semester, that.semester);
 	}
 	
 	@Override public int hashCode() {
-		return Objects.hash(idStudent, time, startWeek, room, classCode, idSubject, name);
-	}
-	
-	@Basic @Column(name = "lenght") public Integer getLenght() {
-		return lenght;
-	}
-	
-	public void setLenght(Integer lenght) {
-		this.lenght = lenght;
-	}
-	
-	@Basic @Column(name = "nameSubject") public String getNameSubject() {
-		return nameSubject;
-	}
-	
-	public void setNameSubject(String nameSubject) {
-		this.nameSubject = nameSubject;
-	}
-	
-	@Basic @Column(name = "semester") public String getSemester() {
-		return semester;
-	}
-	
-	public void setSemester(String semester) {
-		this.semester = semester;
+		return Objects.hash(idStudent, time, startWeek, lenght, room, classCode, idSubject, name, semester);
 	}
 }
