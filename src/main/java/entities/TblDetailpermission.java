@@ -16,12 +16,12 @@ import java.util.Objects;
  */
 @Entity @Table(name = "detailpermission", schema = "sis_db", catalog = "")
 @IdClass(TblDetailpermissionPK.class) public class TblDetailpermission {
-	private int idPermission;
-	private int idDetailPermission;
-	private String name;
-	private String status;
+	private int     idPermission;
+	private int     idDetailPermission;
+	private String  name;
+	private String  status;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idPermission") public int getIdPermission() {
 		return idPermission;

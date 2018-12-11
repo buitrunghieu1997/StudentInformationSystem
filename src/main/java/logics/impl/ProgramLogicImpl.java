@@ -17,14 +17,14 @@ import java.util.List;
  */
 public class ProgramLogicImpl implements ProgramLogic {
 	
-	ProgramValidate programValidate = new ProgramValidate();
-	ProgramDAOImpl  programDAOImpl  = new ProgramDAOImpl();
+	private ProgramValidate programValidate = new ProgramValidate();
+	private ProgramDAOImpl  programDAO      = new ProgramDAOImpl();
 	
 	@Override
 	public boolean insertProgram(int idProgram, int idDepartment, Integer length, Integer credit, int optionalCredit, String description) {
 		
 		if (programValidate.validate(idProgram, idDepartment, length, credit, optionalCredit, description)) {
-			return programDAOImpl.insertProgram(idProgram, idDepartment, length, credit, optionalCredit, description);
+			return programDAO.insertProgram(idProgram, idDepartment, length, credit, optionalCredit, description);
 		}
 		return false;
 	}
@@ -33,7 +33,7 @@ public class ProgramLogicImpl implements ProgramLogic {
 	public boolean updateProgram(int idProgram, int idDepartment, Integer length, Integer credit, int optionalCredit, String description) {
 		
 		if (programValidate.validate(idProgram, idDepartment, length, credit, optionalCredit, description)) {
-			return programDAOImpl.updateProgram(idProgram, idDepartment, length, credit, optionalCredit, description);
+			return programDAO.updateProgram(idProgram, idDepartment, length, credit, optionalCredit, description);
 		}
 		return false;
 	}
@@ -41,13 +41,13 @@ public class ProgramLogicImpl implements ProgramLogic {
 	@Override
 	public boolean deleteProgram(int idProgram) {
 		
-		return programDAOImpl.deleteProgram(idProgram);
+		return programDAO.deleteProgram(idProgram);
 	}
 	
 	@Override
 	public List<TblProgram> displayProgram(int idProgram) {
 		
-		return programDAOImpl.displayProgram(idProgram);
+		return programDAO.displayProgram(idProgram);
 	}
 	
 }

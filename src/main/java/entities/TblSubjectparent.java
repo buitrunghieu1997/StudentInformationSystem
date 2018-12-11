@@ -16,10 +16,10 @@ import java.util.Objects;
  */
 @Entity @Table(name = "subjectparent", schema = "sis_db", catalog = "")
 @IdClass(TblSubjectparentPK.class) public class TblSubjectparent {
-	private String idSubject;
-	private String idSubjectParent;
+	private String  idSubject;
+	private String  idSubjectParent;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idSubject") public String getIdSubject() {
 		return idSubject;

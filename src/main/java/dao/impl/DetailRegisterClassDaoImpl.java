@@ -64,7 +64,7 @@ public class DetailRegisterClassDaoImpl implements DetailRegisterClassDao {
 	}
 	
 	@Override
-	public boolean addDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, int midSempoint, int finalSempoint) {
+	public boolean addDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, double midSempoint, double finalSempoint) {
 		SessionFactory factory = HibernateUtils.getSessionFactory();
 		Session        session = factory.getCurrentSession();
 		try {
@@ -88,7 +88,7 @@ public class DetailRegisterClassDaoImpl implements DetailRegisterClassDao {
 	}
 	
 	@Override
-	public boolean updateDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, int midSempoint, int finalSempoint) {
+	public boolean updateDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, double midSempoint, double finalSempoint) {
 		SessionFactory factory = HibernateUtils.getSessionFactory();
 		Session        session = factory.getCurrentSession();
 		try {

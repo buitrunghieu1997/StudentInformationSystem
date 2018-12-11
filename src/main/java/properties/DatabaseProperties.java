@@ -3,7 +3,7 @@
  * StudentInformationSystem, app.java.utils - IntelliJ IDEA
  * DatabaseProperties.java, 19/10/2018 Trung Hieu Bui (Mr)
  */
-package main.java.properties;
+package properties;
 
 /**
  * DatabaseProperties

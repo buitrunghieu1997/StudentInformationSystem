@@ -13,14 +13,14 @@ import validate.DepartmentValidate;
  */
 public class DepartmentLogicImpl implements DepartmentLogic {
 	
-	DepartmentValidate  departmentValidate  = new DepartmentValidate();
-	DepartmentLogicImpl departmentLogicImpl = new DepartmentLogicImpl();
+	private DepartmentValidate departmentValidate = new DepartmentValidate();
+	private DepartmentLogic    departmentLogic    = new DepartmentLogicImpl();
 	
 	@Override
 	public boolean insertDepartment(int idDepartment, String name, String description) {
 		
 		if (departmentValidate.validate(idDepartment, name, description)) {
-			return departmentLogicImpl.insertDepartment(idDepartment, name, description);
+			return departmentLogic.insertDepartment(idDepartment, name, description);
 		}
 		return false;
 	}
@@ -29,7 +29,7 @@ public class DepartmentLogicImpl implements DepartmentLogic {
 	public boolean updateDepartment(int idDepartment, String name, String description) {
 		
 		if (departmentValidate.validate(idDepartment, name, description)) {
-			return departmentLogicImpl.updateDepartment(idDepartment, name, description);
+			return departmentLogic.updateDepartment(idDepartment, name, description);
 		}
 		return false;
 	}
@@ -37,7 +37,7 @@ public class DepartmentLogicImpl implements DepartmentLogic {
 	@Override
 	public boolean deleteDepartment(int idDepartment) {
 		
-		return departmentLogicImpl.deleteDepartment(idDepartment);
+		return departmentLogic.deleteDepartment(idDepartment);
 	}
 	
 }

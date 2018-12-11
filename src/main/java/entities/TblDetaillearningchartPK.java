@@ -17,7 +17,7 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:09 ~ 06/12/2018
  */
 public class TblDetaillearningchartPK implements Serializable {
-	private int idLearningChart;
+	private int    idLearningChart;
 	private String idSubject;
 	
 	@Column(name = "idLearningChart") @Id public int getIdLearningChart() {

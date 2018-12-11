@@ -15,15 +15,15 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:10 ~ 06/12/2018
  */
 @Entity @Table(name = "subject", schema = "sis_db", catalog = "") public class TblSubject {
-	private String idSubject;
+	private String  idSubject;
 	private Integer idGenre;
-	private String name;
-	private Double coefficient;
+	private String  name;
+	private Double  coefficient;
 	private Integer creditSubject;
 	private Integer creditTuition;
 	private Integer lenght;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idSubject") public String getIdSubject() {
 		return idSubject;

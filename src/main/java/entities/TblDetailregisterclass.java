@@ -16,14 +16,15 @@ import java.util.Objects;
  */
 @Entity @Table(name = "detailregisterclass", schema = "sis_db", catalog = "")
 @IdClass(TblDetailregisterclassPK.class) public class TblDetailregisterclass {
-	private int idRegister;
-	private int idSchedule;
-	private String classCode;
+	
+	private int     idRegister;
+	private int     idSchedule;
+	private String  classCode;
 	private Integer tuition;
-	private Double midSemPoint;
-	private Double finalSemPoint;
+	private Double  midSemPoint;
+	private Double  finalSemPoint;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idRegister") public int getIdRegister() {
 		return idRegister;

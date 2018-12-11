@@ -45,7 +45,7 @@ public class Commons {
      * @param pass the pass
      * @return the string
      */
-    public static String encodeSHA256(String salt, String pass) {
+    public static String encodeSHA256(String pass, String salt) {
         try {
             // Call the SHA256 algorithm
             MessageDigest sha1 = MessageDigest.getInstance("SHA-256");

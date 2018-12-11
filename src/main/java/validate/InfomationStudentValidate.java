@@ -5,14 +5,12 @@
  */
 package validate;
 
-import java.sql.Date;
-
 /**
  * @author vuduchiep
  */
 public class InfomationStudentValidate {
 	
-	public boolean infoStudentValidate(String fullName, String address, String phone, Date dateOfBirth, String email) {
+	public boolean infoStudentValidate(String fullName, String address, String phone, String dateOfBirth, String email) {
 		
 		return !fullName.equals("") && !address.equals("") && !phone.equals("") && !dateOfBirth.equals("") && !email.equals("");
 	}

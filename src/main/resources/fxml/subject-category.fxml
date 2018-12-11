@@ -8,7 +8,7 @@
 <?import java.lang.String?>
 <VBox xmlns:fx="http://javafx.com/fxml/1" id="back-box" prefHeight="604.0" prefWidth="930.0"
       stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8.0.171"
-      fx:controller="controller.TimetableController">
+      fx:controller="controller.SubjectCategoryController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
@@ -18,7 +18,7 @@
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
             </padding>
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="component-inside" text="Timetable"/>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="component-inside" text="Subject Category"/>
             </children>
         </HBox>
         <VBox>
@@ -167,7 +167,7 @@
                     <content>
                         <VBox alignment="CENTER" prefHeight="420.0" prefWidth="900.0" styleClass="vbox">
                             <children>
-                                <TableView fx:id="table" stylesheets="@../css/style.css" tableMenuButtonVisible="true"
+                                <TableView fx:id="tableSC" stylesheets="@../css/style.css" tableMenuButtonVisible="true"
                                            VBox.vgrow="ALWAYS">
                                     <placeholder>
                                         <Label text="There is no subject in this category."/>

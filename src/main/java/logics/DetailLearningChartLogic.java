@@ -17,10 +17,10 @@ public interface DetailLearningChartLogic {
 	/**
 	 * Hàm xử lý logic thêm biểu đồ học tập chi tiết
 	 *
-	 * @param idLearningChart
-	 * @param idSubject
-	 * @param semester
-	 * @param credit
+	 * @param idLearningChart: mã biểu đồ học tập
+	 * @param idSubject: mã học phần
+	 * @param semester: kỳ học
+	 * @param credit: tín chỉ
 	 * @param stt
 	 * @return true (nếu thêm thành công) hoặc false (nếu ngược lại)
 	 * <p>

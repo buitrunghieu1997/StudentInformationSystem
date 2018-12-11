@@ -1,0 +1,14 @@
+
+]squid:S1192&"FDefine a constant instead of duplicating this literal "Loi: " 3 times.(тріь
+O
+squid:S106V"9Replace this use of System.out or System.err by a logger.(тріь
+Bsquid:S1168m"+Return an empty collection instead of null.(•єпН
+O
+squid:S106&"9Replace this use of System.out or System.err by a logger.(тріь
+O
+squid:S106="9Replace this use of System.out or System.err by a logger.(тріь
+xsquid:S1488|"\Immediately return this expression instead of assigning it to the temporary variable "salt".(е иєш€€€€
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(тріь
+O
+squid:S106l"9Replace this use of System.out or System.err by a logger.(тріь

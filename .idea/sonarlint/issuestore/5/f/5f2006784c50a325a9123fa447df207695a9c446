@@ -1,0 +1,4 @@
+
+Qsquid:S1118":Add a private constructor to hide the implicit public one.(é«¡Ï
+osquid:S2234#"XParameters to doFade have the same names but not the same order as the method arguments.(ÖÿÍ¸
+Hsquid:S1602&",Remove useless curly braces around statement(ˆ€áÑÿÿÿÿÿ

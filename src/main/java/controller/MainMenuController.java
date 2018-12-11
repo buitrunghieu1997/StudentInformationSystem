@@ -17,6 +17,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import utils.Constants;
@@ -37,28 +38,25 @@ public class MainMenuController extends BaseController implements Initializable 
 	private        BorderPane parent;
 	private        double     xOffset = 0;
 	private        double     yOffset = 0;
-	@FXML
-	private        TitledPane ui;
-	@FXML
-	private        TitledPane pr;
-	@FXML
-	private        TitledPane sc;
-	@FXML
-	private        TitledPane sr;
-	@FXML
-	private        TitledPane rs;
-	@FXML
-	private        TitledPane lu;
-	@FXML
-	private        HBox       db;
-	@FXML
-	private        HBox       cp;
-	@FXML
-	private        HBox       pi;
-	@FXML
-	private        HBox       tt;
-	@FXML
-	private        HBox       upi;
+	@FXML private  TitledPane ui;
+	@FXML private  TitledPane pr;
+	@FXML private  TitledPane sc;
+	@FXML private  TitledPane sr;
+	@FXML private  TitledPane rs;
+	@FXML private  TitledPane lu;
+	@FXML private  HBox       db;
+	@FXML private  HBox       cp;
+	@FXML private  HBox       pi;
+	@FXML private  HBox       tt;
+	@FXML private  HBox       upi;
+	@FXML private  HBox       suc;
+	@FXML private  HBox       psb;
+	@FXML private  HBox       ssb;
+	@FXML private  HBox       tsb;
+	@FXML private  HBox       scl;
+	@FXML private  HBox       sur;
+	@FXML private  HBox       rcl;
+	@FXML private  Text       nameTxt;
 	
 	@FXML
 	private VBox mainContainer;
@@ -150,6 +148,37 @@ public class MainMenuController extends BaseController implements Initializable 
 		tt.setOnMouseClicked(e -> {
 			mainContainer.getChildren().clear();
 			mainContainer.getChildren().addAll(TimetableController.loadFXML());
+		});
+		
+		suc.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(SubjectCategoryController.loadFXML());
+		});
+		psb.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(PersonalScoreBoardController.loadFXML());
+		});
+		
+		ssb.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(SubjectScoreBoardController.loadFXML());
+		});
+		
+		tsb.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(ToeicScoreBoardController.loadFXML());
+		});
+		scl.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(StudentListController.loadFXML());
+		});
+		rcl.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(ClassRegisteredLookUpController.loadFXML());
+		});
+		sur.setOnMouseClicked(e -> {
+			mainContainer.getChildren().clear();
+			mainContainer.getChildren().addAll(SubjectRegisterController.loadFXML());
 		});
 	}
 	

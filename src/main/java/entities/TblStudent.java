@@ -15,31 +15,31 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:10 ~ 06/12/2018
  */
 @Entity @Table(name = "student", schema = "sis_db", catalog = "") public class TblStudent {
-	private int idStudent;
+	private int     idStudent;
 	private Integer idProgram;
-	private String fullName;
+	private String  fullName;
 	private Integer gender;
-	private String country;
-	private String personality;
-	private String religion;
-	private String placeOfBirth;
+	private String  country;
+	private String  personality;
+	private String  religion;
+	private String  placeOfBirth;
 	private Integer highSchoolGraduatedYear;
-	private String highSchool;
+	private String  highSchool;
 	private Integer type;
-	private String identityId;
-	private String issuedDate;
-	private String issuedPlace;
-	private String phoneNumber;
-	private String email;
-	private String currentAddress;
-	private String permanentAddress;
-	private String contactAddress;
-	private String zone;
-	private String dateOfBirth;
-	private String position;
+	private String  identityId;
+	private String  issuedDate;
+	private String  issuedPlace;
+	private String  phoneNumber;
+	private String  email;
+	private String  currentAddress;
+	private String  permanentAddress;
+	private String  contactAddress;
+	private String  zone;
+	private String  dateOfBirth;
+	private String  position;
 	private Integer warningLevel;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idStudent") public int getIdStudent() {
 		return idStudent;

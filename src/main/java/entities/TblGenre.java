@@ -15,12 +15,12 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:10 ~ 06/12/2018
  */
 @Entity @Table(name = "genre", schema = "sis_db", catalog = "") public class TblGenre {
-	private int idGenre;
+	private int     idGenre;
 	private Integer idDepartment;
-	private String name;
-	private String description;
+	private String  name;
+	private String  description;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idGenre") public int getIdGenre() {
 		return idGenre;

@@ -6,10 +6,7 @@
  */
 package entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
@@ -18,16 +15,16 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:11 ~ 06/12/2018
  */
 @Entity @Table(name = "v_personalscoreboard", schema = "sis_db", catalog = "") public class TblVPersonalscoreboard {
-	private int idStudent;
-	private String semester;
-	private String idSubject;
-	private String name;
+	private int     idStudent;
+	private String  semester;
+	private String  idSubject;
+	private String  name;
 	private Integer creditSubject;
-	private String classCode;
-	private Double midSemPoint;
-	private Double finalSemPoit;
+	private String  classCode;
+	private Double  midSemPoint;
+	private Double  finalSemPoit;
 	
-	@Basic @Column(name = "idStudent") public int getIdStudent() {
+	@Id @Column(name = "idStudent") public int getIdStudent() {
 		return idStudent;
 	}
 	

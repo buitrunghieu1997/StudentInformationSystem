@@ -19,8 +19,12 @@ import java.io.IOException;
  */
 public class FXMLUtils {
     public static <T> T load(String location) throws IOException {
+        return getLoader(location).load();
+    }
+    
+    public static FXMLLoader getLoader(String location) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(FXMLUtils.class.getResource(location));
-        return loader.load();
+        return loader;
     }
 }

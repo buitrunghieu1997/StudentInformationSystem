@@ -16,14 +16,14 @@ import java.util.Objects;
  */
 @Entity @Table(name = "program", schema = "sis_db", catalog = "")
 @IdClass(TblProgramPK.class) public class TblProgram {
-	private int idProgram;
-	private int idDepartment;
+	private int     idProgram;
+	private int     idDepartment;
 	private Integer length;
 	private Integer credit;
 	private Integer optionalCredit;
-	private String description;
+	private String  description;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idProgram") public int getIdProgram() {
 		return idProgram;

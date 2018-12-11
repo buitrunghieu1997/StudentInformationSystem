@@ -1,5 +1,8 @@
 
-Csquid:S1602D",Remove useless curly braces around statement(ˆíèØ
-Fsquid:S1148M"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8ù‹¦ëõ,
-Csquid:S1602A",Remove useless curly braces around statement(÷éÚÆ
-?squid:S11481"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+bsquid:UselessImportCheck"7Remove this unused import 'animatefx.animation.Bounce'.(ì©¦ø8óŒÇù,
+Jsquid:S1602H",Remove useless curly braces around statement(÷éÚÆ8×»Çù,
+Fsquid:S11482"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8Ê°Æù,
+Fsquid:S11488"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8×»Çù,
+gsquid:UselessImportCheck	"7Remove this unused import 'animatefx.animation.RollIn'.(š–ºƒüÿÿÿÿ8×»Çù,
+Jsquid:S1602K",Remove useless curly braces around statement(ˆíèØ8×»Çù,
+Fsquid:S1148T"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8×»Çù,

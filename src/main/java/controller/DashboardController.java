@@ -8,12 +8,15 @@ package controller;
 
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
+import org.jboss.logging.Logger.Level;
 import utils.Constants;
 import utils.FXMLUtils;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
+import java.util.logging.Logger;
 
 /**
  * Description about this Class/Interface/Enum...
@@ -38,7 +41,7 @@ public class DashboardController extends BaseController implements Initializable
             
             return fxml;
         } catch (IOException e) {
-            e.printStackTrace();
+            Logger.getLogger("DASHBOARD_CONTROLLER").warning(Arrays.toString(e.getStackTrace()));
         }
         return null;
     }

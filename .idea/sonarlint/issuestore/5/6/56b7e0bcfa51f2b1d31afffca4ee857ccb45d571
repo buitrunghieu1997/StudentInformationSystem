@@ -1,0 +1,28 @@
+
+O
+squid:S106%"9Replace this use of System.out or System.err by a logger.(òğ´ü
+osquid:S2077›"RUse a variable binding mechanism to construct this query instead of concatenation.(¬œ‘âşÿÿÿÿ
+O
+squid:S106U"9Replace this use of System.out or System.err by a logger.(òğ´ü
+Gsquid:S1481‹"*Remove this unused "query" local variable.(¬œ‘âşÿÿÿÿ
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(òğ´ü
+nsquid:S2077 "RUse a variable binding mechanism to construct this query instead of concatenation.(ÔôŸªıÿÿÿÿ
+]squid:S1192%"FDefine a constant instead of duplicating this literal "Loi: " 6 times.(òğ´ü
+Zsquid:S11559">Use isEmpty() to check whether the collection is empty or not.(É€°Îøÿÿÿÿ
+P
+squid:S106"9Replace this use of System.out or System.err by a logger.(òğ´ü
+isquid:S2077a"RUse a variable binding mechanism to construct this query instead of concatenation.(Ñº©û
+osquid:S2077‹"RUse a variable binding mechanism to construct this query instead of concatenation.(¬œ‘âşÿÿÿÿ
+O
+squid:S106="9Replace this use of System.out or System.err by a logger.(òğ´ü
+tsquid:S1488œ"\Immediately return this expression instead of assigning it to the temporary variable "list".(©ìß
+isquid:S2077y"RUse a variable binding mechanism to construct this query instead of concatenation.(Ñº©û
+jsquid:S1192`"SDefine a constant instead of duplicating this literal " and e.idSchedule=" 3 times.(‰Šªı
+O
+squid:S106l"9Replace this use of System.out or System.err by a logger.(òğ´ü
+Bsquid:S1168'"+Return an empty collection instead of null.(¥¹ï
+Vsquid:S1854‹"9Remove this useless assignment to local variable "query".(¬œ‘âşÿÿÿÿ
+P
+squid:S106Ÿ"9Replace this use of System.out or System.err by a logger.(òğ´ü
+Csquid:S1168¡"+Return an empty collection instead of null.(¥¹ï

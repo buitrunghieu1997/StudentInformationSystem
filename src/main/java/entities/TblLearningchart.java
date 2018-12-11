@@ -15,11 +15,11 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:10 ~ 06/12/2018
  */
 @Entity @Table(name = "learningchart", schema = "sis_db", catalog = "") public class TblLearningchart {
-	private int idLearningChart;
+	private int     idLearningChart;
 	private Integer idStudent;
 	private Integer totalCredit;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idLearningChart") public int getIdLearningChart() {
 		return idLearningChart;

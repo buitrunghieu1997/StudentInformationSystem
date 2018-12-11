@@ -13,8 +13,8 @@ public interface DepartmentLogic {
 	/**
 	 * Hàm xử lý logic thêm khoa/viện
 	 *
-	 * @param idDepartment
-	 * @param name
+	 * @param idDepartment: mã khoa viện
+	 * @param name: tên khoa viện
 	 * @param description
 	 * @return true (nếu thêm thành công) hoặc false (nếu ngược lại)
 	 * <p>
@@ -25,9 +25,9 @@ public interface DepartmentLogic {
 	/**
 	 * Hàm xử lý logic cập nhật khoa/viện
 	 *
-	 * @param idDepartment
-	 * @param name
-	 * @param description
+	 * @param idDepartment: mã khoa viện
+	 * @param name: tên khoa viện
+	 * @param description: mô tả
 	 * @return true (nếu cập nhật thành công) hoặc false (nếu ngược lại)
 	 * <p>
 	 * Cần validate
@@ -37,7 +37,7 @@ public interface DepartmentLogic {
 	/**
 	 * Hàm xử lý logic xóa khoa/viện
 	 *
-	 * @param idDepartment
+	 * @param idDepartment: mã khoa viện
 	 * @return true (nếu xóa thành công) hoặc false (nếu ngược lại)
 	 * <p>
 	 * Cần validate

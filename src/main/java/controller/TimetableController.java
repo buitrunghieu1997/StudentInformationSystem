@@ -8,13 +8,18 @@ package controller;
 
 import entities.TblVSchedule;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.util.Callback;
+import logics.ScheduleLogic;
+import logics.impl.ScheduleLogicImpl;
 import utils.Constants;
 import utils.FXMLUtils;
 
@@ -68,13 +73,13 @@ public class TimetableController extends BaseController implements Initializable
 		
 		TableColumn<TblVSchedule, String> timeCol      = new TableColumn<>("Time");
 		TableColumn<TblVSchedule, String> weekCol      = new TableColumn<>("Week");
-		TableColumn                       lengthCol    = new TableColumn<>("Length");
+		TableColumn<TblVSchedule, String> lengthCol    = new TableColumn<>("Length");
 		TableColumn<TblVSchedule, String> classCodeCol = new TableColumn<>("Class Id");
 		TableColumn                       groupCol     = new TableColumn<>("Group");
 		TableColumn<TblVSchedule, String> idSubjectCol = new TableColumn<>("Subject Id");
 		TableColumn<TblVSchedule, String> classNameCol = new TableColumn<>("Class Name");
 		
-		
+		lengthCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getLenght())));
 		timeCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTime()));
 		weekCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getStartWeek().toString()));
 		classCodeCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getClassCode()));

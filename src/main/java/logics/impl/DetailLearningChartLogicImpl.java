@@ -5,6 +5,7 @@
  */
 package logics.impl;
 
+import dao.DetailLearningChartDAO;
 import dao.impl.DetailLearningChartDAOImpl;
 import entities.TblDetaillearningchart;
 import logics.DetailLearningChartLogic;
@@ -17,20 +18,20 @@ import java.util.List;
  */
 public class DetailLearningChartLogicImpl implements DetailLearningChartLogic {
 	
-	DetailLearningChartDAOImpl  detailLearningChartDAOImpl  = new DetailLearningChartDAOImpl();
-	DetailLearningChartValidate detailLearningChartValidate = new DetailLearningChartValidate();
+	private DetailLearningChartDAO      detailLearningChartDAO      = new DetailLearningChartDAOImpl();
+	private DetailLearningChartValidate detailLearningChartValidate = new DetailLearningChartValidate();
 	
 	@Override
 	public boolean delete(int idLearningChart) {
 		
-		return detailLearningChartDAOImpl.delete(idLearningChart);
+		return detailLearningChartDAO.delete(idLearningChart);
 	}
 	
 	@Override
 	public boolean add(int idLearningChart, String idSubject, String semester, Integer credit, Integer stt) {
 		
 		if (detailLearningChartValidate.validate(idLearningChart, idSubject, semester, credit, stt)) {
-			return detailLearningChartDAOImpl.add(idLearningChart, idSubject, semester, credit, stt);
+			return detailLearningChartDAO.add(idLearningChart, idSubject, semester, credit, stt);
 		}
 		return false;
 	}
@@ -39,7 +40,7 @@ public class DetailLearningChartLogicImpl implements DetailLearningChartLogic {
 	public boolean update(int idLearningChart, String idSubject, String semester, Integer credit, Integer stt) {
 		
 		if (detailLearningChartValidate.validate(idLearningChart, idSubject, semester, credit, stt)) {
-			return detailLearningChartDAOImpl.update(idLearningChart, idSubject, semester, credit, stt);
+			return detailLearningChartDAO.update(idLearningChart, idSubject, semester, credit, stt);
 		}
 		return false;
 	}
@@ -47,7 +48,7 @@ public class DetailLearningChartLogicImpl implements DetailLearningChartLogic {
 	@Override
 	public List<TblDetaillearningchart> search(int idLearningChart) {
 		
-		return detailLearningChartDAOImpl.search(idLearningChart);
+		return detailLearningChartDAO.search(idLearningChart);
 		
 	}
 	

@@ -5,6 +5,8 @@
  */
 package controller;
 
+import animatefx.animation.Bounce;
+import animatefx.animation.RollIn;
 import application.Index;
 import assets.transitions.FadeTransition;
 import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
@@ -41,7 +43,12 @@ public class SplashController extends BaseController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        makeStageDraggable();
+	    try {
+		    makeStageDraggable();
+		    LoginController.loadFXML(parent);
+	    } catch (IOException e) {
+		    e.printStackTrace();
+	    }
         FadeTransition.applyFadeTransition(parent, Duration.seconds(2), event -> {
             try {
                 LoginController.loadFXML(parent);

@@ -1,8 +1,7 @@
 package logics;
 
 import entities.TblToeic;
-
-import java.sql.Date;
+import entities.TblVToeic;
 
 /**
  * @author buiminhhieu
@@ -17,7 +16,7 @@ public interface ToeicLogic {
 	 * @param point     diem sinh vien
 	 * @return boolean neu them sinh vien vao db thanh cong ket qua tra ve se la true nguoc lai ket qua tra ve se la false
 	 */
-	boolean addToeic(int idStudent, String semester, Date date, int point);
+	boolean addToeic(int idStudent, String semester, String date, int point);
 	
 	/**
 	 * Phuong thuc nay de xoa vinh vien du lieu diem toeic cua sv khoi db
@@ -25,7 +24,7 @@ public interface ToeicLogic {
 	 * @param idStudent Ma so sinh vien
 	 * @return boolean neu xoa diem toeic thanh cong ket qua tra ve se la true nguoc lai ket qua tra ve la false
 	 */
-	boolean updateToeic(int idStudent, String semester, Date date, int point);
+	boolean updateToeic(int idStudent, String semester, String date, int point);
 	
 	/**
 	 * Phuong thuc nay de xoa diem toeic cua sinh vien tam thoi bang cach danh dau thuoc tinh stt='DELETE'
@@ -49,5 +48,5 @@ public interface ToeicLogic {
 	 * @param idStudent Ma so sinh vien
 	 * @return TblToeic tra ve diem toeic cua sinh vien can tim
 	 */
-	TblToeic searchToeic(int idStudent);
+	TblVToeic searchToeic(int idStudent);
 }

@@ -8,11 +8,13 @@ package controller;
 
 import com.jfoenix.controls.JFXComboBox;
 import entities.TblDepartment;
-import entities.TblSubject;
+import entities.TblVSubject;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import utils.Constants;
@@ -20,6 +22,7 @@ import utils.FXMLUtils;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 /**
@@ -43,7 +46,7 @@ public class SubjectCategoryController extends BaseController implements Initial
 	/**
 	 * The Table.
 	 */
-	@FXML TableView<TblSubject>      table;
+	@FXML TableView<TblVSubject>     tableSC;
 	/**
 	 * The Search.
 	 */
@@ -59,7 +62,6 @@ public class SubjectCategoryController extends BaseController implements Initial
 	 * @return the parent
 	 */
 	static Parent loadFXML() {
-		Parent fxml;
 		try {
 			return FXMLUtils.load(Constants.FXML_SUBJECT_CATEGORY);
 		} catch (IOException e) {
@@ -69,68 +71,75 @@ public class SubjectCategoryController extends BaseController implements Initial
 	}
 	
 	@Override public void initialize(URL location, ResourceBundle resources) {
-	
+		initializeTable();
+		addItems(getData());
 	}
 	
 	/**
 	 * Khởi tạo bảng danh mục học phần
 	 */
 	private void initializeTable() {
-		//		table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-		//
-		//		TableColumn<TblVSchedule, String> timeCol      = new TableColumn<>("Time");
-		//		TableColumn<TblVSchedule, String> weekCol      = new TableColumn<>("Week");
-		//		TableColumn                       lengthCol    = new TableColumn<>("Length");
-		//		TableColumn<TblVSchedule, String> classCodeCol = new TableColumn<>("Class Id");
-		//		TableColumn                       groupCol     = new TableColumn<>("Group");
-		//		TableColumn<TblVSchedule, String> idSubjectCol = new TableColumn<>("Subject Id");
-		//		TableColumn<TblVSchedule, String> classNameCol = new TableColumn<>("Class Name");
-		//
-		//
-		//		timeCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getTime()));
-		//		weekCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getStartWeek().toString()));
-		//		classCodeCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getClassCode()));
-		//		idSubjectCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getIdSubject()));
-		//		classNameCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getName()));
-		//		table.getColumns().addAll(timeCol, weekCol, lengthCol, classCodeCol, groupCol, idSubjectCol, classNameCol);
+		tableSC.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+		
+		TableColumn<TblVSubject, String> idCol   = new TableColumn<>("Subject ID");
+		TableColumn<TblVSubject, String> subCol  = new TableColumn<>("Subject Name");
+		TableColumn<TblVSubject, String> depCol  = new TableColumn<>("Department Name");
+		TableColumn<TblVSubject, String> genCol  = new TableColumn<>("Genre Name");
+		TableColumn<TblVSubject, String> lenCol  = new TableColumn<>("Class Name");
+		TableColumn<TblVSubject, String> cSubCol = new TableColumn<>("Subject Credit");
+		TableColumn<TblVSubject, String> cTuiCol = new TableColumn<>("Tuition Credit");
+		TableColumn<TblVSubject, String> cofCol  = new TableColumn<>("Subject Id");
+		
+		
+		idCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getIdSubject()));
+		subCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getNameSubject()));
+		genCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getGenreName()));
+		depCol.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getDepartmentName()));
+		lenCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getLength())));
+		cSubCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getCreditSubject())));
+		cTuiCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getCreditTuition())));
+		cofCol.setCellValueFactory(cellData -> new SimpleStringProperty(String.valueOf(cellData.getValue().getWeight())));
+		tableSC.getColumns().addAll(idCol, subCol, genCol, depCol, lenCol, cSubCol, cTuiCol, cofCol);
 	}
 	
 	/**
-	 * Add data to table
+	 * Add data to tableSC
 	 *
-	 * @param timetable listdata
+	 * @param subjectcategories listdata
 	 */
-	//	private void addItems(ArrayList<TblVSchedule> timetable) {
-	//		table.getItems().addAll(timetable);
-	//	}
+	private void addItems(ArrayList<TblVSubject> subjectcategories) {
+		tableSC.getItems().addAll(subjectcategories);
+	}
 	
 	/**
 	 * Hàm lấy data từ logic
 	 *
 	 * @return
 	 */
-	//	private ArrayList<TblVSchedule> getData() {
-	//		// test
-	//		ArrayList<TblVSchedule> listTest = new ArrayList<>();
-	//		TblVSchedule            test1    = new TblVSchedule();
-	//		test1.setClassCode("485460");
-	//		test1.setIdStudent(20151295);
-	//		test1.setIdSubject("IT4440");
-	//		test1.setName("Tương tác người máy");
-	//		test1.setRoom("TC-207");
-	//		test1.setStartWeek(2);
-	//		test1.setTime("Thứ 4, 14h15-17h35");
-	//		listTest.add(test1);
-	//		listTest.add(test1);
-	//		listTest.add(test1);
-	//		listTest.add(test1);
-	//		listTest.add(test1);
-	//		listTest.add(test1);
-	//		listTest.add(test1);
-	//		listTest.add(test1);
-	//		// end test
-	//
-	//		// simple as logic.getListVSchedule();
-	//		return listTest;
-	//	}
+	private ArrayList<TblVSubject> getData() {
+		// test
+		ArrayList<TblVSubject> listTest = new ArrayList<>();
+		TblVSubject            test1    = new TblVSubject();
+		test1.setIdSubject("IT4440");
+		test1.setNameSubject("Tương tác người máy");
+		test1.setLength(16);
+		test1.setCreditTuition(5);
+		test1.setCreditSubject(3);
+		test1.setWeight(0.7);
+		test1.setGenreName("Bộ môn Công nghệ Phần mềm");
+		test1.setDepartmentName("Viện Công nghệ Thông tin và Truyền Thông");
+		
+		listTest.add(test1);
+		listTest.add(test1);
+		listTest.add(test1);
+		listTest.add(test1);
+		listTest.add(test1);
+		listTest.add(test1);
+		listTest.add(test1);
+		listTest.add(test1);
+		// end test
+		
+		// simple as logic.TblVSubject();
+		return listTest;
+	}
 }

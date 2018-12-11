@@ -15,17 +15,17 @@ import java.util.List;
 public interface DepartmentDAO {
 	
 	/**
-	 * @param idDepartment
-	 * @param name
-	 * @param description
+	 * @param idDepartment: mã khoa/viện
+	 * @param name: tên khoa/viện
+	 * @param description: mô tả
 	 * @return true (nếu thêm thành công) hoặc false(nếu ngược lại)
 	 */
 	boolean insert(int idDepartment, String name, String description);
 	
 	/**
-	 * @param idDepartment
-	 * @param name
-	 * @param description
+	 * @param idDepartment: mã khoa viện
+	 * @param name: tên khoa/viện
+	 * @param description: mô tả
 	 * @return true (nếu cạp nhật thành công) hoặc false (nếu ngược lại)
 	 */
 	boolean update(int idDepartment, String name, String description);
@@ -37,7 +37,7 @@ public interface DepartmentDAO {
 	boolean delete(int idDepartment);
 	
 	/**
-	 * @param idDepartment
+	 * @param idDepartment: mã khoa viện
 	 * @return danh sách thông tin khoa/viện (nếu tìm thấy) hoặc trả về null (nếu không tìm thấy)
 	 */
 	List<TblDepartment> search(int idDepartment);

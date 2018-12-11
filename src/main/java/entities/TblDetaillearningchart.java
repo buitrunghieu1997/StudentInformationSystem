@@ -16,12 +16,12 @@ import java.util.Objects;
  */
 @Entity @Table(name = "detaillearningchart", schema = "sis_db", catalog = "")
 @IdClass(TblDetaillearningchartPK.class) public class TblDetaillearningchart {
-	private int idLearningChart;
-	private String idSubject;
-	private String semester;
+	private int     idLearningChart;
+	private String  idSubject;
+	private String  semester;
 	private Integer credit;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idLearningChart") public int getIdLearningChart() {
 		return idLearningChart;

@@ -17,7 +17,7 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:10 ~ 06/12/2018
  */
 public class TblDetailsubjectregisterPK implements Serializable {
-	private int idRegister;
+	private int    idRegister;
 	private String idSubject;
 	
 	@Column(name = "idRegister") @Id public int getIdRegister() {

@@ -1,15 +1,19 @@
 package logics.impl;
 
+import dao.DetailRegisterClassDao;
 import dao.impl.DetailRegisterClassDaoImpl;
 import entities.TblStudent;
 import logics.DetailRegisterClassLogic;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @author Bui Minh Hieu
  */
 public class DetailRegisterClassLogicImpl implements DetailRegisterClassLogic {
+	private DetailRegisterClassDao registerClassDao = new DetailRegisterClassDaoImpl();
+	
 	/**
 	 * Phuong thuc nay tra ve danh sach sinh vien trong mot lop
 	 *
@@ -18,34 +22,34 @@ public class DetailRegisterClassLogicImpl implements DetailRegisterClassLogic {
 	 */
 	@Override
 	public List<TblStudent> showListStudent(String classCode) {
-		if (new DetailRegisterClassDaoImpl().checkClassCode(classCode)) {/*Kiem tra xem co ton tai ma lop khong*/
-			return new DetailRegisterClassDaoImpl().showListStudent(classCode);
+		if (registerClassDao.checkClassCode(classCode)) {/*Kiem tra xem co ton tai ma lop khong*/
+			return registerClassDao.showListStudent(classCode);
 		}
-		return null;
+		return new ArrayList<>();
 	}
 	
 	@Override
 	public boolean addDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, int midSempoint, int finalSempoint) {
-		return new DetailRegisterClassDaoImpl().addDetailRegisterClassDao(idRegister, idSchedule, classCode, tuition, midSempoint, finalSempoint);
+		return registerClassDao.addDetailRegisterClassDao(idRegister, idSchedule, classCode, tuition, midSempoint, finalSempoint);
 	}
 	
 	@Override
 	public boolean updateDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, int midSempoint, int finalSempoint) {
-		return new DetailRegisterClassDaoImpl().updateDetailRegisterClassDao(idRegister, idSchedule, classCode, tuition, midSempoint, finalSempoint);
+		return registerClassDao.updateDetailRegisterClassDao(idRegister, idSchedule, classCode, tuition, midSempoint, finalSempoint);
 	}
 	
 	@Override
 	public boolean deleteDetailRegisterClassDao(int idRegister, int idSchedule) {
-		return new DetailRegisterClassDaoImpl().deleteDetailRegisterClassDao(idRegister, idSchedule);
+		return registerClassDao.deleteDetailRegisterClassDao(idRegister, idSchedule);
 	}
 	
 	@Override
 	public boolean ermanentlyDetailRegisterClassDao(int idRegister, int idSchedule) {
-		return new DetailRegisterClassDaoImpl().ermanentlyDetailRegisterClassDao(idRegister, idSchedule);
+		return registerClassDao.ermanentlyDetailRegisterClassDao(idRegister, idSchedule);
 	}
 	
 	@Override
 	public List showInfoClass(String classCode) {
-		return new DetailRegisterClassDaoImpl().showInfoClass(classCode);
+		return registerClassDao.showInfoClass(classCode);
 	}
 }

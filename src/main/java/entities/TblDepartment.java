@@ -15,11 +15,11 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:09 ~ 06/12/2018
  */
 @Entity @Table(name = "department", schema = "sis_db", catalog = "") public class TblDepartment {
-	private int idDepartment;
-	private String name;
-	private String description;
+	private int     idDepartment;
+	private String  name;
+	private String  description;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idDepartment") public int getIdDepartment() {
 		return idDepartment;

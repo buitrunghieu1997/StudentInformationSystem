@@ -6,10 +6,7 @@
  */
 package entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
@@ -18,17 +15,17 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:11 ~ 06/12/2018
  */
 @Entity @Table(name = "v_schedule", schema = "sis_db", catalog = "") public class TblVSchedule {
-	private int idStudent;
-	private String time;
+	private int     idStudent;
+	private String  time;
 	private Integer startWeek;
 	private Integer lenght;
-	private String room;
-	private String classCode;
-	private String idSubject;
-	private String name;
-	private String semester;
+	private String  room;
+	private String  classCode;
+	private String  idSubject;
+	private String  name;
+	private String  semester;
 	
-	@Basic @Column(name = "idStudent") public int getIdStudent() {
+	@Id @Column(name = "idStudent") public int getIdStudent() {
 		return idStudent;
 	}
 	

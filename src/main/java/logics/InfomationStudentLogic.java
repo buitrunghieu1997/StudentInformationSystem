@@ -7,7 +7,6 @@ package logics;
 
 import entities.TblStudent;
 
-import java.sql.Date;
 import java.util.List;
 
 /**
@@ -18,7 +17,7 @@ public interface InfomationStudentLogic {
 	/**
 	 * Ham lay thong tin sinh vien theo 'idStudent'
 	 *
-	 * @param idStudent
+	 * @param idStudent: mã sinh viên
 	 * @return
 	 */
 	List<TblStudent> displayInfomationStudent(int idStudent);
@@ -26,13 +25,13 @@ public interface InfomationStudentLogic {
 	/**
 	 * Ham xu ly logic cap nhat thong tin sinh vien theo 'idStudent'
 	 *
-	 * @param idStudent
-	 * @param fullName
-	 * @param address
-	 * @param phone
-	 * @param dateOfBirth
-	 * @param email
-	 * @return
+	 * @param idStudent mã số sinh viên
+	 * @param fullName tên đầy đủ
+	 * @param address địa chỉ
+	 * @param phone số diện thoại
+	 * @param dateOfBirth ngày sinh
+	 * @param email email
+	 * @return true nếu thành công, false nếu thất bại
 	 */
-	boolean updateInfomationStudent(int idStudent, String fullName, String address, String phone, Date dateOfBirth, String email);
+	boolean updateInfomationStudent(int idStudent, String fullName, String address, String phone, String dateOfBirth, String email);
 }

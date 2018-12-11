@@ -15,13 +15,13 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:11 ~ 06/12/2018
  */
 @Entity @Table(name = "subjectregister", schema = "sis_db", catalog = "") public class TblSubjectregister {
-	private int idRegister;
+	private int     idRegister;
 	private Integer idStudent;
-	private String semester;
+	private String  semester;
 	private Integer credit;
 	private Integer maxCredit;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idRegister") public int getIdRegister() {
 		return idRegister;

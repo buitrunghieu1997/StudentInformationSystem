@@ -1,0 +1,5 @@
+
+squid:S18459"Rename field "back" to prevent any misunderstanding/clash with method "back" defined in superclass "controller.BaseController".(„½éÌ8÷ê¿™ù,
+Fsquid:S1148D"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8÷ê¿™ù,
+jsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(•êË8•‰¾™ù,
+}squid:S00116-"YRename this field "SubjectNameTxt" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥‰õÿÿÿÿÿ8÷ê¿™ù,

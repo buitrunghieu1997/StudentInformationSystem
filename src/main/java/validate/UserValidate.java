@@ -11,4 +11,7 @@ package validate;
  * @author Trung Hieu Bui (Mr)
  */
 public class UserValidate {
+//	validateUserID() {
+//
+//	}
 }

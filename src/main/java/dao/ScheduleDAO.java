@@ -17,13 +17,13 @@ public interface ScheduleDAO {
 	/**
 	 * Hàm thêm Schedule
 	 *
-	 * @param idSubject
-	 * @param idSchedule
-	 * @param room
-	 * @param time
-	 * @param startWeek
-	 * @param size
-	 * @param maxSize
+	 * @param idSubject: mã học phần
+	 * @param idSchedule: mã thời khóa biểu
+	 * @param room: phòng học
+	 * @param time: thời gian
+	 * @param startWeek: tuần bắt đầu học
+	 * @param size:
+	 * @param maxSize:
 	 * @param status
 	 * @param stt
 	 * @return true (nếu thêm thành công) hoặc false (nếu ngược lại)
@@ -35,11 +35,11 @@ public interface ScheduleDAO {
 	/**
 	 * Hàm cập nhật Schedule
 	 *
-	 * @param idSubject
-	 * @param idSchedule
-	 * @param room
-	 * @param time
-	 * @param startWeek
+	 * @param idSubject: mã học phần
+	 * @param idSchedule: mã thời khóa biểu
+	 * @param room: phòng học
+	 * @param time: thời gian
+	 * @param startWeek: tuần bắt đầu học
 	 * @param size
 	 * @param maxSize
 	 * @param status
@@ -53,7 +53,7 @@ public interface ScheduleDAO {
 	/**
 	 * Hàm xóa Schedule
 	 *
-	 * @param idSchedule
+	 * @param idSchedule: mã thời khóa biểu
 	 * @return true (nếu xoa thành công) hoặc false (nếu ngược lại)
 	 * <p>
 	 * Không cần validate
@@ -63,7 +63,7 @@ public interface ScheduleDAO {
 	/**
 	 * Hàm hiển thị thời khóa biểu
 	 *
-	 * @param idStudent
+	 * @param idStudent: mã thờ khóa biểu
 	 * @return thông tin thời khóa biểu (nếu tồn tại) hoặc trả về null (nếu ngược lại)
 	 * <p>
 	 * Không cần validate

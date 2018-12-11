@@ -5,6 +5,7 @@
  */
 package logics.impl;
 
+import dao.LearningChartDAO;
 import dao.impl.LearningChartDAOImpl;
 import entities.TblLearningchart;
 import logics.LearningChartLogic;
@@ -17,14 +18,14 @@ import java.util.List;
  */
 public class LearningChartLogicImpl implements LearningChartLogic {
 	
-	LearningChartDAOImpl  learningChartDAOImpl  = new LearningChartDAOImpl();
-	LearningChartValidate learningChartValidate = new LearningChartValidate();
+	private LearningChartDAO      learningChartDAO      = new LearningChartDAOImpl();
+	private LearningChartValidate learningChartValidate = new LearningChartValidate();
 	
 	@Override
 	public boolean add(int idLearningChart, Integer idStudent, Integer totalCredit) {
 		
 		if (learningChartValidate.validate(idLearningChart, idStudent, totalCredit)) {
-			return learningChartDAOImpl.add(idLearningChart, idStudent, totalCredit);
+			return learningChartDAO.add(idLearningChart, idStudent, totalCredit);
 		}
 		return false;
 	}
@@ -33,7 +34,7 @@ public class LearningChartLogicImpl implements LearningChartLogic {
 	public boolean update(int idLearningChart, Integer idStudent, Integer totalCredit) {
 		
 		if (learningChartValidate.validate(idLearningChart, idStudent, totalCredit)) {
-			return learningChartDAOImpl.update(idLearningChart, idStudent, totalCredit);
+			return learningChartDAO.update(idLearningChart, idStudent, totalCredit);
 		}
 		return false;
 	}
@@ -41,13 +42,13 @@ public class LearningChartLogicImpl implements LearningChartLogic {
 	@Override
 	public boolean delete(int idLearningChart) {
 		
-		return learningChartDAOImpl.delete(idLearningChart);
+		return learningChartDAO.delete(idLearningChart);
 	}
 	
 	@Override
 	public List<TblLearningchart> serach(int idLearningChart) {
 		
-		return learningChartDAOImpl.search(idLearningChart);
+		return learningChartDAO.search(idLearningChart);
 	}
 	
 }

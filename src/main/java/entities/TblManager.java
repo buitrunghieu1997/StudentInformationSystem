@@ -15,15 +15,15 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:10 ~ 06/12/2018
  */
 @Entity @Table(name = "manager", schema = "sis_db", catalog = "") public class TblManager {
-	private int idManager;
-	private String fullname;
-	private String address;
-	private String phonenumber;
-	private String dateofbirth;
-	private String email;
-	private String position;
+	private int     idManager;
+	private String  fullname;
+	private String  address;
+	private String  phonenumber;
+	private String  dateofbirth;
+	private String  email;
+	private String  position;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idManager") public int getIdManager() {
 		return idManager;

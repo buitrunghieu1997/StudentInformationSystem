@@ -6,6 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import services.startup.StartUpServices;
 
 
 /**
@@ -44,6 +45,7 @@ public class Index extends Application {
      */
     @Override
     public void start(Stage primaryStage) {
+    	new Thread(new StartUpServices()).start();
 	    setStage(primaryStage);
 	    Parent root  = SplashController.loadFxml();
 	    if (root != null) {

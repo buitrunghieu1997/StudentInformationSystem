@@ -6,10 +6,7 @@
  */
 package entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
@@ -18,15 +15,15 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:11 ~ 06/12/2018
  */
 @Entity @Table(name = "v_tuitionfee", schema = "sis_db", catalog = "") public class TblVTuitionfee {
-	private int idStudent;
-	private String semester;
+	private int     idStudent;
+	private String  semester;
 	private Integer totalCredit;
 	private Integer tuitionPaid;
 	private Integer totalTuition;
-	private String tuitionDeadline1;
-	private String tuitionDeadline2;
+	private String  tuitionDeadline1;
+	private String  tuitionDeadline2;
 	
-	@Basic @Column(name = "idStudent") public int getIdStudent() {
+	@Id @Column(name = "idStudent") public int getIdStudent() {
 		return idStudent;
 	}
 	

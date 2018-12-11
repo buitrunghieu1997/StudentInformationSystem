@@ -6,8 +6,7 @@
 package utils;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
 
 /**
  * What is this class usage?
@@ -24,21 +23,18 @@ public class HibernateUtils {
      */
     private static SessionFactory buildSessionFactory() {
         try {
-            // create service registry from cfg.cfg.xml
-            org.hibernate.service.ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
-                    .configure("cfg/hibernate.cfg.xml").build();
-
-            //create metadata source from ServiceRegistry
-            org.hibernate.boot.Metadata metadata = new MetadataSources(serviceRegistry).getMetadataBuilder().build();
-
-            return metadata.getSessionFactoryBuilder().build();
+	        Configuration cfg = new Configuration();
+	        cfg.configure("cfg/hibernate.cfg.xml"); //hibernate config xml file name
+	        cfg.getProperties().setProperty("hibernate.connection.password", Constants.PASSWORD);
+	        cfg.getProperties().setProperty("hibernate.connection.username", Constants.USERNAME);
+	        return cfg.buildSessionFactory();
         } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
     }
-
-    public static org.hibernate.SessionFactory getSessionFactory() {
+	
+	public static SessionFactory getSessionFactory() {
         return SESSION_FACTORY;
     }
 

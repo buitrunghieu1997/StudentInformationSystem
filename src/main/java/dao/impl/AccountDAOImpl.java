@@ -103,6 +103,7 @@ public class AccountDAOImpl implements AccountDAO {
 			query.setParameter("username", username);
 			query.setParameter("password", password);
 			account = query.list();
+			session.getTransaction().commit();
 			return account;
 		} catch (Exception ex) {
 			System.out.println("Loi:" + ex.getMessage());
@@ -122,6 +123,7 @@ public class AccountDAOImpl implements AccountDAO {
 			Query  query = session.createQuery(hql);
 			query.setParameter("username", username);
 			String salt = (String) query.uniqueResult();
+			session.getTransaction().commit();
 			return salt;
 		} catch (Exception ex) {
 			System.out.println("Loi:" + ex.getMessage());

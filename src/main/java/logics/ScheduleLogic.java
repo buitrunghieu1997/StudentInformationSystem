@@ -17,11 +17,11 @@ public interface ScheduleLogic {
 	/**
 	 * Hàm xử lý logic thêm Schedule
 	 *
-	 * @param idSubject
-	 * @param idSchedule
-	 * @param room
-	 * @param time
-	 * @param startWeek
+	 * @param idSubject: mã học phần
+	 * @param idSchedule: mã thời khóa biểu
+	 * @param room: phòng học
+	 * @param time: thời gian
+	 * @param startWeek: tuần bắt đầu học
 	 * @param size
 	 * @param maxSize
 	 * @param status

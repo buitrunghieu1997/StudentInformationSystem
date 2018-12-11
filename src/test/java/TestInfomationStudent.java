@@ -1,5 +1,5 @@
 import entities.TblStudent;
-import logics.impl.InfomationStudentLogicImpl;
+import logics.impl.InformationStudentLogicImpl;
 
 import java.sql.Date;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 public class TestInfomationStudent {
 	
-	InfomationStudentLogicImpl info = new InfomationStudentLogicImpl();
+	InformationStudentLogicImpl info = new InformationStudentLogicImpl();
 	
 	public static void main(String[] args) {
 		
@@ -90,7 +90,7 @@ public class TestInfomationStudent {
 		System.out.println("Nhap nam sinh: ");
 		int nam = new Scanner(System.in).nextInt();
 		
-		if (info.updateInfomationStudent(idStudent, fullName, address, phone, new Date(ngay, thang, nam), email)) {
+		if (info.updateInfomationStudent(idStudent, fullName, address, phone, new Date(ngay, thang, nam).toString(), email)) {
 			System.out.println("Cap nhat thanh cong");
 		} else {
 			System.out.println("That bai");

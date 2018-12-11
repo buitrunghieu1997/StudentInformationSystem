@@ -290,7 +290,7 @@
                      <content>
                         <VBox stylesheets="@../css/style.css">
                            <children>
-                              <HBox fx:id="pm" alignment="CENTER_LEFT">
+                               <HBox fx:id="psb" alignment="CENTER_LEFT">
                                  <padding>
                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                                  </padding>
@@ -300,7 +300,7 @@
                                            <Insets left="21.0" right="5.0" />
                                        </HBox.margin>
                                     </FontAwesomeIconView>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Mark">
+                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Personal ScoreBoard">
                                        <HBox.margin>
                                            <Insets left="10.0" />
                                        </HBox.margin>
@@ -319,7 +319,7 @@
                                      <String fx:value="vbox" />
                                  </styleClass>
                               </HBox>
-                              <HBox fx:id="sm" alignment="CENTER_LEFT">
+                               <HBox fx:id="ssb" alignment="CENTER_LEFT">
                                  <padding>
                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                                  </padding>
@@ -329,7 +329,7 @@
                                            <Insets left="21.0" right="2.0" />
                                        </HBox.margin>
                                     </FontAwesomeIconView>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Mark">
+                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subject ScoreBoard">
                                        <HBox.margin>
                                            <Insets left="10.0" />
                                        </HBox.margin>
@@ -348,7 +348,7 @@
                                      <String fx:value="vbox" />
                                  </styleClass>
                               </HBox>
-                              <HBox fx:id="tm" alignment="CENTER_LEFT">
+                               <HBox fx:id="tsb" alignment="CENTER_LEFT">
                                  <padding>
                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                                  </padding>
@@ -358,7 +358,7 @@
                                            <Insets left="21.0" right="2.0" />
                                        </HBox.margin>
                                     </FontAwesomeIconView>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Toeic Mark">
+                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Toeic ScoreBoard">
                                        <HBox.margin>
                                            <Insets left="10.0" />
                                        </HBox.margin>
@@ -381,7 +381,7 @@
                         </VBox>
                      </content>
                   </TitledPane>
-                   <TitledPane fx:id="rs" animated="false" graphicTextGap="14.0" layoutX="10.0" layoutY="443.0" stylesheets="@../css/style.css" text="Register Subject">
+                   <TitledPane fx:id="rs" animated="false" graphicTextGap="14.0" layoutX="10.0" layoutY="443.0" stylesheets="@../css/style.css" text="Register">
                      <graphic>
                          <FontAwesomeIconView glyphName="CALENDAR_CHECK_ALT" size="20" styleClass="menu-color" translateX="4.0" />
                      </graphic>
@@ -391,7 +391,7 @@
                      <content>
                         <VBox stylesheets="@../css/style.css">
                            <children>
-                              <HBox fx:id="sre" alignment="CENTER_LEFT">
+                               <HBox fx:id="sur" alignment="CENTER_LEFT">
                                  <padding>
                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                                  </padding>
@@ -573,7 +573,7 @@
                                      <String fx:value="vbox" />
                                  </styleClass>
                               </HBox>
-                              <HBox fx:id="rc" alignment="CENTER_LEFT">
+                               <HBox fx:id="rcl" alignment="CENTER_LEFT">
                                  <padding>
                                      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                                  </padding>
@@ -583,7 +583,7 @@
                                            <Insets left="20.0" right="6.0" />
                                        </HBox.margin>
                                     </FontAwesomeIconView>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registered Class">
+                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Registered Class List">
                                        <HBox.margin>
                                            <Insets left="10.0" />
                                        </HBox.margin>
@@ -764,7 +764,7 @@
                                <Insets left="20.0" right="20.0" />
                            </HBox.margin>
                         </ImageView>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Bùi Trung Hiếu">
+                        <Text fx:id="nameTxt" strokeType="OUTSIDE" strokeWidth="0.0" text="Bùi Trung Hiếu">
                            <HBox.margin>
                                <Insets right="10.0" />
                            </HBox.margin>

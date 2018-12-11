@@ -3,10 +3,9 @@ package logics.impl;
 
 import dao.impl.ToeicDaoImpl;
 import entities.TblToeic;
+import entities.TblVToeic;
 import logics.ToeicLogic;
 import validate.ToeicValidate;
-
-import java.sql.Date;
 
 
 /**
@@ -24,7 +23,7 @@ public class ToeicLogicImpl implements ToeicLogic {
 	 * @return boolean neu them sinh vien vao db thanh cong ket qua tra ve se la true nguoc lai ket qua tra ve se la false
 	 */
 	@Override
-	public boolean addToeic(int idStudent, String semester, Date date, int point) {
+	public boolean addToeic(int idStudent, String semester, String date, int point) {
 		if (new ToeicValidate().checkPoint(point)) {
 			return new ToeicDaoImpl().addToeic(idStudent, semester, date, point);
 		}
@@ -38,7 +37,7 @@ public class ToeicLogicImpl implements ToeicLogic {
 	 * @return boolean neu xoa diem toeic thanh cong ket qua tra ve se la true nguoc lai ket qua tra ve la false
 	 */
 	@Override
-	public boolean updateToeic(int idStudent, String semester, Date date, int point) {
+	public boolean updateToeic(int idStudent, String semester, String date, int point) {
 		if (new ToeicValidate().checkPoint(point)) {
 			return new ToeicDaoImpl().updateToeic(idStudent, semester, date, point);
 		}
@@ -74,7 +73,7 @@ public class ToeicLogicImpl implements ToeicLogic {
 	 * @return TblToeic tra ve diem toeic cua sinh vien can tim
 	 */
 	@Override
-	public TblToeic searchToeic(int idStudent) {
+	public TblVToeic searchToeic(int idStudent) {
 		return new ToeicDaoImpl().searchToeic(idStudent);
 	}
 }

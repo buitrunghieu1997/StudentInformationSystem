@@ -1,0 +1,8 @@
+
+msquid:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(©â¼ì
+Tsquid:S00107"<Method has 9 parameters, which is greater than 7 authorized.(ÞÒï¾
+msquid:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(©â¼ì
+Hsquid:S1172"1Remove this unused method parameter "idSchedule".(ÞÒï¾
+msquid:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(©â¼ì
+msquid:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(©â¼ì
+msquid:S2159"VRemove this call to "equals"; comparisons between unrelated types always return false.(©â¼ì

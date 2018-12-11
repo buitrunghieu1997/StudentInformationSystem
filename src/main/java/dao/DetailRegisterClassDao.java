@@ -35,7 +35,7 @@ public interface DetailRegisterClassDao {
 	 * @param finalSempoint diem cuoi ki
 	 * @return boolean tra ve true neu them thanh cong tra ve false neu them khong thanh cong
 	 */
-	boolean addDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, int midSempoint, int finalSempoint);
+	boolean addDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, double midSempoint, double finalSempoint);
 	
 	/**
 	 * Phuong thuc nay dung de update du lieu trong bang DetailRegisterClass trong db
@@ -48,7 +48,7 @@ public interface DetailRegisterClassDao {
 	 * @param finalSempoint diem cuoi ki
 	 * @return boolean tra ve true neu update thanh cong nguoc lai la false neu khong thanh cong
 	 */
-	boolean updateDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, int midSempoint, int finalSempoint);
+	boolean updateDetailRegisterClassDao(int idRegister, int idSchedule, String classCode, int tuition, double midSempoint, double finalSempoint);
 	
 	/**
 	 * Phuong thuc nay dung de xoa du lieu trong bang DetailRegisterClass tam thoi

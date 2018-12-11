@@ -15,16 +15,16 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:10 ~ 06/12/2018
  */
 @Entity @Table(name = "schedule", schema = "sis_db", catalog = "") public class TblSchedule {
-	private String idSubject;
-	private int idSchedule;
-	private String room;
-	private String time;
+	private String  idSubject;
+	private int     idSchedule;
+	private String  room;
+	private String  time;
 	private Integer startWeek;
 	private Integer size;
 	private Integer maxSize;
 	private Integer status;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Basic @Column(name = "idSubject") public String getIdSubject() {
 		return idSubject;

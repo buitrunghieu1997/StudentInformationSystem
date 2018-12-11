@@ -15,7 +15,7 @@ public interface RegisterSubjectDao {
 	 * @param semester  hoc ki
 	 * @return boolean neu them thanh cong ket qua tra ve la true nguoc lai ket qua tra ve la false
 	 */
-	boolean addRegisterSubject(int idRegister, int idStudent, String semester);
+	boolean addRegisterSubject(int idStudent, String semester);
 	
 	/**
 	 * Phuong thuc nay dung de update tin chi hien tai dang dang ki trong bang register subject trong db

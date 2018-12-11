@@ -12,21 +12,19 @@ import javafx.scene.Node;
 import javafx.util.Duration;
 
 /**
- * Description about this Class/Interface/Enum...
- *
- * @author buitr
- * Created: 00:09 ~ 27/10/2018
+ * The type Fade transition.
  */
 public class FadeTransition {
     /**
-     * Function to created Fade transition
-     * @param node the parent
-     * @param duration transition time
-     * @param event Event Handle of this
-     * @param startValue % fade start
-     * @param endValue % fade end
-     * @param repeatTime repeat time of transition
-     * @param autoReverse reverse of animation
+     * Apply fade transition.
+     *
+     * @param node        the node
+     * @param duration    the duration
+     * @param event       the event
+     * @param startValue  the start value
+     * @param endValue    the end value
+     * @param repeatTime  the repeat time
+     * @param autoReverse the auto reverse
      */
     public static void applyFadeTransition(Node node, Duration duration, EventHandler<ActionEvent> event,
                                            double startValue, double endValue, int repeatTime, boolean autoReverse) {
@@ -42,16 +40,6 @@ public class FadeTransition {
         });
     }
 
-    /**
-     * Function to create fadein or fadeout for applyFadeTransition function
-     *@param node the parent
-     * @param duration transition time
-     * @param startValue % fade start
-     * @param endValue % fade end
-     * @param repeatTime repeat time of transition
-     * @param autoReverse reverse of animation
-     * @return
-     */
     private static javafx.animation.FadeTransition doFade(Node node, Duration duration, double startValue, double endValue, int repeatTime, boolean autoReverse) {
         javafx.animation.FadeTransition fade = new javafx.animation.FadeTransition(duration, node);
         fade.setCycleCount(repeatTime);

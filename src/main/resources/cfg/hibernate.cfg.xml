@@ -48,6 +48,7 @@
         <mapping class="entities.TblVSchedule"/>
         <mapping class="entities.TblVToeic"/>
         <mapping class="entities.TblVTuitionfee"/>
+        <mapping class="entities.TblVSubject"/>
         <!-- entities linking -->
         <!--<mapping resource="mapping.hbm.xml"/> dùng để include file mapping vào-->
     </session-factory>

@@ -9,12 +9,12 @@ public interface AccountDAO {
 	/**
 	 * Hàm dùng để thêm tài khoản vào CSDL
 	 *
-	 * @param idAccount
-	 * @param username
-	 * @param password
-	 * @param idPermission
-	 * @param stt
-	 * @param timeModified
+	 * @param idAccount: mã tài khoản
+	 * @param username: tên tài khoản
+	 * @param password: mật khẩu
+	 * @param idPermission: quyền hạn
+	 * @param stt: trạng thái
+	 * @param timeModified: thời gian
 	 * @return
 	 */
 	boolean addAccount(int idAccount, String username, String password, Integer idPermission, Integer stt, String timeModified);

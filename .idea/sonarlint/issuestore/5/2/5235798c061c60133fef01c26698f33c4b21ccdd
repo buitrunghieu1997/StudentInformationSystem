@@ -1,0 +1,17 @@
+
+ssquid:S1488W"\Immediately return this expression instead of assigning it to the temporary variable "list".(©ìß
+T
+squid:S106H"9Replace this use of System.out or System.err by a logger.(¬“ùùÿÿÿÿ
+]squid:S1192"FDefine a constant instead of duplicating this literal "Loi: " 4 times.(òğ´ü
+{squid:S1488E"_Immediately return this expression instead of assigning it to the temporary variable "student".(‘¢µ‰ûÿÿÿÿ
+O
+squid:S106\"9Replace this use of System.out or System.err by a logger.(òğ´ü
+Bsquid:S1168,"+Return an empty collection instead of null.(¥¹ï
+Bsquid:S1168]"+Return an empty collection instead of null.(¥¹ï
+O
+squid:S106"9Replace this use of System.out or System.err by a logger.(òğ´ü
+nsquid:S20776"RUse a variable binding mechanism to construct this query instead of concatenation.(¬œ‘âşÿÿÿÿ
+O
+squid:S106*"9Replace this use of System.out or System.err by a logger.(òğ´ü
+O
+squid:S106;"9Replace this use of System.out or System.err by a logger.(òğ´ü

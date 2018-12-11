@@ -1,0 +1,20 @@
+
+P
+squid:S106’"9Replace this use of System.out or System.err by a logger.(òğ´ü
+O
+squid:S1062"9Replace this use of System.out or System.err by a logger.(òğ´ü
+O
+squid:S106K"9Replace this use of System.out or System.err by a logger.(òğ´ü
+]squid:S11922"FDefine a constant instead of duplicating this literal "Loi: " 5 times.(òğ´ü
+O
+squid:S106b"9Replace this use of System.out or System.err by a logger.(òğ´ü
+O
+squid:S106w"9Replace this use of System.out or System.err by a logger.(òğ´ü
+Bsquid:S2629!"$Invoke method(s) only conditionally.(ÏÉ…‚8 °Åµù,
+P
+squid:S106©"9Replace this use of System.out or System.err by a logger.(òğ´ü
+[squid:S1155">Use isEmpty() to check whether the collection is empty or not.(É€°Îøÿÿÿÿ
+osquid:S2077¤"RUse a variable binding mechanism to construct this query instead of concatenation.(¬œ‘âşÿÿÿÿ
+Csquid:S1168«"+Return an empty collection instead of null.(¥¹ï
+P
+squid:S106¸"9Replace this use of System.out or System.err by a logger.(òğ´ü

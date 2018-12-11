@@ -2,13 +2,16 @@ package dao.impl;
 
 import dao.ToeicDao;
 import entities.TblToeic;
+import entities.TblVToeic;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import utils.Commons;
 import utils.Constants;
 import utils.HibernateUtils;
 
-import java.sql.Date;
+import java.util.List;
+
 
 /**
  * @author Bui Minh Hieu
@@ -25,7 +28,7 @@ public class ToeicDaoImpl implements ToeicDao {
 	 * @return boolean neu them sinh vien vao db thanh cong ket qua tra ve se la true nguoc lai ket qua tra ve se la false
 	 */
 	@Override
-	public boolean addToeic(int idStudent, String semester, Date date, int point) {
+	public boolean addToeic(int idStudent, String semester, String date, int point) {
 		SessionFactory factory = HibernateUtils.getSessionFactory();
 		Session        session = factory.getCurrentSession();
 		try {
@@ -56,7 +59,7 @@ public class ToeicDaoImpl implements ToeicDao {
 	 * @return boolean neu update diem toeic thanh cong ket qua tra ve la true nguoc lai ket qua tra ve la false
 	 */
 	@Override
-	public boolean updateToeic(int idStudent, String semester, Date date, int point) {
+	public boolean updateToeic(int idStudent, String semester, String date, int point) {
 		SessionFactory factory = HibernateUtils.getSessionFactory();
 		Session        session = factory.getCurrentSession();
 		try {
@@ -129,14 +132,17 @@ public class ToeicDaoImpl implements ToeicDao {
 	 * @return Tbltoeic tra ve thong tinh cua sinh vien
 	 */
 	@Override
-	public TblToeic searchToeic(int idStudent) {
+	public TblVToeic searchToeic(int idStudent) {
 		SessionFactory factory = HibernateUtils.getSessionFactory();
 		Session        session = factory.getCurrentSession();
 		try {
 			session.getTransaction().begin();
-			TblToeic toeic = session.get(TblToeic.class, idStudent);
+			String hql="select e from TblVToeic e where idStudent= :idStudent";
+			Query query= session.createQuery(hql);
+			query.setParameter("idStudent",idStudent);
+			List<TblVToeic> listToeic=query.list();
 			session.getTransaction().commit();
-			return toeic;
+			return listToeic.get(0);
 		} catch (Exception ex) {
 			System.out.println("Loi: " + ex.getMessage());
 		}

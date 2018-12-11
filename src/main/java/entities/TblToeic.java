@@ -15,12 +15,12 @@ import java.util.Objects;
  * @author Bùi Trung Hiếu  Created: 16:11 ~ 06/12/2018
  */
 @Entity @Table(name = "toeic", schema = "sis_db", catalog = "") public class TblToeic {
-	private int idstudent;
-	private String semester;
-	private String date;
+	private int     idstudent;
+	private String  semester;
+	private String  date;
 	private Integer point;
 	private Integer stt;
-	private String timeModified;
+	private String  timeModified;
 	
 	@Id @Column(name = "idstudent") public int getIdstudent() {
 		return idstudent;
